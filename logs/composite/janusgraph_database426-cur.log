@@ -1,0 +1,12 @@
+-- Time: 2024/04/11 13:45:20
+-- Database: janusgraph_database426
+-- Database version: composite
+-- seed value: 1712812406949
+CREATE (n0 :L5{k29 : 'TJ', k31 : false, k30 : '0', id : 0, k32 : 'wCnqmmv'});
+CREATE (n0 :L2{k17 : 'v60rEb8', k16 : false, id : 1, k13 : -427976489, k15 : '7pSlE7Oj', k14 : true});
+CREATE (n0 {id : 2});
+CREATE (n0 :L5{k28 : '36kiCh', k29 : '9Hu', k31 : false, k30 : 'JXFn8', id : 3});
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T0{k40 : false, k42 : false, k41 : 'tzwKjtqtr', id : 4, k43 : -1073494340}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 2}) MERGE(n0)-[r :T3{k60 : 961661233, k62 : 'Ybq', id : 5, k57 : -194538091, k56 : 'FFBz', k59 : -235790235, k58 : false}]->(n1);
+OPTIONAL MATCH (), ()-[*0..0]->(n0 :L5) DETACH DELETE n0  CREATE ({id:6})<-[r0 :T0{id:7}]-({id:8}), ({k32:NULL, id:9}) RETURN 1 AS a0;
+OPTIONAL MATCH ( ) ,( ) - [ * 0 .. 0 ] - > ( n0 : L5 ) OPTIONAL MATCH ()-[:TYPE]-() DETACH DELETE n0 CREATE ( { id : 6 } ) < - [ r0 : T0 { id : 7 } ] - ( { id : CASE WHEN FALSE THEN NULL ELSE 8 END } ) CREATE ( { k32 : NULL , id : 9 } ) RETURN 1 AS a0 ORDER BY 1 ;

@@ -1,0 +1,23 @@
+-- Time: 2024/04/11 14:19:47
+-- Database: janusgraph_database891
+-- Database version: composite
+-- seed value: 1712812407416
+CREATE (n0 :L3{k19 : -1425938486, k20 : false, k22 : '0', id : 0, k21 : false, k24 : true, k23 : '1'});
+CREATE (n0 {id : 1});
+CREATE (n0 :L1{k11 : false, id : 2, k10 : 568302535, k7 : 506383355, k8 : '3Bd8UZ9tk', k12 : true, k9 : '42U'});
+CREATE (n0 :L4{k28 : 1363519903, k27 : false, k29 : 'psdNRjc', k31 : false, k30 : -1566190818, id : 3, k26 : false, k25 : true});
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T2{k44 : true, id : 4, k46 : -584533089, k45 : true, k48 : 1512694944, k47 : false}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T1{k39 : true, k38 : 'Y', k40 : true, k41 : -552785348, id : 5, k37 : 'pAe2'}]->(n1);
+MERGE (n0{id:6})-[r0 :T1{id:7}]-(n1{id:8}) REMOVE n0.k2 MERGE (n2{id:9}) RETURN 1 AS a0;
+MERGE ( n0 { id : 6 } ) - [ r0 : T1 { id : CASE WHEN FALSE THEN NULL ELSE 7 END } ] - ( n1 { id : 8 } ) FOREACH(f in [1]|REMOVE n0 . k2 ) WITH * OPTIONAL MATCH ()-[:TYPE]-() MERGE ( n2 { id : 9 } ) RETURN 1 AS a0 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE ({id:10})<-[r0 :T1{k39:false, id:11}]-(n0{id:12}) DETACH DELETE n0  CREATE ({id:13})<-[r1 :T1{k41:round(((CASE WHEN false THEN 1567302706 END+round(-1904986323))--1047982291)), id:14}]-(n1{id:15}) RETURN 1 AS a0 UNION ALL MERGE ({k8:'iPNiNwuY', id:16}) MERGE (n0{id:17})-[r0 :T2{k46:-1740160598, id:18}]-(n1{id:19}) MERGE ({id:20}) RETURN n0 AS a0;
+MERGE ( { id : 10 } ) < - [ r0 : T1 { k39 : false , id : 11 } ] - ( n0 { id : 12 } ) DETACH DELETE n0 CREATE ( { id : 13 } ) < - [ r1 : T1 { k41 : round ( ( ( CASE WHEN false THEN 1567302706 END + round ( -1904986323 ) ) - -1047982291 ) ) , id : 14 } ] - ( n1 { id : CASE WHEN TRUE THEN 15 END } ) WITH * RETURN 1 AS a0 UNION ALL MERGE ( { k8 : 'iPNiNwuY' , id : 16 } ) WITH * UNWIND [1] as l0 MERGE pp0=( n0 { id : 17 } ) - [ r0 : T2 { k46 : -1740160598 , id : 18 } ] - ( n1 { id : 19 } ) MERGE ( { id : 20 } ) RETURN n0 AS a0 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (n0)<-[]-() REMOVE n0.k2 SET n0.k=NULL RETURN n0 AS a0;
+MATCH (n0)-[*0..0]-( n0 ) < - [ ] - ( ) UNWIND [NULL] as l0 WITH * CALL{WITH *REMOVE n0 . k2 } WITH * SET n0 . k = NULL RETURN n0 AS a0 ;

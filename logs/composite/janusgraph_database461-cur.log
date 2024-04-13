@@ -1,0 +1,17 @@
+-- Time: 2024/04/11 13:47:56
+-- Database: janusgraph_database461
+-- Database version: composite
+-- seed value: 1712812406984
+CREATE (n0 :L1{k11 : 'KIyoHDKKj', id : 0, k10 : true, k7 : 'P', k8 : '0OVMStG', k12 : true, k9 : 896116892});
+CREATE (n0 :L4{k28 : true, k27 : 'j', id : 1, k24 : false, k26 : 'n', k25 : '5'});
+CREATE (n0 {id : 2});
+CREATE (n0 :L0{k0 : 195759265, k1 : false, k2 : false, k5 : true, id : 3, k6 : 667063258});
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T1{k49 : 'vq', k51 : 1544600443, k50 : 8597322, k52 : 'jo8VuE', id : 4, k48 : -325576869}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T0{k44 : 'M', id : 5, k43 : true, k46 : -941778211, k45 : 'DQ3rQ7vM', k47 : 'Z'}]->(n1);
+UNWIND NULL AS a0 MERGE (n0{id:6})<-[r0 :T1{k52:'r', id:7}]-(n1{k28:false, id:8})-[r1 :T0{id:9}]->( :L4{id:10}) CREATE (n2{k9:round(-1606133228), id:11}), ({k12:false, id:12}) RETURN (r1.k44) AS a1;
+UNWIND CASE WHEN FALSE THEN NULL ELSE NULL END AS a0 WITH * MERGE ( n0 { id : 6 } ) < - [ r0 : T1 { k52 : 'r' , id : 7 } ] - ( n1 { k28 : false , id : 8 } ) - [ r1 : T0 { id : 9 } ] - > ( : L4 { id : CASE WHEN FALSE THEN NULL ELSE 10 END } ) WITH * CREATE ( n2 { k9 : CASE WHEN FALSE THEN NULL ELSE round ( -1606133228 ) END , id : 11 } ) CREATE ( { k12 : false , id : 12 } ) RETURN ( r1 . k44 ) AS a1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (n0)-[]-(n1), (n2 :L4)-[]->({k28:(n2.k28)})-[ :T1{k52:'2'}]-() WHERE (n2.k28) MATCH (n0), ()<-[*0..1]-(n0)-[]->(n3) MERGE (n4{id:13})-[ :T0{k44:'N', id:14}]->({id:15})-[ :T1{k52:'L', id:16}]->(n5{id:17}) RETURN 1 AS a0 LIMIT 0;
+MATCH ( n0 ) - [ ] - ( n1 ) ,(n2)-[*0..0]-( n2 : L4 ) - [ ] - > ( { k28 : ( n2 . k28 ) } ) - [ : T1 { k52 : '2' } ] - ( ) WHERE ( n2 . k28 ) OPTIONAL MATCH ()-[:TYPE]-() MATCH (n0),(nn0),()<-[*0..1]-(),(n0),()-[m1]->(),(n3) WHERE exists((nn0)<-[*0..1]-(n0)-[m1]->(n3)) MERGE ( n4 { id : 13 } ) - [ : T0 { k44 : 'N' , id : 14 } ] - > ( { id : 15 } ) - [ : T1 { k52 : 'L' , id : 16 } ] - > ( n5 { id : 17 } ) RETURN DISTINCT 1 AS a0 SKIP 1 LIMIT 0 ;

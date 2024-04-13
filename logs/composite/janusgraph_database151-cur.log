@@ -1,0 +1,12 @@
+-- Time: 2024/04/11 13:25:01
+-- Database: janusgraph_database151
+-- Database version: composite
+-- seed value: 1712812406633
+CREATE (n0 :L1{k11 : 1976841157, id : 0, k6 : 'wEMfIcNp', k10 : 'Xvy', k7 : 830341356, k8 : 'EkkxVLy', k9 : 'FeVW'});
+CREATE (n0 :L0{k0 : -454644085, k1 : -1757861417, k3 : -1273452095, k5 : 'iPj', id : 1});
+CREATE (n0 :L5{k33 : -1526570620, id : 2, k32 : 'QUWvXJA', k35 : 'uRXS', k34 : false});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T2{k49 : 227260814, k51 : true, k50 : -1405756030, k53 : '7Lq', k52 : 260252801, id : 4}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T4{k61 : false, k64 : false, k63 : false, id : 5, k65 : true}]->(n1);
+MATCH () WHERE NULL MATCH (), ()-[]-(n0)<-[*0..0]-() MERGE (n1{id:6}) RETURN *;
+MATCH ( ) WHERE NULL MATCH ( ) ,( ) - [ ] - ( n0 ) < - [ * 0 .. 0 ] - ( ) OPTIONAL MATCH ()-[:TYPE]-() MERGE ( n1 { id : 6 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN * ;

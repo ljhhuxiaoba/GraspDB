@@ -1,0 +1,33 @@
+-- Time: 2024/04/11 13:18:31
+-- Database: janusgraph_database63
+-- Database version: composite
+-- seed value: 1712812406544
+CREATE (n0 :L0{k1 : 'lIm9hIzky', k2 : -437590729, k3 : true, k4 : 289869160, k5 : false, id : 0});
+CREATE (n0 :L2{k17 : true, k16 : false, id : 1, k13 : 'fmdMFLJ', k15 : 'C', k14 : false});
+CREATE (n0 :L3{k19 : 848204112, k20 : false, k22 : false, id : 2, k21 : '1IKXuXsWF'});
+CREATE (n0 :L3{k19 : 2115790753, k18 : 'Q', k20 : true, k22 : false, id : 3, k21 : 'SWwOV'});
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T4{k60 : false, k61 : 'T', id : 4, k57 : true, k59 : false, k58 : true}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T5{k62 : 'COpT', k64 : -488954939, k63 : 875193422, id : 5, k65 : '3UPM', k67 : -1728625567}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T0{k31 : true, k30 : 'qy', k33 : true, id : 6, k32 : -154388906, k35 : false, k34 : false, k36 : 2124118217}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T0{k31 : true, k30 : 'D', id : 7, k32 : 1696491349, k35 : false, k34 : false, k36 : 1804753031}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T3{k51 : 'RG', k50 : false, k53 : 'ZbYelB1', k52 : true, k55 : 'T', id : 8, k54 : -1197724386, k56 : 2065405775}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T1{k39 : 'U', k38 : false, k40 : 1900354, k42 : 'R', k41 : false, id : 9, k37 : 'xkw759y'}]->(n1);
+OPTIONAL MATCH ()-[r0]-( :L0), (n5)-[]-()-[]-(n6{k21:'Z'}) DETACH DELETE n5  SET n6.k=306520915 RETURN NULL AS a2 ORDER BY a2 LIMIT 1;
+OPTIONAL MATCH ( ) - [ r0 ] - ( : L0 ) ,( n5 ) - [ ] - ( ) - [ ] - ( n6 { k21 : 'Z' } ) FOREACH(f in [1]|DETACH DELETE n5 ) SET n6 . k = 306520915 RETURN NULL AS a2 ORDER BY a2 LIMIT 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE (n6{k20:true, id:10})-[r3 :T3{k56:875705406, id:11}]->(n7{id:12})-[r4 :T1{id:13}]-({id:14}) DETACH DELETE r4  SET n6.k=round(size(NULL)) RETURN 1 AS a0, n6 AS a1 SKIP 1;
+MERGE ( n6 { k20 : true , id : 10 } ) - [ r3 : T3 { k56 : 875705406 , id : 11 } ] - > ( n7 { id : 12 } ) - [ r4 : T1 { id : 13 } ] - ( { id : 14 } ) WITH * DETACH DELETE r4 SET n6 . k = round ( CASE WHEN FALSE THEN NULL ELSE size ( NULL ) END ) RETURN 1 AS a0 , n6 AS a1 SKIP 1 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+UNWIND toBooleanList([NULL, NULL]) AS a0 CREATE ({id:15}) CREATE (n0{k18:substring('EdV', toIntegerOrNull(abs(1364072979)), toIntegerOrNull(abs((-1170539682+-276899126)))), id:16}), (n1{id:17}) RETURN 1 AS a1, NULL AS a2 ORDER BY true;
+UNWIND toBooleanList ( [ NULL , NULL ] ) AS a0 WITH * CREATE ( { id : 15 } ) WITH * CREATE ( n0 { k18 : CASE WHEN TRUE THEN substring ( ('EdV' +'') , CASE WHEN TRUE THEN toIntegerOrNull ( abs ( 1364072979 ) ) END , toIntegerOrNull ( abs ( CASE WHEN FALSE THEN NULL ELSE ( -1170539682 + -276899126 ) END ) ) ) END , id : 16 } ) CREATE ( n1 { id : 17 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN DISTINCT 1 AS a1 , NULL AS a2 ORDER BY true ,FALSE ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE (n0{id:18}) MERGE ({id:19}) DETACH DELETE n0  RETURN 1 AS a0, 1 AS a1;
+MERGE pp0=( n0 { id : 18 } ) WITH * UNWIND 1 as l0 MERGE ( { id : CASE WHEN FALSE THEN NULL ELSE 19 END } ) DETACH DELETE n0 RETURN 1 AS a0 , 1 AS a1 SKIP 1 ;

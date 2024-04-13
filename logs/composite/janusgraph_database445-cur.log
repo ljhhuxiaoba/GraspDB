@@ -1,0 +1,24 @@
+-- Time: 2024/04/11 13:46:44
+-- Database: janusgraph_database445
+-- Database version: composite
+-- seed value: 1712812406968
+CREATE (n0 :L1{k11 : -1455336743, id : 0, k6 : '6YuT', k10 : 852292551, k7 : 'pIQj12rp', k9 : false});
+CREATE (n0 :L5{k33 : 'E4ESVPH', id : 1, k32 : 'B', k35 : -805588271, k34 : 'L'});
+CREATE (n0 :L2{k17 : 576724552, k16 : 1456356531, id : 2, k13 : 'e', k12 : 'ZMnL', k15 : -753483743, k14 : 'RIlyl1sh'});
+CREATE (n0 :L1{k11 : -1962054552, id : 3, k6 : 'FMor0Uxl', k7 : 'U', k8 : false, k9 : false});
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T4{k71 : 'gGoD', k70 : true, k72 : '3E', k66 : false, id : 4, k68 : 710963703, k67 : 'e', k69 : true}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 2}) MERGE(n0)-[r :T2{k55 : -1493105652, id : 5, k54 : -1949784645, k57 : true, k56 : false, k59 : true, k58 : '5uBv15xZ'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T2{k55 : -129921753, id : 6, k57 : true, k56 : false, k59 : true, k58 : 'rKUBHb'}]->(n1);
+MATCH (n6 :L1{k11:toIntegerOrNull(NULL)})-[]-(n2), p1=()-[r0]-(n0) OPTIONAL MATCH (n7)-[]-(n0), ()-[r0]-(n0) MERGE (n8{id:7})<-[ :T2{id:8}]-({k34:'R', id:9}) RETURN *, n8 AS a1;
+MATCH ( n6 : L1 { k11 : toIntegerOrNull ( NULL ) } ) - [ ] - ( n2 ) ,p1 = ( ) - [ r0 ] - ( n0 ) WITH * OPTIONAL MATCH ( n7 ) - [ ] - ( n0 ) ,( ) - [ r0 ] - ( n0 ) MERGE ( n8 { id : 7 } ) < - [ : T2 { id : 8 } ] - ( { k34 : 'R' , id : 9 } ) RETURN * , n8 AS a1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+OPTIONAL MATCH (n3 :L1{k11:NULL}), (n4)-[r1 :T4{k72:'0F'}]-() OPTIONAL MATCH p1=()<-[r2 :T2{k54:(r1.k68)}]-(), (n4)-[r1]-() WHERE (r1.k69) CREATE ({id:10})<-[ :T4{id:11}]-({id:12}) RETURN nodes(CASE WHEN (r1.k66) THEN p1 END)[toIntegerOrNull(abs(toIntegerOrNull((r1.k70))))] AS a3;
+OPTIONAL MATCH (n3:L1),(n4)-[r1 :T4{k72:'0F'}]-() WHERE n3.k11=NULL OPTIONAL MATCH ()-[:TYPE]-() OPTIONAL MATCH p1 = ( ) < - [ r2 : T2 { k54 : CASE WHEN TRUE THEN ( r1 . k68 ) END } ] - ( ) ,( n4 ) - [ r1 ] - ( ) WHERE ( r1 . k69 ) CREATE ( { id : 10 } ) < - [ : T4 { id : 11 } ] - ( { id : CASE WHEN TRUE THEN 12 END } ) WITH * UNWIND [1] as l0 RETURN nodes ( CASE WHEN ( r1 . k66 ) THEN p1 END ) [ toIntegerOrNull ( abs ( toIntegerOrNull ( ( r1 . k70 ) ) ) ) ] AS a3 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE (n0{id:13}) SET n0.k=NULL REMOVE n0.k2 RETURN 1 AS a0, n0 AS a1;
+MERGE ( n0 { id : 13 } ) WITH * UNWIND [NULL] as l0 SET n0 . k = NULL WITH * UNWIND [NULL] as l1 REMOVE n0 . k2 RETURN DISTINCT 1 AS a0 , n0 AS a1 ORDER BY 1 ;

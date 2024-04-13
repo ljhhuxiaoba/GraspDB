@@ -1,0 +1,14 @@
+-- Time: 2024/04/11 14:04:04
+-- Database: janusgraph_database679
+-- Database version: composite
+-- seed value: 1712812407203
+CREATE (n0 :L0{k1 : false, k2 : 976141894, k3 : 'I', k4 : 'R', k5 : false, id : 0});
+CREATE (n0 :L1{id : 1, k6 : 'L3E', k10 : 'j', k7 : 'Fu2', k8 : '9', k12 : -379365595, k9 : true});
+CREATE (n0 :L1{k11 : true, id : 2, k6 : 'g', k10 : 'iM', k7 : 'K', k8 : 'NSEQ', k12 : 892646125, k9 : false});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T1{k39 : false, k42 : -1464817324, k41 : 'v', id : 4, k43 : 547616212}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T1{k40 : -792101623, k42 : -400629547, k41 : '4i', id : 5, k43 : -524409790}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T2{k44 : 'KH', id : 6, k46 : 1879354631, k45 : true, k48 : 2090277718, k47 : 1157444249}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T2{k44 : 'Z', id : 7, k46 : 706272601, k48 : -1083198804}]->(n1);
+MATCH (n0) SET n0.k=CASE WHEN ('x' < 'BsdxY') THEN 2303507 END MERGE ({id:8})-[r0 :T2{k44:'Sz', id:9}]-(n1 :L1{k11:false, id:10}) RETURN n1 AS a0, n0 AS a1;
+MATCH ( n0 ) WHERE TRUE WITH * SET n0 . k = CASE WHEN TRUE THEN CASE WHEN CASE WHEN FALSE THEN NULL ELSE ( 'x' < 'BsdxY' ) END THEN 2303507 END END WITH * OPTIONAL MATCH ()-[:TYPE]-() MERGE pp0=( { id : 8 } ) - [ r0 : T2 { k44 : 'Sz' , id : 9 } ] - ( n1 : L1 { k11 : CASE WHEN FALSE THEN NULL ELSE false END , id : 10 } ) RETURN CASE WHEN FALSE THEN NULL ELSE n1 END AS a0 , n0 AS a1 ;

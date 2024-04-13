@@ -1,0 +1,19 @@
+-- Time: 2024/04/11 13:43:08
+-- Database: janusgraph_database396
+-- Database version: composite
+-- seed value: 1712812406919
+CREATE (n0 {id : 0});
+CREATE (n0 {id : 1});
+CREATE (n0 :L3{k17 : 'H97SLsc', k19 : 1808159559, k18 : true, k20 : true, k22 : 823003829, id : 2});
+CREATE (n0 :L4{k28 : true, k27 : -1106858291, id : 3, k24 : 'W', k23 : true, k26 : 'SF8Teu5', k25 : 'm'});
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T2{k49 : 1679993916, k50 : 'BbnmL', id : 4, k46 : true, k45 : true, k48 : 'I', k47 : true}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T2{k49 : 1679993916, k50 : 'ust9Hu', id : 5, k46 : true, k45 : true, k48 : 'K'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T1{k40 : 1489330886, k42 : true, k41 : 'B', k44 : true, id : 6, k43 : -397618272}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T1{k40 : 1149916662, k42 : false, k41 : 'YsJfA', k44 : true, id : 7, k43 : 1748560395}]->(n1);
+MATCH (n0) UNWIND NULL AS a0 SET n0.k=NULL RETURN 1 AS a1, NULL AS a2;
+MATCH ( n0 ) OPTIONAL MATCH ()-[:TYPE]-() UNWIND NULL AS a0 OPTIONAL MATCH ()-[:TYPE]-() FOREACH(f in [1]|SET n0 . k = CASE WHEN TRUE THEN NULL END ) WITH * UNWIND [1] as l0 RETURN 1 AS a1 , NULL AS a2 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+UNWIND [949547133, 1968703679] AS a0 OPTIONAL MATCH () MERGE (n0{id:8}) RETURN a0 AS a1, a0 AS a2;
+UNWIND [ 949547133 , 1968703679 ] AS a0 WITH * OPTIONAL MATCH ()-[*0..0]-( ) OPTIONAL MATCH ()-[:TYPE]-() MERGE ( n0 { id : 8 } ) RETURN a0 AS a1 , a0 AS a2 ORDER BY TRUE DESC ;

@@ -1,0 +1,24 @@
+-- Time: 2024/04/11 14:28:18
+-- Database: janusgraph_database1006
+-- Database version: composite
+-- seed value: 1712812407531
+CREATE (n0 :L5{k29 : -1000535252, k31 : true, k30 : 'D3v7Juo', k33 : 'Y', id : 0, k32 : true, k34 : 'S'});
+CREATE (n0 :L1{k5 : 'F', id : 1, k7 : 'c', k8 : false});
+CREATE (n0 :L5{k28 : true, k29 : 1059161519, k31 : true, k30 : 'qycgDhi', k33 : 'ER', id : 2, k32 : true, k34 : '0'});
+CREATE (n0 :L0{k1 : 1307277277, k2 : true, k3 : 459885418, k4 : 1545064249, id : 3});
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T3{k60 : true, k62 : false, k61 : -1052880491, k64 : 't', k63 : false, id : 4, k59 : 120520813}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T4{id : 5, k65 : 's', k68 : 944756952, k69 : false}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T2{id : 6, k54 : true, k57 : false, k56 : -81399756, k58 : true}]->(n1);
+MERGE ( :L5{id:7})-[r0 :T4{id:8}]-({id:9})-[r1 :T3{k63:false, id:10}]-({id:11}) MERGE ( :L5{id:12})-[ :T4{id:13}]-({k34:'l', id:14})-[ :T3{id:15}]-(n0{id:16}) DETACH DELETE n0  RETURN 1 AS a0;
+MERGE ( : L5 { id : 7 } ) - [ r0 : T4 { id : 8 } ] - ( { id : 9 } ) - [ r1 : T3 { k63 : false , id : 10 } ] - ( { id : 11 } ) WITH * UNWIND [1] as l0 MERGE ( : L5 { id : 12 } ) - [ : T4 { id : 13 } ] - ( { k34 : 'l' , id : 14 } ) - [ : T3 { id : 15 } ] - ( n0 { id : 16 } ) DETACH DELETE n0 WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN DISTINCT 1 AS a0 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+OPTIONAL MATCH (n0)<-[]-({k9:'cix7'}), () CREATE ({k32:isEmpty(NULL), id:17}) DETACH DELETE n0  RETURN 1 AS a1, 1 AS a2;
+OPTIONAL MATCH (n0)<-[]-({k9:'cix7'}),() CREATE ( { k32 : isEmpty ( NULL ) , id : 17 } ) DETACH DELETE CASE WHEN TRUE THEN n0 END RETURN 1 AS a1 , 1 AS a2 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE (n0 :L5{id:18})<-[r0 :T4{k68:-1013505817, id:19}]-({id:20}) SET n0.k=NULL CREATE p0=(n4{id:21}) RETURN (n0.k28) AS a0, 1 AS a1 LIMIT 0;
+MERGE ( n0 : L5 { id : 18 } ) < - [ r0 : T4 { k68 : -1013505817 , id : 19 } ] - ( { id : CASE WHEN FALSE THEN NULL ELSE 20 END } ) SET n0 . k = NULL CREATE p0 = ( n4 { id : 21 } ) RETURN CASE WHEN TRUE THEN ( n0 . k28 ) END AS a0 , 1 AS a1 LIMIT 0 ;

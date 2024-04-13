@@ -1,0 +1,22 @@
+-- Time: 2024/04/11 13:54:44
+-- Database: janusgraph_database553
+-- Database version: composite
+-- seed value: 1712812407077
+CREATE (n0 :L0{k0 : -1988548380, k1 : false, k2 : false, k3 : 'L', k4 : true, id : 0});
+CREATE (n0 :L3{k19 : 'AZPH', k18 : 'H', k20 : -1259554194, k22 : true, id : 1, k21 : 'i'});
+CREATE (n0 {id : 2});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T4{k60 : false, k62 : 1970668846, k61 : 'CQ38', k64 : -2143896837, k63 : false, id : 4, k65 : 'N4FGxZcr'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T1{k42 : 788265066, k41 : true, k44 : false, id : 5, k43 : 'Ux', k46 : 1269957778, k45 : -1926873115, k47 : false}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 2}) MERGE(n0)-[r :T4{k60 : false, k62 : 535967457, k61 : 'I', k64 : -2143896837, k63 : true, id : 6, k65 : 'fduH'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T3{k55 : -1007999613, id : 7, k54 : -2125445289, k56 : true, k59 : true, k58 : false}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T4{k60 : false, k62 : -1701553511, k61 : 'q5dD6R', k64 : -899277492, k63 : true, id : 8, k65 : 'tkUupK'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T3{k55 : 1077168128, id : 9, k54 : -928814839, k57 : -1701597495, k56 : false, k59 : false, k58 : true}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T4{k62 : 1454911921, k61 : '1', k64 : -1412805441, id : 10, k65 : 'prTE8XnMc'}]->(n1);
+WITH DISTINCT startNode(relationships(NULL)[toIntegerOrNull(abs(NULL))]) AS a0 SET a0.k=NULL CREATE ({id:11}), ({id:12}) RETURN 1 AS a1;
+WITH DISTINCT startNode ( relationships ( NULL ) [ toIntegerOrNull ( abs ( NULL ) ) ] ) AS a0 WITH * SET a0 . k = NULL WITH * CREATE ( { id : 11 } ) CREATE ( { id : 12 } ) RETURN 1 AS a1 ORDER BY 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+UNWIND ['Q', NULL] AS a0 OPTIONAL MATCH p0=(n0)-[]-(n1)-[]-( :L0), (n2{k21:NULL})<-[*..2]-(n0) MERGE (n3 :L3{id:13}) RETURN 1 AS a1;
+UNWIND [ 'Q' , NULL ] AS a0 WITH * OPTIONAL MATCH p0=(n0)-[]-(n1)-[]-( :L0),(n2),()<-[*..2]-(),(n0) WHERE exists((n2{k21:NULL})<-[*..2]-(n0)) MERGE ( n3 : L3 { id : CASE WHEN TRUE THEN 13 END } ) RETURN 1 AS a1 ;

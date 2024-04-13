@@ -1,0 +1,23 @@
+-- Time: 2024/04/11 14:33:21
+-- Database: janusgraph_database1074
+-- Database version: composite
+-- seed value: 1712812407599
+CREATE (n0 :L1{k5 : false, id : 0, k6 : false, k7 : '4g8', k8 : true, k9 : -1771721371});
+CREATE (n0 {id : 1});
+CREATE (n0 :L1{k5 : true, id : 2, k6 : true, k7 : 'LM5', k8 : true, k9 : -452387858});
+CREATE (n0 :L3{k17 : 2140866448, k19 : 'cHeZgJ', k18 : false, k20 : 'c', id : 3});
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T0{k31 : -144720885, k33 : false, id : 4, k32 : true, k35 : 1088559184, k34 : 2123795432}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T1{k39 : false, k40 : true, id : 5, k37 : 'yRGOwpTF', k36 : true}]->(n1);
+UNWIND [x IN [NULL, properties(CASE WHEN true THEN NULL END)]] AS a0 MATCH (n0), (n0) DETACH DELETE n0  RETURN 1 AS a1, a0 AS a2 LIMIT 1;
+UNWIND [ x IN [ NULL , properties ( CASE WHEN true THEN NULL END ) ] ] AS a0 MATCH ( n0 ) ,( n0 ) OPTIONAL MATCH ()-[:TYPE]-() DETACH DELETE CASE WHEN FALSE THEN NULL ELSE n0 END WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN 1 AS a1 , a0 AS a2 LIMIT 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH p0=(n0) WHERE true SET n0.k='v47Z' DETACH DELETE p0  RETURN 1 AS a0;
+MATCH p0=(n0) WHERE true WITH * SET n0 . k = 'v47Z' WITH * DETACH DELETE p0 WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN CASE WHEN FALSE THEN NULL ELSE 1 END AS a0 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH () WHERE exists(()-[]-()) UNWIND [true, true] AS a2 MERGE p0=( :L1{k8:true, id:6})<-[r0 :T1{k39:false, id:7}]-(n0 :L3{id:8})<-[r1 :T0{id:9}]-(n1{id:10}) RETURN n1 AS a3 ORDER BY 1182835346;
+MATCH () WHERE exists ( ( ) - [ ] - ( ) ) UNWIND [ true , CASE WHEN TRUE THEN true END ] AS a2 MERGE p0 = ( : L1 { k8 : true , id : 6 } ) < - [ r0 : T1 { k39 : CASE WHEN FALSE THEN NULL ELSE false END , id : 7 } ] - ( n0 : L3 { id : 8 } ) < - [ r1 : T0 { id : 9 } ] - ( n1 { id : 10 } ) RETURN n1 AS a3 ORDER BY 1182835346 SKIP 1 ;

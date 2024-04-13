@@ -1,0 +1,13 @@
+-- Time: 2024/04/11 14:15:02
+-- Database: janusgraph_database827
+-- Database version: composite
+-- seed value: 1712812407351
+CREATE (n0 :L2{k16 : 'pA', k19 : true, k20 : 'w9m3', id : 0, k15 : -506785723, k14 : false});
+CREATE (n0 :L4{k28 : 'p', k27 : '0', k29 : 'X', k31 : -1936636656, k30 : true, k33 : false, id : 1});
+CREATE (n0 :L1{k11 : 'A', id : 2, k10 : 985215585, k7 : 752600311, k13 : 'BJypDo7cD', k8 : false, k12 : 'iin0', k9 : true});
+CREATE (n0 :L3{k22 : -992147606, id : 3, k23 : 1642661294, k26 : 'D', k25 : false});
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T3{k60 : false, k62 : true, k61 : '5iVjA', k63 : 891247306, id : 4, k58 : 'm'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T2{k51 : false, k53 : false, k52 : 2007641348, k55 : -485886921, id : 5, k54 : true, k57 : false, k56 : 'Nw'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T2{k51 : false, k53 : false, k52 : -1743717110, k55 : 777198006, id : 6, k54 : true, k57 : false}]->(n1);
+WITH * SKIP 1 WHERE ('q' STARTS WITH 'g') OPTIONAL MATCH ()-[r0]-(n0), () WHERE false REMOVE n0.k2 RETURN 1 AS a0;
+WITH * SKIP 1 WHERE ( 'q' STARTS WITH 'g' ) WITH * OPTIONAL MATCH ()-[r0]-(n0),() WHERE false WITH * CALL{WITH *REMOVE n0 . k2 } RETURN 1 AS a0 SKIP 1 LIMIT 1 ;

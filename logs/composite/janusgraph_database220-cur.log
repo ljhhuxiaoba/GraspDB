@@ -1,0 +1,17 @@
+-- Time: 2024/04/11 13:30:08
+-- Database: janusgraph_database220
+-- Database version: composite
+-- seed value: 1712812406743
+CREATE (n0 :L4{k28 : 2062443371, k27 : false, k29 : true, k31 : -1964413965, id : 0, k32 : 'poY', k26 : false});
+CREATE (n0 {id : 1});
+CREATE (n0 :L4{k28 : -1319553239, k27 : false, k29 : false, k31 : 476945826, k30 : 40051743, id : 2, k32 : '6', k26 : false});
+CREATE (n0 :L6{k39 : -62597970, k40 : 'X', k42 : 1610672853, k41 : false, id : 3, k43 : 'E'});
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T2{k61 : 'p', id : 4, k57 : -112003364, k59 : true, k58 : true}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T0{k49 : 'N', id : 5, k46 : 'rm', k45 : true, k47 : 1032070567}]->(n1);
+MATCH ()<-[r0]-(), (n1)-[r0]-() REMOVE n1.k2 CREATE ({id:6}) RETURN *, NULL AS a1;
+MATCH ( ) < - [ r0 ] - ( ) ,( n1 ) - [ r0 ] - ( ) OPTIONAL MATCH ()-[:TYPE]-() REMOVE n1 . k2 CREATE ( { id : 6 } ) RETURN * , NULL AS a1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+CREATE ({id:7}), p0=(n0{id:8})<-[ :T2{k57:NULL, id:9}]-({id:10}) CREATE ( :L6{id:11})<-[ :T2{id:12}]-({id:13}), ({k44:NULL, id:14})<-[ :T2{id:15}]-({id:16}) CREATE ({id:17}), p1=({id:18}) RETURN 1 AS a0;
+CREATE ( { id : 7 } ) CREATE p0 = ( n0 { id : 8 } ) < - [ : T2 { k57 : NULL , id : 9 } ] - ( { id : 10 } ) WITH * UNWIND [1] as l0 CREATE ( : L6 { id : 11 } ) < - [ : T2 { id : CASE WHEN TRUE THEN 12 END } ] - ( { id : 13 } ) CREATE ( { k44 : NULL , id : 14 } ) < - [ : T2 { id : 15 } ] - ( { id : 16 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() CREATE ( { id : 17 } ) CREATE p1 = ( { id : 18 } ) RETURN 1 AS a0 ;

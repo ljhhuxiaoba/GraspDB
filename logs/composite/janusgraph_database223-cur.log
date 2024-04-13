@@ -1,0 +1,16 @@
+-- Time: 2024/04/11 13:30:21
+-- Database: janusgraph_database223
+-- Database version: composite
+-- seed value: 1712812406746
+CREATE (n0 :L4{k28 : true, k27 : 1385866255, k29 : false, k31 : true, k30 : -1761643195, id : 0, k32 : 'b', k26 : 'I'});
+CREATE (n0 :L6{k39 : false, k38 : -95555220, k40 : -1362907823, k42 : false, k41 : 873645977, id : 1});
+CREATE (n0 :L2{k17 : 1204665926, k16 : 699573466, k18 : true, id : 2, k15 : true, k14 : -1352828654});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T2{k60 : false, id : 4, k57 : 'N', k56 : -1159325341, k59 : 'F', k58 : 856139672}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T3{k62 : 393726159, k61 : false, k64 : true, id : 5, k65 : '8'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T1{k53 : -61054861, k52 : -939245889, k55 : true, id : 6, k54 : true}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T0{k44 : true, id : 7, k43 : false, k46 : 'VzAyPwj', k45 : -766488599, k48 : true, k47 : false}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T0{k49 : false, k44 : true, id : 8, k43 : false, k46 : 'W', k45 : 148862926}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T2{k60 : true, id : 9, k57 : 'FogQvtnB', k56 : -704048920, k58 : -906872977}]->(n1);
+OPTIONAL MATCH (n0 :L4)-[r0]-({k30:-244990415})-[]->(), ()<-[*0..]-(n1)-[r1 :T2{k60:true}]-() MERGE ({id:10}) MERGE ({id:11})-[r2 :T3{id:12}]-(n2{id:13})-[r3 :T1{id:14}]->({id:15}) RETURN DISTINCT 1 AS a0;
+OPTIONAL MATCH (n0:L4),()<-[r0]-(),(nn0),()-[m1]->(),(nn2),()<-[*0..]-(n1)-[r1 :T2{k60:true}]-() WHERE exists((n0)-[r0]-(nn0{k30:-244990415})-[m1]->(nn2)) WITH * MERGE ( { id : 10 } ) MERGE ( { id : 11 } ) - [ r2 : T3 { id : 12 } ] - ( n2 { id : 13 } ) - [ r3 : T1 { id : 14 } ] - > ( { id : 15 } ) RETURN DISTINCT 1 AS a0 SKIP 1 ;

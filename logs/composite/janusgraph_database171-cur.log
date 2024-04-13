@@ -1,0 +1,12 @@
+-- Time: 2024/04/11 13:26:30
+-- Database: janusgraph_database171
+-- Database version: composite
+-- seed value: 1712812406653
+CREATE (n0 :L0{k0 : -910837841, k1 : 491328635, k2 : 'U', k3 : 'r', k4 : '9vo6P6QY', k5 : 524025811, id : 0, k6 : 'A'});
+CREATE (n0 {id : 1});
+CREATE (n0 :L2{k17 : false, k16 : -1696845202, id : 2, k15 : 'SK', k14 : 'n8FuDNc1'});
+CREATE (n0 :L2{k16 : -1659383619, id : 3, k13 : 'w', k15 : '8', k14 : 't'});
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T2{k49 : 'L', k51 : true, k50 : -487888215, k52 : -42841436, id : 4, k48 : false}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T0{k39 : false, k38 : 'RIHV5gN', id : 5, k35 : false, k37 : false}]->(n1);
+WITH * WHERE true MERGE (n0 :L2{id:6}) MERGE p0=(n1{id:7})-[r0 :T2{id:8}]-({id:9}) RETURN 1 AS a0, NULL AS a1;
+WITH * WHERE true MERGE ( n0 : L2 { id : 6 } ) MERGE p0 = ( n1 { id : 7 } ) - [ r0 : T2 { id : 8 } ] - ( { id : 9 } ) RETURN 1 AS a0 , NULL AS a1 LIMIT 1 ;

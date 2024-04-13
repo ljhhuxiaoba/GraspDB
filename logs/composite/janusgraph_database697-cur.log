@@ -1,0 +1,12 @@
+-- Time: 2024/04/11 14:05:24
+-- Database: janusgraph_database697
+-- Database version: composite
+-- seed value: 1712812407221
+CREATE (n0 {id : 0});
+CREATE (n0 :L3{k19 : '9L', k18 : true, k20 : -1713684425, k22 : true, id : 1, k21 : false, k23 : -203382252});
+CREATE (n0 {id : 2});
+CREATE (n0 :L2{k17 : 'ki3ko3', k16 : 'T', id : 3, k13 : -1003007374, k15 : 183015139, k14 : -1515633362});
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T4{k55 : 'E', id : 4, k54 : 'j', k57 : 'w', k56 : false, k58 : true}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T3{k49 : 'qu', k51 : 'PTj', k50 : 1640799533, k53 : 'iyNC6ykX', k52 : false, id : 5}]->(n1);
+MERGE (n0{id:6}) SET n0.k='a' MERGE (n1{id:7})<-[r0 :T3{id:8}]-(n2 :L3{id:9}) RETURN n1 AS a0;
+MERGE ( n0 { id : 6 } ) SET n0 . k = 'a' MERGE ( n1 { id : 7 } ) < - [ r0 : T3 { id : 8 } ] - ( n2 : L3 { id : 9 } ) RETURN n1 AS a0 ;

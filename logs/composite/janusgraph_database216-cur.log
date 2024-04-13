@@ -1,0 +1,22 @@
+-- Time: 2024/04/11 13:29:50
+-- Database: janusgraph_database216
+-- Database version: composite
+-- seed value: 1712812406739
+CREATE (n0 :L5{k28 : '9LzydAq', k29 : 'iz', k31 : -211026413, k30 : 2138744608, id : 0, k32 : -634963992});
+CREATE (n0 :L0{k0 : 'c9RR2Ok', k1 : true, k2 : 'OpoU57x', k3 : 'e', k4 : 1700739279, k5 : -1829356371, id : 1});
+CREATE (n0 :L2{k11 : 'X', id : 2, k13 : -1197894128, k12 : -780696846, k15 : true, k14 : 'w'});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T0{k39 : 1830386642, k38 : 927207314, k40 : 'xWNJ9kJ', k42 : true, k41 : true, k44 : 1190461706, id : 4, k43 : true}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T1{k49 : 'i', id : 5, k46 : -227840650, k48 : -1633802678, k47 : -233819885}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T5{k71 : -1300017828, k70 : false, k72 : 'h', id : 6, k68 : 'G', k69 : true}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T4{k62 : 273896507, k64 : 'eg', k63 : 1649233550, k66 : true, id : 7, k65 : true, k67 : 1961788592}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T1{k49 : 'KEvz5a', id : 8, k46 : 1097414886, k45 : 94196548, k48 : -1978709480, k47 : 605254670}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T1{k49 : 'm', id : 9, k46 : -904206496, k45 : 94196548, k48 : -597569016, k47 : 680998281}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T3{k61 : 562595689, id : 10, k57 : 'L', k59 : -1183967037}]->(n1);
+UNWIND NULL AS a0 MERGE (n0 :L5{k28:'c', id:11})-[r0 :T1{id:12}]-(n1{id:13}) SET n1.k=(r0.k49) RETURN DISTINCT (n0.k30) AS a1 UNION MERGE (n0{k1:true, id:14}) REMOVE n0.k2 REMOVE n0.k2 RETURN 1 AS a1;
+UNWIND NULL AS a0 MERGE ( n0 : L5 { k28 : 'c' , id : 11 } ) - [ r0 : T1 { id : 12 } ] - ( n1 { id : 13 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() SET n1 . k = ( r0 . k49 ) WITH * RETURN DISTINCT ( CASE WHEN FALSE THEN NULL ELSE n0 . k30 END ) AS a1 UNION MERGE ( n0 { k1 : true , id : 14 } ) FOREACH(f in [1]|REMOVE n0 . k2 ) WITH * OPTIONAL MATCH ()-[:TYPE]-() REMOVE n0 . k2 WITH * RETURN 1 AS a1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE (n0{id:15}) CREATE ( :L0{k3:'N', id:16})<-[r0 :T5{id:17}]-({id:18})<-[r1 :T1{id:19}]-(n1{id:20}) CREATE p0=(n2 :L0{id:21}) RETURN 1 AS a0, n0 AS a1 LIMIT 1;
+MERGE ( n0 { id : CASE WHEN TRUE THEN 15 END } ) WITH * CREATE (n1{id:20})-[ r1 : T1 { id : CASE WHEN TRUE THEN 19 END } ] ->({id:18})-[ r0 : T5 { id : 17 } ] ->( : L0 { k3 : 'N' , id : 16 } ) CREATE p0 = ( n2 : L0 { id : 21 } ) RETURN DISTINCT 1 AS a0 , CASE WHEN FALSE THEN NULL ELSE n0 END AS a1 LIMIT 1 ;

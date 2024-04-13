@@ -1,0 +1,13 @@
+-- Time: 2024/04/11 14:35:08
+-- Database: janusgraph_database1098
+-- Database version: composite
+-- seed value: 1712812407623
+CREATE (n0 :L4{k27 : -1688746167, k29 : -103944821, k31 : 'q', k30 : 'u', id : 0, k26 : 'g', k25 : true});
+CREATE (n0 {id : 1});
+CREATE (n0 :L1{k5 : false, id : 2, k6 : 't', k10 : -1428653295, k7 : 'C', k8 : true, k9 : false});
+CREATE (n0 :L2{k17 : 'NF', k16 : false, id : 3, k13 : 912974843, k12 : -718901369, k15 : -413098732, k14 : -1082948998});
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T0{k50 : 1148954262, k44 : -246499522, id : 4, k46 : -280874000, k45 : 'e', k48 : 'x', k47 : -63149818}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T2{k60 : 339617963, id : 5, k57 : 'Wodc', k56 : false, k59 : false, k58 : '7IQ'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T0{k50 : -1718939089, k44 : -634640033, id : 6, k46 : -640778292, k45 : 'oXSVgKW', k48 : 'sqAk', k47 : -1062448231}]->(n1);
+UNWIND [true, (false IS NULL)] AS a0 MERGE (n0 :L1{id:7}) SET n0.k='Ss' RETURN n0 AS a1, a0 AS a2;
+UNWIND [ true , ( false IS NULL ) ] AS a0 MERGE ( n0 : L1 { id : 7 } ) SET n0 . k = 'Ss' RETURN n0 AS a1 , a0 AS a2 ;

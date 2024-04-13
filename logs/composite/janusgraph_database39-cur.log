@@ -1,0 +1,23 @@
+-- Time: 2024/04/11 13:16:43
+-- Database: janusgraph_database39
+-- Database version: composite
+-- seed value: 1712812406520
+CREATE (n0 :L6{k39 : 1556870942, k38 : 'AU', id : 0, k35 : 1741281500, k37 : true});
+CREATE (n0 {id : 1});
+CREATE (n0 :L2{k16 : 'o8nQ7mK', id : 2, k13 : false, k12 : -1508782471, k15 : true, k14 : false});
+CREATE (n0 :L5{k29 : 'xFu', k31 : true, k30 : '49bNk3E', k33 : 'n', id : 3, k32 : -1305994788, k34 : 1978262125});
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T1{k49 : 'AYC3XxwM', k51 : 'OJ', id : 4, k46 : '0', k48 : 701008317, k47 : true}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T4{k64 : false, k63 : '6j', k66 : 779473857, id : 5, k67 : -1499679409}]->(n1);
+WITH NULL AS a0 LIMIT 1 CREATE (n0{id:6})<-[ :T1{k47:true, id:7}]-(n1{id:8}) CREATE ( :L6{k35:(NULL+-2085071824), id:9}), ( :L6{id:10})<-[ :T1{k47:false, id:11}]-(n2{id:12}) RETURN a0 AS a1;
+WITH NULL AS a0 LIMIT 1 UNWIND [NULL] as l0 CREATE ( n0 { id : CASE WHEN FALSE THEN NULL ELSE 6 END } ) < - [ : T1 { k47 : true , id : 7 } ] - ( n1 { id : 8 } ) CREATE ( : L6 { k35 : ( NULL + -2085071824 ) , id : 9 } ) CREATE (n2{id:12})-[ : T1 { k47 : false , id : 11 } ] ->( : L6 { id : CASE WHEN FALSE THEN NULL ELSE 10 END } ) RETURN a0 AS a1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (n0), ()-[ :T4{k67:NULL}]-( :L5{k34:NULL}) CREATE ({k15:CASE WHEN NULL THEN true END, id:13}), (n1{id:14}) CREATE (n2{id:15}), (n3{id:16}) RETURN n0 AS a0;
+MATCH (n0),(nn0),()<-[m1:T4{k67:NULL}]-(),(nn2:L5) WHERE exists((nn0)-[m1]-(nn2{k34:NULL})) CREATE ( { k15 : CASE WHEN NULL THEN true END , id : 13 } ) CREATE ( n1 { id : 14 } ) CREATE ( n2 { id : 15 } ) CREATE ( n3 { id : 16 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN CASE WHEN FALSE THEN NULL ELSE n0 END AS a0 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+CREATE p0=({id:17})<-[ :T4{id:18}]-({k31:NULL, id:19}), ({k38:'X', id:20}) CREATE p1=({id:21})<-[ :T4{id:22}]-({id:23}) CREATE ({id:24})<-[r0 :T1{id:25}]-(n0{id:26}) RETURN 1 AS a0;
+CREATE p0=({k31:NULL, id:19})-[ : T4 { id : 18 } ] ->( { id : 17 } ) CREATE ( { k38 : 'X' , id : 20 } ) WITH * UNWIND 1 as l0 CREATE p1 = ( { id : 21 } ) < - [ : T4 { id : 22 } ] - ( { id : 23 } ) CREATE ( { id : 24 } ) < - [ r0 : T1 { id : 25 } ] - ( n0 { id : 26 } ) WITH * UNWIND [1] as l1 RETURN CASE WHEN TRUE THEN 1 END AS a0 ;

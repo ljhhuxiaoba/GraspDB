@@ -1,0 +1,12 @@
+-- Time: 2024/04/11 14:01:25
+-- Database: janusgraph_database643
+-- Database version: composite
+-- seed value: 1712812407167
+CREATE (n0 {id : 0});
+CREATE (n0 {id : 1});
+CREATE (n0 {id : 2});
+CREATE (n0 :L1{k11 : 'P3', id : 3, k6 : 'h', k10 : -2095233132, k7 : '9WJOc8V5', k8 : true, k9 : 1486652380});
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T0{k39 : 1654404801, k38 : true, k40 : 823738330, k42 : -584287253, k41 : -1548458033, k44 : 1518550377, id : 4}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T4{k66 : 'tO', id : 5, k65 : -1850777244, k68 : -1505554867, k67 : 1446736335, k69 : 1770018747}]->(n1);
+CREATE p0=({id:6}), (n0{id:7}) MERGE (n1{id:8}) REMOVE n1.k2 RETURN -966075768 AS a0, n1 AS a1;
+CREATE p0 = ( { id : 6 } ) CREATE ( n0 { id : CASE WHEN TRUE THEN 7 END } ) WITH * UNWIND [NULL] as l0 MERGE ( n1 { id : 8 } ) WITH * UNWIND [NULL] as l1 REMOVE n1 . k2 RETURN -966075768 AS a0 , n1 AS a1 ;

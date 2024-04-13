@@ -1,0 +1,18 @@
+-- Time: 2024/04/11 14:24:22
+-- Database: janusgraph_database953
+-- Database version: composite
+-- seed value: 1712812407478
+CREATE (n0 :L6{k31 : true, k33 : true, id : 0, k32 : false, k34 : '2vU7L'});
+CREATE (n0 {id : 1});
+CREATE (n0 {id : 2});
+CREATE (n0 :L5{k28 : true, k27 : 86710280, k29 : false, id : 3, k26 : '9B', k25 : 'XfBZp'});
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T1{k42 : false, k44 : false, id : 4, k43 : 'o', k46 : -1431341446, k45 : 'q', k48 : true, k47 : '3'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 2}) MERGE(n0)-[r :T4{k62 : 'RIE8vB', k61 : 299048379, k64 : false, k63 : 120519670, k66 : false, id : 5, k65 : -186549208}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T4{k62 : 'UxI', k61 : -1832328623, k63 : -633874229, id : 6, k65 : -1919085743}]->(n1);
+OPTIONAL MATCH (n0)-[ :T4{k64:true}]-(), (n0) WHERE isEmpty(NULL) OPTIONAL MATCH (n1{k28:true})-[r0]->() WHERE (false OR isEmpty(relationships(NULL))) REMOVE n1.k2 RETURN 1 AS a0, n0 AS a1;
+OPTIONAL MATCH ( n0 ) - [ : T4 { k64 : true } ] - ( ) ,( n0 ) WHERE isEmpty ( NULL ) WITH * OPTIONAL MATCH ( n1 { k28 : true } ) - [ r0 ] - > ( ) WHERE ( CASE WHEN TRUE THEN false OR isEmpty ( relationships ( NULL ) ) END ) UNWIND [1] as l0 REMOVE n1 . k2 RETURN 1 AS a0 , n0 AS a1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE (n0{id:7})<-[r0 :T1{id:8}]-({id:9}) DETACH DELETE n0  CREATE (n1{id:10})<-[r1 :T1{id:11}]-(n2{id:12}) RETURN 'J' AS a0;
+MERGE ( n0 { id : CASE WHEN FALSE THEN NULL ELSE 7 END } ) < - [ r0 : T1 { id : CASE WHEN TRUE THEN 8 END } ] - ( { id : CASE WHEN FALSE THEN NULL ELSE 9 END } ) DETACH DELETE n0 CREATE ( n1 { id : 10 } ) < - [ r1 : T1 { id : 11 } ] - ( n2 { id : 12 } ) WITH * RETURN 'J' AS a0 ;

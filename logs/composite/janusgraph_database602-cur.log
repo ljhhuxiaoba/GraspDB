@@ -1,0 +1,19 @@
+-- Time: 2024/04/11 13:58:22
+-- Database: janusgraph_database602
+-- Database version: composite
+-- seed value: 1712812407126
+CREATE (n0 :L5{k38 : -1387952842, k33 : -1904864248, id : 0, k32 : 171939198, k35 : 'fizU', k34 : '2', k37 : 'smrWnv', k36 : false});
+CREATE (n0 :L5{k38 : 1077204559, k33 : 937082850, id : 1, k32 : 180642695, k34 : 'h', k37 : 'dFJp', k36 : false});
+CREATE (n0 :L4{k28 : -984083489, k29 : 1297112055, k31 : true, k30 : false, id : 2, k26 : true, k25 : 1270443056});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T4{k71 : 'YLEd8Y9Q', k70 : false, k73 : 692796120, k72 : true, k75 : 'PnGc', k74 : 1670947438, id : 4, k69 : false}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T2{k62 : -593571126, id : 5, k59 : -1956033398, k58 : 1938548295}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T2{k60 : 1328820393, k62 : -758693666, k61 : 'C', id : 6, k59 : -1060942034, k58 : -1701149239}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T6{k84 : '2', k83 : false, k86 : false, k85 : 'J', id : 7, k87 : 1997797237}]->(n1);
+CREATE (n0 :L5{id:8}), ({id:9})-[ :T6{id:10}]->(n1{k28:length(NULL), id:11})-[r0 :T2{id:12}]->(n2{id:13}) CREATE ( :L5{k36:(false AND (NULL AND true)), id:14}) MERGE (n3{id:15})-[r1 :T2{k61:'ix55CNwyR', id:16}]->(n4{id:17})-[r2 :T4{k69:true, id:18}]-({id:19}) RETURN 'a' AS a0 ORDER BY NULL, a0;
+CREATE ( n0 : L5 { id : 8 } ) CREATE ( { id : CASE WHEN TRUE THEN 9 END } ) - [ : T6 { id : 10 } ] - > ( n1 { k28 : CASE WHEN FALSE THEN NULL ELSE length ( NULL ) END , id : 11 } ) - [ r0 : T2 { id : 12 } ] - > ( n2 { id : CASE WHEN TRUE THEN 13 END } ) WITH * CREATE ( : L5 { k36 : ( false AND ( NULL AND true ) ) , id : 14 } ) MERGE ( n3 { id : 15 } ) - [ r1 : T2 { k61 : CASE WHEN FALSE THEN NULL ELSE 'ix55CNwyR' END , id : CASE WHEN TRUE THEN 16 END } ] - > ( n4 { id : 17 } ) - [ r2 : T4 { k69 : true , id : 18 } ] - ( { id : CASE WHEN FALSE THEN NULL ELSE 19 END } ) RETURN 'a' AS a0 ORDER BY NULL, a0 SKIP 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+OPTIONAL MATCH ({k36:(NULL AND (NULL CONTAINS NULL))}) WHERE false CREATE ( :L5{k38:NULL, id:20}) MERGE ({id:21}) RETURN 1 AS a0;
+OPTIONAL MATCH ( { k36 : ( NULL AND ( NULL CONTAINS NULL ) ) } ) WHERE false CREATE ( : L5 { k38 : NULL , id : 20 } ) MERGE ( { id : 21 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN 1 AS a0 ;

@@ -1,0 +1,27 @@
+-- Time: 2024/04/11 13:21:15
+-- Database: janusgraph_database100
+-- Database version: composite
+-- seed value: 1712812406582
+CREATE (n0 :L0{k0 : 580172388, k1 : false, k2 : 'f8mni', k3 : true, k4 : 'MBv', id : 0});
+CREATE (n0 :L2{k17 : 'cnc', k16 : 'hg9sYmnHe', id : 1, k13 : 'e0F5', k12 : -1746170013, k15 : false, k14 : true});
+CREATE (n0 :L3{k19 : 'noDH', k18 : false, k20 : 'uz', k22 : 919799378, id : 2, k21 : '4w', k24 : -1146451952});
+CREATE (n0 :L6{k39 : true, k38 : false, k40 : true, k41 : -690976129, id : 3, k35 : 'hO2Chy21C', k37 : '0', k36 : 1168177460});
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T5{k71 : true, k73 : 'Z', k72 : 1946314577, k74 : 'd', id : 4, k76 : false}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T1{k49 : '5', k51 : 'R', k50 : 'Nt1', k52 : -1592591127, id : 5, k48 : 'j'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T1{k49 : '5', k51 : 'xValu', k50 : 'zVBWS8KC2', k52 : 315971677, id : 6, k48 : 'Z4ziVk'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T4{k70 : 'L', k66 : -842300896, id : 7, k68 : false, k67 : true, k69 : false}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T0{k44 : 'm', id : 8, k43 : 525327368, k46 : -1830104877, k45 : 37967196, k47 : 265357333}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T0{k42 : false, k44 : '44W', id : 9, k43 : -1832255408, k46 : -533127877, k45 : 37967196}]->(n1);
+MATCH ()<-[ :T0{k42:NULL}]-(n0)-[r0 :T1{k52:toIntegerList([substring('CPw8S', toIntegerOrNull(abs(-488438608)), toIntegerOrNull(abs(646394312)))])[toIntegerOrNull(abs((1022315945/-1668516081)))]}]-(n1) OPTIONAL MATCH ()<-[ :T0{k44:toStringList([(r0.k52), (r0.k52)])[toIntegerOrNull(abs((r0.k52)))]}]-(n2{k24:(r0.k52)})-[]-(n3) DETACH DELETE n0  RETURN n3 AS a0, n1 AS a1;
+MATCH (nn0),()<-[m1:T0{k42:NULL}]-(),(n0),()<-[r0:T1{k52:toIntegerList([substring('CPw8S', toIntegerOrNull(abs(-488438608)), toIntegerOrNull(abs(646394312)))])[toIntegerOrNull(abs((1022315945/-1668516081)))]}]-(),(n1) WITH * WHERE exists((nn0)<-[m1]-(n0)-[r0]-(n1)) OPTIONAL MATCH ( ) < - [ : T0 { k44 : toStringList ( [ ( r0 . k52 ) , ( r0 . k52 ) ] ) [ toIntegerOrNull ( abs ( ( r0 . k52 ) ) ) ] } ] - ( n2 { k24 : ( CASE WHEN TRUE THEN r0 . k52 END ) } ) - [ ] - ( n3 ) WHERE TRUE DETACH DELETE n0 RETURN n3 AS a0 , CASE WHEN FALSE THEN NULL ELSE n1 END AS a1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+WITH * OPTIONAL MATCH (n0)-[r0 :T0{k44:'d'}]-(n1{k37:toStringList(CASE WHEN false THEN [[]] END)[toIntegerOrNull(abs((r0.k46)))]}) MERGE p0=(n2{id:10}) RETURN p0 AS a0 UNION ALL UNWIND NULL AS a0 CREATE ( :L0{id:11}) CREATE ({id:12}) RETURN NULL AS a0;
+WITH * WITH * OPTIONAL MATCH ( n0 ) - [ r0 : T0 { k44 : 'd' } ] - ( n1 { k37 : toStringList ( CASE WHEN TRUE THEN CASE WHEN false THEN [ [ ] ] END END ) [ toIntegerOrNull ( CASE WHEN FALSE THEN NULL ELSE abs ( ( r0 . k46 ) ) END ) ] } ) OPTIONAL MATCH ()-[:TYPE]-() MERGE p0 = ( n2 { id : 10 } ) WITH * UNWIND 1 as l0 RETURN p0 AS a0 UNION ALL UNWIND NULL AS a0 CREATE ( : L0 { id : 11 } ) WITH * UNWIND 1 as l1 CREATE ( { id : 12 } ) WITH * RETURN NULL AS a0 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+CREATE (n0{id:13})-[ :T0{id:14}]->(n1 :L6{id:15})-[r0 :T1{id:16}]->( :L2{id:17}) CREATE ( :L2{k16:NULL, id:18})<-[ :T0{id:19}]-({id:20})-[r1 :T4{id:21}]->(n2 :L3{id:22}), (n3{id:23})-[ :T0{id:24}]->({id:25})<-[ :T1{id:26}]-({id:27}) CREATE ({id:28}) RETURN NULL AS a0;
+CREATE ( n0 { id : 13 } ) - [ : T0 { id : 14 } ] - > ( n1 : L6 { id : 15 } ) - [ r0 : T1 { id : 16 } ] - > ( : L2 { id : 17 } ) CREATE ( : L2 { k16 : NULL , id : 18 } ) < - [ : T0 { id : 19 } ] - ( { id : 20 } ) - [ r1 : T4 { id : 21 } ] - > ( n2 : L3 { id : 22 } ) CREATE (n3{ id : 23 } )CREATE (n3)- [ : T0 { id : 24 } ] - > ( { id : 25 } ) < - [ : T1 { id : 26 } ] - ( { id : 27 } ) WITH * CREATE ( { id : 28 } ) RETURN NULL AS a0 ;

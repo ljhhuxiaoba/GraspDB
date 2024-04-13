@@ -1,0 +1,12 @@
+-- Time: 2024/04/11 13:19:06
+-- Database: janusgraph_database71
+-- Database version: composite
+-- seed value: 1712812406552
+CREATE (n0 :L0{k0 : -1360092529, k1 : 'k5pf5t6L', k2 : 1490458219, k4 : 't', id : 0});
+CREATE (n0 {id : 1});
+CREATE (n0 :L3{k16 : false, k19 : -1228333741, k18 : -447436040, id : 2, k15 : 'Rd'});
+CREATE (n0 :L1{k5 : '1', id : 3, k7 : false, k8 : true, k9 : 'MCw'});
+MATCH (n0 {id : 3}), (n1 {id : 2}) MERGE(n0)-[r :T4{k62 : 552993851, k64 : -1412714622, k63 : 1990977245, id : 4, k65 : 'ERm'}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T5{k71 : 'XIWA', k70 : true, k72 : 'CkEKWw', id : 5, k67 : 'FIu71x', k69 : 1534518308}]->(n1);
+WITH * MATCH (n1)-[]-()-[*0..1]->(n2), p1=(n0)-[]-(n3 :L1)-[r0]-(n0) CREATE ( :L3{k18:NULL, id:6})<-[ :T4{k63:NULL, id:7}]-({id:8}), (n4{k21:(n3.k9), id:9}) RETURN *;
+WITH * MATCH (n1),()<-[m0]-(),(nn1),()-[*0..1]->(),(n2),p1=(n0)-[]-(n3 :L1)-[r0]-(n0) WITH * WHERE exists((n1)-[m0]-(nn1)-[*0..1]->(n2)) CREATE ( : L3 { k18 : NULL , id : 6 } ) < - [ : T4 { k63 : NULL , id : 7 } ] - ( { id : 8 } ) CREATE ( n4 { k21 : ( n3 . k9 ) , id : 9 } ) RETURN * ;

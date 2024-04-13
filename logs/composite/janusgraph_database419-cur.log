@@ -1,0 +1,26 @@
+-- Time: 2024/04/11 13:44:49
+-- Database: janusgraph_database419
+-- Database version: composite
+-- seed value: 1712812406942
+CREATE (n0 :L0{k0 : true, k1 : false, k2 : 'TiZxX', k3 : '6cikdO', k4 : 'kd0tLHlys', id : 0});
+CREATE (n0 :L2{k11 : -1407864639, id : 1, k13 : 'LRp6zZ', k12 : 'C0Ah', k15 : 'F', k14 : 'j'});
+CREATE (n0 {id : 2});
+CREATE (n0 :L0{k1 : true, k2 : 'h', k3 : 'Q', k4 : 'T', id : 3});
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T4{k60 : 657269521, k62 : 'Z', k61 : 1833659819, k64 : '0', k63 : 320830809, id : 4, k59 : false, k58 : 2076779938}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T1{k42 : 'b7VNfi', k41 : 'v', k44 : 'x', id : 5, k43 : true, k45 : true}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T2{k51 : true, k50 : false, id : 6, k46 : '5', k48 : -2126039063, k47 : -1351580550}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T1{k42 : 'o', k41 : 'WDg', k44 : 'N6E', id : 7, k43 : true, k45 : false}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T0{k38 : 1707232841, k40 : 'r', id : 8, k35 : -1737637929, k37 : -951198642, k36 : 'Di'}]->(n1);
+CREATE p0=({k12:elementId(relationships(NULL)[toIntegerOrNull(abs(round(784877233)))]), id:9}) CREATE ({id:10}) CREATE p1=(n0{id:11})<-[r0 :T0{k39:738111057, id:12}]-({id:13}), (n1{id:14})<-[r1 :T0{id:15}]-({id:16}) RETURN NULL AS a0;
+CREATE p0 = ( { k12 : elementId ( relationships ( NULL ) [ toIntegerOrNull ( CASE WHEN FALSE THEN NULL ELSE abs ( round ( CASE WHEN FALSE THEN NULL ELSE 784877233 END ) ) END ) ] ) , id : 9 } ) WITH * UNWIND 1 as l0 CREATE ( { id : 10 } ) CREATE (n0{ id : 11 } )CREATE (n0)< - [ r0 : T0 { k39 : 738111057 , id : 12 } ] - ( { id : 13 } ) CREATE ( n1 { id : 14 } ) < - [ r1 : T0 { id : 15 } ] - ( { id : 16 } ) WITH * RETURN DISTINCT NULL AS a0 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+UNWIND [(n0)<-[]-(n1)|isEmpty(CASE WHEN true THEN [] END)] AS a0 MATCH (n0)<-[]-(n0) SET n0.k=NULL RETURN properties(n0) AS a1, n0 AS a2;
+UNWIND [ ( n0 ) < - [ ] - ( n1 ) | isEmpty ( CASE WHEN true THEN [ ] END ) ] AS a0 MATCH (n0),()<-[m0]-(),(n0) WHERE exists((n0)<-[m0]-(n0)) WITH * SET n0 . k = NULL RETURN properties ( n0 ) AS a1 , n0 AS a2 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE (n0{id:17}) MERGE (n1{id:18}) MERGE ({id:19})-[r0 :T1{id:20}]-(n2{k2:'U', id:21})-[r1 :T0{id:22}]-(n3 :L0{id:23}) RETURN DISTINCT 1 AS a0;
+MERGE ( n0 { id : 17 } ) MERGE ( n1 { id : 18 } ) MERGE ( { id : 19 } ) - [ r0 : T1 { id : 20 } ] - ( n2 { k2 : CASE WHEN TRUE THEN 'U' END , id : 21 } ) - [ r1 : T0 { id : 22 } ] - ( n3 : L0 { id : 23 } ) RETURN DISTINCT 1 AS a0 SKIP 1 ;

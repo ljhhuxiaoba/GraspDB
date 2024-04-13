@@ -1,0 +1,32 @@
+-- Time: 2024/04/11 14:25:51
+-- Database: janusgraph_database973
+-- Database version: composite
+-- seed value: 1712812407498
+CREATE (n0 :L1{k11 : false, id : 0, k6 : 'kSEo5', k10 : 'O', k8 : 'ZsMNPVd', k12 : -731835442, k9 : 'kozY2xN6D'});
+CREATE (n0 {id : 1});
+CREATE (n0 :L3{k19 : false, k20 : 's8ay', k22 : 939604657, id : 2, k21 : 'M', k24 : '7zIkuAmul', k23 : true});
+CREATE (n0 :L5{id : 3, k32 : true, k35 : -1937759956, k34 : true, k37 : false, k36 : 1206264139});
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T4{k70 : 15551452, k64 : false, id : 4, k65 : 'PacoH', k68 : 'M', k67 : 416789854, k69 : 421242339}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T4{k70 : 1768000545, k64 : false, k66 : 'hNJ3qG9Z', id : 5, k68 : 't', k67 : -209158734, k69 : -1622801767}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T5{k71 : 'JaQ2N', k73 : true, k72 : '9Dp5D', k75 : 'DFcWTG', k74 : false, id : 6, k76 : true}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T4{k70 : 1457987929, k64 : true, k66 : 'm', id : 7, k67 : -209158734, k69 : 1041805661}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T2{k51 : 'tE', k53 : false, k52 : 511477973, k55 : false, id : 8, k54 : 'IAUWPnBQi', k57 : -881584806, k56 : 'kcxQl2NM'}]->(n1);
+MERGE (n1{k36:1247827606, id:9})-[ :T4{id:10}]-(n2{k10:'S', id:11})-[r1 :T4{id:12}]-({id:13}) MERGE ( :L1{id:14})-[r2 :T2{id:15}]-(n3{k23:true, id:16})-[r3 :T5{id:17}]->({id:18}) REMOVE n3.k2 RETURN r1 AS a1;
+MERGE ( n1 { k36 : CASE WHEN TRUE THEN 1247827606 END , id : 9 } ) - [ : T4 { id : 10 } ] - ( n2 { k10 : 'S' , id : 11 } ) - [ r1 : T4 { id : CASE WHEN FALSE THEN NULL ELSE 12 END } ] - ( { id : 13 } ) WITH * MERGE pp0=( : L1 { id : 14 } ) - [ r2 : T2 { id : 15 } ] - ( n3 { k23 : true , id : 16 } ) - [ r3 : T5 { id : 17 } ] - > ( { id : 18 } ) REMOVE n3 . k2 WITH * UNWIND [1] as l0 RETURN DISTINCT CASE WHEN TRUE THEN r1 END AS a1 ORDER BY NULL ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH ()-[]->(), ()-[]->() CREATE (n0{id:19})-[ :T5{id:20}]->(n1{k24:substring(NULL, toIntegerOrNull(abs(-1138249196)), toIntegerOrNull(abs(-1282105451))), id:21}) CREATE ( :L3{k20:NULL, id:22})-[ :T5{id:23}]->( :L3{k19:true, id:24}), (n2 :L3{id:25}) RETURN 1 AS a0 LIMIT 0;
+MATCH ()-[*0..0]-( ) - [ ] - > ( ) ,( ) - [ ] - > ( ) WITH * UNWIND 1 as l0 CREATE (n1{k24:substring(NULL, toIntegerOrNull(abs(-1138249196)), toIntegerOrNull(abs(-1282105451))), id:21})<-[ : T5 { id : 20 } ] -( n0 { id : 19 } ) CREATE ( :L3{k19:true, id:24})<-[ : T5 { id : 23 } ] -( : L3 { k20 : NULL , id : 22 } ) CREATE ( n2 : L3 { id : 25 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN 1 AS a0 LIMIT 0 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE (n2{id:26})<-[r1 :T4{id:27}]-({id:28}) CREATE ({k36:(r1.k70), id:29})<-[r2 :T4{k66:(r1.k66), id:30}]-(n3{id:31})<-[ :T4{id:32}]-(n4{k7:reverse(toStringOrNull(false)), id:33}), (n5{id:34})<-[ :T4{id:35}]-(n6{id:36})<-[ :T4{id:37}]-(n7 :L1{id:38}) REMOVE n2.k2 RETURN n2 AS a2, n2 AS a3;
+MERGE ( n2 { id : 26 } ) < - [ r1 : T4 { id : 27 } ] - ( { id : 28 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() CREATE (n4{k7:reverse(toStringOrNull(false)), id:33})-[ : T4 { id : 32 } ] ->(n3{id:31})-[ r2 : T4 { k66 : ( r1 . k66 ) , id : 30 } ] ->( { k36 : ( r1 . k70 ) , id : 29 } ) CREATE (n5{ id : 34 } )CREATE (n5)< - [ : T4 { id : 35 } ] - ( n6 { id : 36 } ) < - [ : T4 { id : 37 } ] - ( n7 : L1 { id : 38 } ) REMOVE n2 . k2 WITH * UNWIND 1 as l0 RETURN n2 AS a2 , n2 AS a3 SKIP 1 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH p0=( :L1)-[]-() OPTIONAL MATCH () MERGE (n0 :L1{id:39})-[r0 :T2{id:40}]-({k22:1142693406, id:41}) RETURN (n0.k7) AS a0, 1 AS a1;
+MATCH p0 = ( : L1 ) - [ ] - ( ) OPTIONAL MATCH ( ) WHERE TRUE MERGE ( n0 : L1 { id : 39 } ) - [ r0 : T2 { id : 40 } ] - ( { k22 : 1142693406 , id : 41 } ) RETURN ( n0 . k7 ) AS a0 , 1 AS a1 ;

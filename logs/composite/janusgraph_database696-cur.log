@@ -1,0 +1,13 @@
+-- Time: 2024/04/11 14:05:19
+-- Database: janusgraph_database696
+-- Database version: composite
+-- seed value: 1712812407220
+CREATE (n0 :L3{k19 : false, k18 : 'v', k20 : 1877890855, id : 0, k21 : -65875492});
+CREATE (n0 :L1{k11 : '9', id : 1, k10 : 'JqQm', k7 : 'UZ', k8 : false, k12 : -904981903, k9 : true});
+CREATE (n0 :L0{k2 : true, k3 : -1255279387, k4 : -2015112330, k5 : false, id : 2, k6 : 88000495});
+CREATE (n0 :L2{k17 : 'n', id : 3, k13 : false, k15 : 99423505, k14 : 'dlbf'});
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T4{k53 : 'A', k55 : -1418216901, id : 4, k54 : 'hf', k57 : 'rw', k56 : 'g463lQj', k59 : true, k58 : false}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T1{k39 : 1479149726, k38 : true, k40 : 'Z', id : 5, k35 : -1267675248, k37 : true, k36 : true}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T1{k39 : -1199090993, k38 : true, k40 : 'uWqu', id : 6, k35 : -1491698921, k37 : true, k36 : true}]->(n1);
+MERGE (n0{id:7}) DETACH DELETE n0  MERGE (n1 :L0{id:8}) RETURN *;
+MERGE ( n0 { id : 7 } ) DETACH DELETE n0 WITH * OPTIONAL MATCH ()-[:TYPE]-() MERGE ( n1 : L0 { id : 8 } ) RETURN * ;

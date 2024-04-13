@@ -1,0 +1,23 @@
+-- Time: 2024/04/11 14:04:52
+-- Database: janusgraph_database690
+-- Database version: composite
+-- seed value: 1712812407214
+CREATE (n0 :L1{k5 : false, id : 0, k6 : -1238411607, k10 : true, k7 : false, k8 : false, k9 : -950286260});
+CREATE (n0 :L3{k17 : 'W', k16 : 1700277176, k18 : true, k20 : true, id : 1});
+CREATE (n0 :L0{k0 : false, k1 : true, k2 : true, k3 : 'b', k4 : true, id : 2});
+CREATE (n0 :L1{k5 : true, id : 3, k6 : -1077475003, k10 : true, k7 : false, k8 : false, k9 : -1081490182});
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T3{k49 : 'ivfIzsd2', k50 : 1126158981, k53 : true, k52 : -1095980327, id : 4, k54 : true}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T3{k49 : 'qW9hCx', k51 : -965924448, k53 : true, k52 : -786341663, id : 5, k54 : false}]->(n1);
+UNWIND toStringList(['L', toStringList([])[toIntegerOrNull(abs(-2138013678))]]) AS a0 OPTIONAL MATCH (n0{k9:-1302790229}) CREATE (n1 :L1{id:6})-[r0 :T3{id:7}]->(n2 :L3{id:8}), (n3 :L1{id:9})-[ :T3{id:10}]->( :L3{id:11}) RETURN DISTINCT n0 AS a1, CASE WHEN NULL THEN NULL END AS a2;
+UNWIND CASE WHEN FALSE THEN NULL ELSE toStringList ( [ 'L' , toStringList ( [ ] ) [ toIntegerOrNull ( abs ( CASE WHEN TRUE THEN -2138013678 END ) ) ] ] ) END AS a0 UNWIND [NULL] as l0 OPTIONAL MATCH (n0)-[*0..0]-( n0 { k9 : -1302790229 } ) CREATE ( n1 : L1 { id : CASE WHEN TRUE THEN 6 END } ) - [ r0 : T3 { id : 7 } ] - > ( n2 : L3 { id : 8 } ) CREATE ( :L3{id:11})<-[ : T3 { id : 10 } ] -( n3 : L1 { id : 9 } ) WITH * UNWIND [NULL] as l1 RETURN DISTINCT n0 AS a1 , CASE WHEN CASE WHEN TRUE THEN NULL END THEN NULL END AS a2 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE p0=({id:12}) CREATE ({id:13}) DETACH DELETE p0  RETURN 1 AS a0;
+MERGE p0 = ( { id : 12 } ) CREATE ( { id : 13 } ) WITH * UNWIND 1 as l0 DETACH DELETE p0 WITH * RETURN 1 AS a0 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+WITH NULL AS a2 WHERE NULL MATCH (), () CREATE (n6{k19:length(NULL), id:14}), (n7 :L0{id:15}) RETURN 1 AS a3;
+WITH NULL AS a2 WHERE NULL MATCH ( ) ,( ) WITH * CREATE ( n6 { k19 : length ( NULL ) , id : CASE WHEN TRUE THEN 14 END } ) CREATE ( n7 : L0 { id : 15 } ) RETURN CASE WHEN FALSE THEN NULL ELSE 1 END AS a3 ;

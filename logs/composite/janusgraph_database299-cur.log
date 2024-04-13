@@ -1,0 +1,29 @@
+-- Time: 2024/04/11 13:35:57
+-- Database: janusgraph_database299
+-- Database version: composite
+-- seed value: 1712812406822
+CREATE (n0 :L3{k19 : true, k20 : -354887448, k22 : -1883512502, id : 0, k21 : -819950268, k24 : 1767975964, k23 : '3Ys4yx2H'});
+CREATE (n0 :L1{k5 : 'w', k11 : 1578693315, id : 1, k10 : 'mhYSfKhq', k7 : 162050758, k8 : false, k9 : 1593201290});
+CREATE (n0 :L1{k5 : 'tr', id : 2, k6 : 'bd', k10 : 'sEAPZ', k8 : false, k9 : -313705233});
+CREATE (n0 :L3{k20 : -984047098, k22 : 1186899054, id : 3, k21 : 582316624, k24 : 1252777918, k23 : 'E'});
+MATCH (n0 {id : 3}), (n1 {id : 2}) MERGE(n0)-[r :T2{k44 : 1150058826, id : 4, k43 : -1626253189, k46 : 'R7c1', k45 : '8Lp', k47 : -2100413875}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T4{k60 : false, k55 : -1426060355, id : 5, k57 : true, k56 : -992253940, k59 : true, k58 : 766937000}]->(n1);
+CREATE (n0 :L1{id:6}), (n1{k23:NULL, id:7}) CREATE (n2 :L3{k19:true, id:8}), ( :L3{k24:((-678427603*-958333737)*1443184482), id:9}) MERGE ( :L3{id:10}) RETURN 1 AS a0, 1 AS a1 ORDER BY NULL, a1;
+CREATE ( n0 : L1 { id : 6 } ) CREATE ( n1 { k23 : NULL , id : 7 } ) CREATE ( n2 : L3 { k19 : true , id : 8 } ) CREATE ( : L3 { k24 : ( ( -678427603 * -958333737 ) * 1443184482 ) , id : 9 } ) MERGE ( : L3 { id : 10 } ) WITH * UNWIND 1 as l0 RETURN 1 AS a0 , 1 AS a1 ORDER BY NULL, a1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+UNWIND NULL AS a0 OPTIONAL MATCH () MERGE ( :L3{id:11})-[r0 :T4{id:12}]-(n0{id:13}) RETURN 1 AS a1, a0 AS a2;
+UNWIND NULL AS a0 OPTIONAL MATCH ( ) MERGE ( : L3 { id : 11 } ) - [ r0 : T4 { id : 12 } ] - ( n0 { id : 13 } ) WITH * UNWIND [1] as l0 RETURN 1 AS a1 , a0 AS a2 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+OPTIONAL MATCH (n0)-[r0]->(), (n1)-[r0]-(n2) DETACH DELETE n0  MERGE (n3 :L1{id:14})-[ :T4{id:15}]->({id:16}) RETURN 1 AS a0, collect(NULL)[toIntegerOrNull(abs(-452988819))] AS a1 UNION OPTIONAL MATCH (n0)-[*..2]-() REMOVE n0.k2 DETACH DELETE n0  RETURN NULL AS a0, 1 AS a1;
+OPTIONAL MATCH ( n0 ) - [ r0 ] - > ( ) ,( n1 ) - [ r0 ] - ( n2 ) DETACH DELETE n0 MERGE ( n3 : L1 { id : 14 } ) - [ : T4 { id : 15 } ] - > ( { id : 16 } ) RETURN DISTINCT 1 AS a0 , collect ( CASE WHEN FALSE THEN NULL ELSE NULL END ) [ toIntegerOrNull ( abs ( -452988819 ) ) ] AS a1 LIMIT 1 UNION OPTIONAL MATCH ( n0 ) - [ * .. 2 ] - ( ) WHERE TRUE WITH * REMOVE n0 . k2 WITH * CALL{WITH *DETACH DELETE CASE WHEN TRUE THEN n0 END } WITH * RETURN NULL AS a0 , 1 AS a1 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+OPTIONAL MATCH (n0) OPTIONAL MATCH (n1{k19:(NULL >= ('olt'+'kM'))})<-[]-() WHERE NULL DETACH DELETE n0  RETURN DISTINCT 1 AS a0, n1 AS a1;
+OPTIONAL MATCH ( n0 ) OPTIONAL MATCH ( n1 { k19 : ( NULL >= ( (''+'olt' )+ (''+'kM' )) ) } ) < - [ ] - ( ) WHERE NULL WITH * DETACH DELETE CASE WHEN TRUE THEN n0 END WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN DISTINCT 1 AS a0 , n1 AS a1 ;

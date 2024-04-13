@@ -1,0 +1,13 @@
+-- Time: 2024/04/11 13:24:57
+-- Database: janusgraph_database150
+-- Database version: composite
+-- seed value: 1712812406632
+CREATE (n0 :L3{k17 : true, k19 : true, k18 : 'u', k20 : 1039005631, k22 : false, id : 0, k21 : false});
+CREATE (n0 :L1{k11 : 'mE', id : 1, k6 : 'g', k10 : false, k7 : '2', k8 : 'eDV8k', k9 : true});
+CREATE (n0 {id : 2});
+CREATE (n0 :L3{k17 : false, k18 : 'C', k20 : 2122476131, k22 : true, id : 3});
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T5{k66 : false, id : 4, k68 : 394268334, k67 : 'eSH6j0', k69 : 'G'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T3{k53 : 'j', k55 : 27803985, id : 5, k54 : true, k57 : 530429631, k56 : true, k59 : 'X', k58 : 'vE'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T0{k39 : 'fY', id : 6, k34 : 'T2j7D', k37 : 1300198985, k36 : false}]->(n1);
+MERGE (n0{id:7}) REMOVE n0.k2 CREATE ({id:8})<-[ :T5{id:9}]-({id:10}), (n1{id:11}) RETURN 1 AS a0, 1 AS a1;
+MERGE ( n0 { id : 7 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() REMOVE n0 . k2 CREATE ( { id : 8 } ) < - [ : T5 { id : CASE WHEN TRUE THEN 9 END } ] - ( { id : 10 } ) CREATE ( n1 { id : 11 } ) WITH * RETURN 1 AS a0 , 1 AS a1 ORDER BY FALSE ;

@@ -1,0 +1,18 @@
+-- Time: 2024/04/11 14:03:02
+-- Database: janusgraph_database665
+-- Database version: composite
+-- seed value: 1712812407189
+CREATE (n0 {id : 0});
+CREATE (n0 :L2{k16 : -1859507395, id : 1, k13 : false, k12 : 'QtBP7AT9H', k15 : '4', k14 : false});
+CREATE (n0 :L2{id : 2, k13 : false, k12 : '3', k14 : false});
+CREATE (n0 :L3{k17 : -238064674, k19 : true, k18 : true, k20 : true, k22 : '5fH', id : 3, k21 : 'uRjDW'});
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T0{k39 : 2120885000, k38 : -526400886, k40 : 'PSP', k42 : false, k41 : 'E', k44 : true, id : 4, k43 : 173496794}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T0{k39 : -1543104309, k38 : 795908359, k40 : '6UdlzJ4', k42 : true, k41 : 'aNogSxHj', k44 : false, id : 5}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T2{k51 : false, k53 : 'y', k52 : true, id : 6, k54 : 'KU'}]->(n1);
+OPTIONAL MATCH (n4)-[r0]-( :L2)-[]->(n3) CREATE p0=(n5{k17:-933821580, id:7})<-[ :T0{k44:NULL, id:8}]-(n6{k12:reverse(('8Od'+'uYF')), id:9}), ({id:10}) CREATE (n7{k22:NULL, id:11}), ({id:12}) RETURN 1 AS a0, n4 AS a1;
+OPTIONAL MATCH ( n4 ) - [ r0 ] - ( : L2 ) - [ ] - > ( n3 ) WITH * CREATE p0 = ( n5 { k17 : -933821580 , id : 7 } ) < - [ : T0 { k44 : NULL , id : 8 } ] - ( n6 { k12 : reverse ( ( CASE WHEN TRUE THEN '8Od' + 'uYF' END ) ) , id : 9 } ) CREATE ( { id : 10 } ) CREATE ( n7 { k22 : NULL , id : CASE WHEN FALSE THEN NULL ELSE 11 END } ) CREATE ( { id : 12 } ) RETURN 1 AS a0 , CASE WHEN FALSE THEN NULL ELSE n4 END AS a1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE ({id:13})-[r0 :T2{k55:'M', id:14}]->( :L3{id:15}) DETACH DELETE r0  CREATE p0=({id:16})-[ :T2{id:17}]->( :L3{id:18}), ( :L2{k13:CASE WHEN NULL THEN NULL END, id:19}) RETURN 1 AS a0;
+MERGE ( { id : 13 } ) - [ r0 : T2 { k55 : 'M' , id : 14 } ] - > ( : L3 { id : 15 } ) DETACH DELETE r0 CREATE (m0{ id : 16 } )CREATE (m0)- [ : T2 { id : CASE WHEN TRUE THEN 17 END } ] - > ( : L3 { id : 18 } ) CREATE ( : L2 { k13 : CASE WHEN NULL THEN NULL END , id : 19 } ) RETURN DISTINCT 1 AS a0 ;

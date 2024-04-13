@@ -1,0 +1,23 @@
+-- Time: 2024/04/11 13:40:55
+-- Database: janusgraph_database366
+-- Database version: composite
+-- seed value: 1712812406889
+CREATE (n0 :L2{k17 : -902622957, k16 : 'z', k18 : 'k', id : 0, k14 : 1927437274});
+CREATE (n0 {id : 1});
+CREATE (n0 {id : 2});
+CREATE (n0 :L5{k38 : false, k33 : -416750702, id : 3, k32 : 1100778641, k35 : false, k34 : '5', k37 : -1266688750, k36 : '8'});
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T0{k40 : -1802619059, k42 : false, k41 : -1169293650, k44 : false, id : 4, k43 : 'E'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T6{k72 : -1866000012, k75 : 'p8', k74 : false, id : 5, k76 : false}]->(n1);
+CREATE ( :L2{id:6}) MERGE (n0{id:7})-[r0 :T6{id:8}]-({id:9}) CREATE ({k16:(r0.k75), id:10}) RETURN (r0.k73) AS a0, endNode(CASE WHEN false THEN r0 END) AS a1;
+CREATE ( : L2 { id : CASE WHEN TRUE THEN 6 END } ) MERGE ( n0 { id : 7 } ) - [ r0 : T6 { id : 8 } ] - ( { id : CASE WHEN TRUE THEN 9 END } ) CREATE ( { k16 : ( r0 . k75 ) , id : 10 } ) RETURN ( r0 . k73 ) AS a0 , endNode ( CASE WHEN CASE WHEN FALSE THEN NULL ELSE false END THEN r0 END ) AS a1 LIMIT 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+UNWIND labels(endNode(NULL)) AS a0 CREATE (n3{id:11})-[r1 :T6{id:12}]->(n4{id:13})-[ :T0{id:14}]->({id:15}) CREATE (n5 :L2{id:16})-[r2 :T6{id:17}]->(n6{id:18})-[ :T0{id:19}]->(n7{id:20}), (n8{id:21})-[ :T6{id:22}]->({id:23}) RETURN a0 AS a1, 1 AS a2;
+UNWIND labels ( endNode ( NULL ) ) AS a0 OPTIONAL MATCH ()-[:TYPE]-() CREATE ( n3 { id : 11 } ) - [ r1 : T6 { id : 12 } ] - > ( n4 { id : 13 } ) - [ : T0 { id : 14 } ] - > ( { id : 15 } ) WITH * CREATE (n5: L2 { id : 16 } )CREATE (n5)- [ r2 : T6 { id : 17 } ] - > ( n6 { id : 18 } ) - [ : T0 { id : 19 } ] - > ( n7 { id : CASE WHEN TRUE THEN 20 END } ) CREATE (n8{ id : 21 } )CREATE (n8)- [ : T6 { id : 22 } ] - > ( { id : 23 } ) RETURN a0 AS a1 , 1 AS a2 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE ( :L2{id:24}) CREATE (n0{id:25})-[ :T6{id:26}]->(n1{id:27}) CREATE (n2{k15:false, id:28})-[ :T6{id:29}]->(n3{id:30})-[ :T0{id:31}]->(n4{id:32}) RETURN 1 AS a0;
+MERGE ( : L2 { id : 24 } ) WITH * CREATE ( n0 { id : 25 } ) - [ : T6 { id : 26 } ] - > ( n1 { id : 27 } ) CREATE ( n2 { k15 : false , id : 28 } ) - [ : T6 { id : 29 } ] - > ( n3 { id : 30 } ) - [ : T0 { id : 31 } ] - > ( n4 { id : 32 } ) WITH * UNWIND 1 as l0 RETURN 1 AS a0 SKIP 1 ;

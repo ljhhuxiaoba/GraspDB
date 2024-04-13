@@ -1,0 +1,19 @@
+-- Time: 2024/04/11 14:32:19
+-- Database: janusgraph_database1060
+-- Database version: composite
+-- seed value: 1712812407585
+CREATE (n0 {id : 0});
+CREATE (n0 :L3{k17 : 'J', k16 : 'h0Pn6a', k19 : false, k18 : -798262542, k20 : true, id : 1});
+CREATE (n0 :L0{k0 : true, k1 : 115491232, k3 : true, k4 : false, id : 2});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T2{k53 : 'LvC', k52 : -1083415773, k55 : -853658427, id : 4, k57 : false, k56 : true}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T0{k42 : 'EvrkjdD', k44 : false, id : 5, k46 : true, k45 : 'j'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T5{k71 : false, k70 : 't9EDcYJ9', k73 : 1142433500, k72 : true, k74 : 'VK', id : 6, k69 : 1153248949}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T1{k49 : 1358551636, k51 : -937166425, k50 : true, id : 7, k48 : -925265098, k47 : -2003500683}]->(n1);
+WITH keys(relationships(NULL)[toIntegerOrNull(abs(NULL))]) AS a0 MATCH (n0), (n1 :L0) MERGE ({id:8})-[r0 :T0{id:9}]->({id:10}) RETURN n1 AS a1, (n1.k3) AS a2 UNION OPTIONAL MATCH (n0)-[r0 :T2{k57:NULL}]-() CREATE ({id:11}) REMOVE n0.k2 RETURN 1 AS a1, 1 AS a2;
+WITH keys ( relationships ( NULL ) [ toIntegerOrNull ( abs ( NULL ) ) ] ) AS a0 WHERE TRUE OPTIONAL MATCH ()-[:TYPE]-() MATCH ( n0 ) ,( n1 : L0 ) MERGE ( { id : 8 } ) - [ r0 : T0 { id : 9 } ] - > ( { id : 10 } ) RETURN CASE WHEN FALSE THEN NULL ELSE n1 END AS a1 , ( CASE WHEN FALSE THEN NULL ELSE n1 . k3 END ) AS a2 UNION OPTIONAL MATCH ( n0 ) - [ r0 : T2 { k57 : NULL } ] - ( ) CREATE ( { id : 11 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() REMOVE n0 . k2 RETURN 1 AS a1 , 1 AS a2 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE (n4{k3:false, id:12})-[r1 :T0{id:13}]->({id:14}) SET n4.k=(r1.k43) SET n4.k=(r1.k46) RETURN n4 AS a2, 1 AS a3;
+MERGE ( n4 { k3 : false , id : CASE WHEN TRUE THEN 12 END } ) - [ r1 : T0 { id : 13 } ] - > ( { id : 14 } ) WITH * FOREACH(f in [1]|SET n4 . k = ( r1 . k43 ) ) SET n4 . k = ( r1 . k46 ) RETURN n4 AS a2 , 1 AS a3 ;

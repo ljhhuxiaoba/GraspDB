@@ -1,0 +1,18 @@
+-- Time: 2024/04/11 14:13:42
+-- Database: janusgraph_database809
+-- Database version: composite
+-- seed value: 1712812407333
+CREATE (n0 :L4{k27 : false, k29 : 'eUg', id : 0, k24 : false, k26 : 'zoP9aqGmj', k25 : 'r'});
+CREATE (n0 :L3{k19 : true, k20 : 959966122, k22 : false, id : 1, k21 : 379056302, k23 : true});
+CREATE (n0 {id : 2});
+CREATE (n0 :L2{k17 : 1263374610, k16 : 'U4ddfZi', id : 3, k13 : false, k15 : 'oENlCmQ'});
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T4{k60 : 'H8xj', id : 4, k57 : 970052392, k56 : 1172035914, k59 : false, k58 : 186505183}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T5{k62 : 'n', k61 : -148421220, k64 : false, k63 : false, id : 5, k65 : -778500340}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T1{k39 : 'YI3OGcw', k38 : true, k40 : 'eR60BL8uy', k42 : 'Y', k44 : false, id : 6}]->(n1);
+MATCH p0=(n0) OPTIONAL MATCH (n0) REMOVE n0.k2 RETURN 1 AS a0;
+MATCH p0 = ( n0 ) OPTIONAL MATCH ( n0 ) UNWIND [1] as l0 REMOVE n0 . k2 WITH * UNWIND 1 as l1 RETURN 1 AS a0 ORDER BY FALSE ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE ({id:7}) MERGE ({id:8}) CREATE p0=(n0{id:9}), (n1{id:10}) RETURN 1 AS a0, 1 AS a1;
+MERGE ( { id : 7 } ) MERGE ( { id : 8 } ) CREATE p0 = ( n0 { id : 9 } ) CREATE ( n1 { id : 10 } ) RETURN 1 AS a0 , 1 AS a1 ;

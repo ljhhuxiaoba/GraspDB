@@ -1,0 +1,22 @@
+-- Time: 2024/04/11 14:27:21
+-- Database: janusgraph_database993
+-- Database version: composite
+-- seed value: 1712812407518
+CREATE (n0 {id : 0});
+CREATE (n0 :L2{k17 : '9t', k16 : 1396038154, id : 1, k13 : 'n', k12 : false, k14 : '0'});
+CREATE (n0 :L0{k0 : 231376294, k1 : -582510280, k2 : false, k3 : -1606935501, k4 : 'FIf', k5 : -1350201837, id : 2, k6 : true});
+CREATE (n0 :L2{k17 : 'u1n', k16 : 1143437504, id : 3, k13 : 'EXKXD3Add', k12 : true, k15 : false, k14 : 'xbY3D'});
+MATCH (n0 {id : 3}), (n1 {id : 2}) MERGE(n0)-[r :T3{k51 : true, k50 : -78808947, k52 : 'zE', id : 4, k54 : 'L'}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T0{k31 : 'UT', k30 : -1981326680, k33 : 1807112115, id : 5, k32 : -1182702079, k35 : 'N', k34 : false, k36 : '5L'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T3{k49 : false, k51 : true, k50 : -1297204247, k53 : 'm', k52 : 'MT', id : 6}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T2{k44 : 'H', id : 7, k43 : 'W', k46 : true, k45 : 1423979237, k48 : true, k47 : -133017210}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T4{k60 : 1198508036, k55 : true, id : 8, k57 : true, k56 : 'PNQrDLgx', k59 : true, k58 : -1254828208}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T0{k31 : 'O', k30 : -1909352889, k33 : 95839223, id : 9, k32 : 733347235, k35 : 'g', k34 : true, k36 : 'jVw'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T2{k44 : 'D', id : 10, k43 : 'T', k46 : true, k48 : true}]->(n1);
+CREATE p0=(n0{k14:'Vr', id:11})-[r0 :T3{id:12}]->( :L0{id:13}), ({id:14})-[ :T4{id:15}]->(n1{id:16})<-[r1 :T2{id:17}]-(n2{k13:reverse(substring('mI8Hmi', toIntegerOrNull(abs(NULL)), toIntegerOrNull(abs(size([]))))), id:18}) CREATE p1=(n3{id:19})-[r2 :T4{k59:true, id:20}]->( :L2{k15:NULL, id:21}) MERGE ({id:22})-[r3 :T2{id:23}]-({id:24}) RETURN r3 AS a0 ORDER BY NULL, a0;
+CREATE p0 = ( n0 { k14 : CASE WHEN FALSE THEN NULL ELSE 'Vr' END , id : 11 } ) - [ r0 : T3 { id : 12 } ] - > ( : L0 { id : 13 } ) CREATE (n2{k13:reverse(substring('mI8Hmi', toIntegerOrNull(abs(NULL)), toIntegerOrNull(abs(size([]))))), id:18})-[ r1 : T2 { id : CASE WHEN FALSE THEN NULL ELSE 17 END } ] ->(n1{id:16})<-[ : T4 { id : 15 } ] -( { id : CASE WHEN TRUE THEN 14 END } ) CREATE p1 = ( n3 { id : 19 } ) - [ r2 : T4 { k59 : true , id : 20 } ] - > ( : L2 { k15 : NULL , id : 21 } ) MERGE ( { id : 22 } ) - [ r3 : T2 { id : 23 } ] - ( { id : CASE WHEN FALSE THEN NULL ELSE 24 END } ) RETURN r3 AS a0 ORDER BY NULL, a0 SKIP 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+OPTIONAL MATCH (), ({k12:true})-[]-()<-[r0]-( :L2) MERGE (n0 :L2{id:25})<-[r1 :T2{k45:278153466, id:26}]-({id:27}) REMOVE n0.k2 RETURN 1 AS a0, 1 AS a1 SKIP 1;
+OPTIONAL MATCH ( ) ,()-[*0..0]-( { k12 : true } ) - [ ] - ( ) < - [ r0 ] - ( : L2 ) WITH * MERGE ( n0 : L2 { id : 25 } ) < - [ r1 : T2 { k45 : 278153466 , id : 26 } ] - ( { id : 27 } ) WITH * REMOVE n0 . k2 WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN 1 AS a0 , 1 AS a1 SKIP 1 ;

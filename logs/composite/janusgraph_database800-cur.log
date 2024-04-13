@@ -1,0 +1,30 @@
+-- Time: 2024/04/11 14:13:01
+-- Database: janusgraph_database800
+-- Database version: composite
+-- seed value: 1712812407324
+CREATE (n0 :L4{k27 : 182244088, id : 0, k24 : false, k26 : true, k25 : 2069555370});
+CREATE (n0 :L1{k5 : false, id : 1, k6 : false, k10 : 1254529726, k7 : 161670242, k8 : -1383382468, k9 : -644315415});
+CREATE (n0 :L0{k1 : true, k2 : -802424425, k3 : true, id : 2});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T6{k71 : 'Sc', k70 : 970160057, k73 : 'Yy', k72 : -1168973566, id : 4, k68 : 839647911, k67 : 203149677, k69 : 814819099}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T4{k60 : 2125210363, k61 : true, id : 5, k57 : '1', k56 : 'IOolh', k59 : false, k58 : false}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 2}) MERGE(n0)-[r :T5{k62 : false, k64 : 292784271, k63 : -118170897, k66 : -146444755, id : 6, k65 : 'dGusxWyq'}]->(n1);
+CREATE (n0{id:7})-[ :T6{k67:889919609, id:8}]->({id:9}), p0=({id:10})<-[ :T5{k65:'4En', id:11}]-({id:12})-[ :T4{k61:NULL, id:13}]->({k7:136374521, id:14}) MERGE (n1 :L0{k0:false, id:15})<-[r0 :T5{k65:'D', id:16}]-({id:17}) DETACH DELETE n1  RETURN 1 AS a0 UNION WITH nodes(NULL)[toIntegerOrNull(abs(1149583642))] AS a0 WHERE NULL OPTIONAL MATCH p0=()-[r0]->(n0 :L1) REMOVE n0.k2 RETURN 1 AS a0 ORDER BY [reverse('w2sXML34u'), reverse((n0.k11))], a0;
+CREATE ( n0 { id : 7 } ) - [ : T6 { k67 : 889919609 , id : 8 } ] - > ( { id : 9 } ) CREATE p0=({k7:136374521, id:14})<-[ : T4 { k61 : NULL , id : 13 } ] -({id:12})-[ : T5 { k65 : (''+'4En' ), id : 11 } ] ->( { id : 10 } ) MERGE ( n1 : L0 { k0 : false , id : 15 } ) < - [ r0 : T5 { k65 : CASE WHEN TRUE THEN 'D' END , id : 16 } ] - ( { id : 17 } ) WITH * DETACH DELETE n1 RETURN DISTINCT 1 AS a0 UNION WITH nodes ( NULL ) [ CASE WHEN TRUE THEN toIntegerOrNull ( abs ( CASE WHEN TRUE THEN 1149583642 END ) ) END ] AS a0 WHERE CASE WHEN TRUE THEN NULL END OPTIONAL MATCH ()-[:TYPE]-() OPTIONAL MATCH p0 = ( ) - [ r0 ] - > ( n0 : L1 ) REMOVE n0 . k2 WITH * UNWIND 1 as l0 RETURN 1 AS a0 ORDER BY [reverse('w2sXML34u'), reverse((n0.k11))], a0 SKIP 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+UNWIND [startNode(relationships(NULL)[toIntegerOrNull(abs(1719915257))])] AS a0 MERGE (n0{id:18})-[r0 :T4{id:19}]-(n1 :L1{id:20}) REMOVE n1.k2 RETURN 1 AS a1;
+UNWIND ([ startNode ( relationships ( NULL ) [ CASE WHEN TRUE THEN toIntegerOrNull ( abs ( 1719915257 ) ) END ] ) ] +[]) AS a0 MERGE ( n0 { id : 18 } ) - [ r0 : T4 { id : 19 } ] - ( n1 : L1 { id : 20 } ) REMOVE n1 . k2 RETURN 1 AS a1 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE (n0{id:21})<-[r0 :T5{id:22}]-({id:23}) SET n0.k=852995741 MERGE p0=( :L4{k26:false, id:24})-[r1 :T6{id:25}]-(n1 :L1{id:26}) RETURN 1 AS a0, (n1.k5) AS a1;
+MERGE ( n0 { id : 21 } ) < - [ r0 : T5 { id : 22 } ] - ( { id : 23 } ) SET n0 . k = 852995741 WITH * UNWIND 1 as l0 MERGE p0 = ( : L4 { k26 : false , id : 24 } ) - [ r1 : T6 { id : 25 } ] - ( n1 : L1 { id : 26 } ) RETURN 1 AS a0 , ( n1 . k5 ) AS a1 LIMIT 1 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+UNWIND [829335472, -821457326] AS a0 MATCH () CREATE (n0 :L1{id:27})<-[ :T5{k65:NULL, id:28}]-({id:29}), (n1{k10:NULL, id:30}) RETURN 1 AS a1;
+UNWIND CASE WHEN TRUE THEN ([]+[ 829335472 , -821457326 ] )END AS a0 MATCH ( ) CREATE ( n0 : L1 { id : 27 } ) < - [ : T5 { k65 : NULL , id : 28 } ] - ( { id : 29 } ) CREATE ( n1 { k10 : NULL , id : 30 } ) RETURN 1 AS a1 ;

@@ -1,0 +1,17 @@
+-- Time: 2024/04/11 14:08:57
+-- Database: janusgraph_database745
+-- Database version: composite
+-- seed value: 1712812407269
+CREATE (n0 :L2{k16 : 850556105, k19 : 'ByR3', id : 0, k15 : -914474330, k14 : 'D'});
+CREATE (n0 :L2{k17 : true, k16 : 162909614, k19 : '3', k18 : false, id : 1, k15 : 838221702, k14 : 'Slj'});
+CREATE (n0 :L2{k17 : true, k16 : -2130892350, k19 : '9WH', k18 : true, id : 2, k15 : -598416192, k14 : '0eAWAr'});
+CREATE (n0 :L1{k11 : '31J0Rr', id : 3, k10 : 'M', k7 : 'F', k8 : 'B', k12 : 'hq', k9 : -494868863});
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T3{k60 : 'w', k61 : 'J', id : 4, k57 : 1311051450, k59 : -1057432387, k58 : '8'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T0{k40 : -1766892439, k42 : 228441643, k44 : 'N', id : 5, k43 : 1919397327, k45 : '8'}]->(n1);
+WITH 1469663908 AS a0 UNWIND [-1080708066, (a0/1668600845)] AS a1 MERGE (n0{k15:1863000918, id:6}) RETURN DISTINCT 1 AS a2;
+WITH 1469663908 AS a0 UNWIND ([]+[ -1080708066 , CASE WHEN FALSE THEN NULL ELSE ( a0 / 1668600845 ) END ] )AS a1 MERGE ( n0 { k15 : 1863000918 , id : 6 } ) RETURN DISTINCT 1 AS a2 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+WITH -1785350809 AS a0 WHERE true UNWIND NULL AS a1 CREATE ( :L2{id:7}) RETURN 1 AS a2;
+WITH -1785350809 AS a0 WHERE true UNWIND NULL AS a1 CREATE ( : L2 { id : 7 } ) WITH * RETURN 1 AS a2 ;

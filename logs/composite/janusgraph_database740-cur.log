@@ -1,0 +1,17 @@
+-- Time: 2024/04/11 14:08:35
+-- Database: janusgraph_database740
+-- Database version: composite
+-- seed value: 1712812407264
+CREATE (n0 :L0{k0 : false, k1 : 357862425, k4 : false, k5 : false, id : 0, k6 : false});
+CREATE (n0 {id : 1});
+CREATE (n0 {id : 2});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T2{k60 : 'jGq', k55 : false, id : 4, k57 : -641517115, k56 : '8', k59 : 782432170, k58 : false}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T0{k44 : -1795042433, id : 5, k43 : -1537933480, k46 : true, k45 : '7Y', k47 : 93816845}]->(n1);
+CREATE (n0{id:6}), ({id:7}) MERGE (n1{id:8})-[r0 :T0{k44:148618493, id:9}]->(n2 :L0{k1:2146256838, id:10}) DETACH DELETE n2  RETURN 1 AS a0, 1 AS a1 UNION OPTIONAL MATCH ()-[r0]->(n0), (n1) DETACH DELETE n0  SET n1.k=NULL RETURN DISTINCT 1 AS a0, n1 AS a1 LIMIT 0;
+CREATE ( n0 { id : CASE WHEN TRUE THEN 6 END } ) CREATE ( { id : 7 } ) MERGE ( n1 { id : 8 } ) - [ r0 : T0 { k44 : 148618493 , id : 9 } ] - > ( n2 : L0 { k1 : 2146256838 , id : 10 } ) DETACH DELETE n2 WITH * UNWIND [1] as l0 RETURN DISTINCT 1 AS a0 , 1 AS a1 UNION OPTIONAL MATCH (nn0),()-[r0]->(),(n0),(n1) WHERE exists((nn0)-[r0]->(n0)) OPTIONAL MATCH ()-[:TYPE]-() DETACH DELETE n0 SET n1 . k = NULL RETURN DISTINCT 1 AS a0 , n1 AS a1 SKIP 1 LIMIT CASE WHEN FALSE THEN NULL ELSE 0 END ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+OPTIONAL MATCH p0=()-[r0 :T2{k59:811877542}]-(n0), () DETACH DELETE n0  MERGE (n1{id:11}) RETURN *, properties(n1) AS a0;
+OPTIONAL MATCH p0 = ( ) - [ r0 : T2 { k59 : 811877542 } ] - ( n0 ) ,( ) DETACH DELETE CASE WHEN FALSE THEN NULL ELSE n0 END MERGE ( n1 { id : 11 } ) RETURN * , properties ( n1 ) AS a0 ;

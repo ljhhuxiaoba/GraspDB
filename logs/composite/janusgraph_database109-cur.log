@@ -1,0 +1,19 @@
+-- Time: 2024/04/11 13:21:55
+-- Database: janusgraph_database109
+-- Database version: composite
+-- seed value: 1712812406591
+CREATE (n0 :L2{k17 : true, k16 : 1240457582, k19 : 548307287, k18 : 1548075008, k20 : 'B1E', id : 0, k15 : 'J', k14 : 't'});
+CREATE (n0 :L6{k39 : -499710735, k40 : 'vJ7g', k42 : false, k41 : true, k44 : 807227485, id : 1, k43 : 'b'});
+CREATE (n0 {id : 2});
+CREATE (n0 :L5{k38 : -400652977, k33 : '4', id : 3, k35 : -1630682111, k34 : true, k37 : 184814315, k36 : -715438806});
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T2{k60 : -2132559147, id : 4, k57 : 'Y', k59 : -121644041, k58 : -235821857}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 2}) MERGE(n0)-[r :T1{k50 : -1845772319, k52 : true, k55 : false, id : 5, k54 : false}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T4{k70 : true, k66 : false, id : 6, k67 : 1636730295, k69 : -903575636}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T3{k62 : false, k61 : 'FSnQ2grYL', k64 : false, id : 7, k65 : '7U'}]->(n1);
+MERGE (n0{id:8}) REMOVE n0.k2 DETACH DELETE n0  RETURN 1 AS a0, 1 AS a1;
+MERGE ( n0 { id : 8 } ) REMOVE n0 . k2 WITH * WITH * CALL{WITH *DETACH DELETE n0 } WITH * UNWIND 1 as l0 RETURN 1 AS a0 , 1 AS a1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (n0 :L6{k43:NULL}) CREATE (n1{id:9}) REMOVE n0.k2 RETURN *;
+MATCH (n0:L6) WHERE n0.k43=NULL UNWIND [NULL] as l0 CREATE ( n1 { id : 9 } ) REMOVE n0 . k2 WITH * UNWIND 1 as l1 RETURN DISTINCT * ;

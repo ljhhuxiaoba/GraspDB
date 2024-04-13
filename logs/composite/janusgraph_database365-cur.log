@@ -1,0 +1,25 @@
+-- Time: 2024/04/11 13:40:51
+-- Database: janusgraph_database365
+-- Database version: composite
+-- seed value: 1712812406888
+CREATE (n0 :L2{k16 : -2127376460, id : 0, k10 : 'bT', k13 : false, k12 : true, k14 : false});
+CREATE (n0 :L6{k39 : true, k38 : -140209668, id : 1, k35 : false, k37 : 'Dyct1Ddn', k36 : false});
+CREATE (n0 :L6{k39 : false, id : 2, k35 : true, k37 : 'B', k36 : true});
+CREATE (n0 :L1{k5 : 984940527, id : 3, k6 : 'E', k7 : true, k9 : -1895167424});
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T4{k64 : true, k66 : -1573216644, id : 4, k65 : -260188568, k68 : false}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T5{k71 : 'gSXROG', k70 : '7lPUkh', k73 : false, k72 : 181226139, id : 5, k69 : 1676068579}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T1{k51 : false, k50 : false, id : 6, k47 : 'sdkujiFR'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T2{k53 : 'CxpV', k55 : true, id : 7, k54 : 'NmLzK2', k56 : 't'}]->(n1);
+MATCH (n0)-[r0]-(), ()<-[ :T1{k50:exists(( :L6)-[ :T1]->({k6:NULL})<-[{k72:NULL}]-( :L6))}]-( :L6)-[r0]-(n1 :L1) REMOVE n1.k2 REMOVE n0.k2 RETURN n1 AS a0, 1 AS a1;
+MATCH ( n0 ) - [ r0 ] - ( ) ,( ) < - [ : T1 { k50 : exists ( ( : L6 ) - [ : T1 ] - > ( { k6 : NULL } ) < - [ { k72 : NULL } ] - ( : L6 ) ) } ] - ( : L6 ) - [ r0 ] - ( n1 : L1 ) REMOVE n1 . k2 WITH * UNWIND 1 as l0 REMOVE n0 . k2 RETURN DISTINCT n1 AS a0 , CASE WHEN TRUE THEN 1 END AS a1 ORDER BY NULL ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+OPTIONAL MATCH (n4)<-[*0..1]-(n0) WHERE toBooleanList(CASE WHEN false THEN NULL END)[toIntegerOrNull(abs(NULL))] REMOVE n0.k2 DETACH DELETE n4  RETURN 1 AS a2;
+OPTIONAL MATCH (n4),()<-[*0..1]-(),(n0) WHERE exists((n4)<-[*0..1]-(n0)) AND (toBooleanList ( CASE WHEN false THEN NULL END ) [ toIntegerOrNull ( abs ( NULL ) ) ] )REMOVE n0 . k2 WITH * DETACH DELETE n4 WITH * UNWIND 1 as l0 RETURN 1 AS a2 ORDER BY 1 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+OPTIONAL MATCH ()-[]->(), p1=(n1)-[r0]-() OPTIONAL MATCH p2=( :L6)-[*..2]-(n0)<-[r1]-(n2), (n3 :L6)-[]->()-[]->( :L1) DETACH DELETE n0  RETURN CASE WHEN true THEN p1 END AS a1, 1 AS a2;
+OPTIONAL MATCH ( ) - [ ] - > ( ) ,p1 = ( n1 ) - [ r0 ] - ( ) WITH * OPTIONAL MATCH p2=( :L6)-[*..2]-(n0)<-[r1]-(n2),(n3:L6),()-[m0]->(),(nn1),()-[m2]->(),(nn3:L1) WHERE exists((n3)-[m0]->(nn1)-[m2]->(nn3)) OPTIONAL MATCH ()-[:TYPE]-() DETACH DELETE n0 WITH * RETURN CASE WHEN true THEN p1 END AS a1 , 1 AS a2 LIMIT 1 ;

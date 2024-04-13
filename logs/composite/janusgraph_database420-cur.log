@@ -1,0 +1,20 @@
+-- Time: 2024/04/11 13:44:54
+-- Database: janusgraph_database420
+-- Database version: composite
+-- seed value: 1712812406943
+CREATE (n0 :L4{k27 : 'S', k29 : -1712727278, id : 0, k25 : 'FrkP6lsJi'});
+CREATE (n0 :L0{k0 : 'uN7', k1 : true, k2 : 1267173598, k3 : 24750290, k4 : -762157677, k5 : false, id : 1});
+CREATE (n0 :L1{id : 2, k6 : 1562623350, k10 : '7bHGSe', k7 : 199146778, k8 : true, k9 : false});
+CREATE (n0 :L6{k38 : true, k41 : 2119880777, id : 3, k37 : true, k36 : -162248079});
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T4{k71 : 'U', k70 : false, k66 : false, id : 4, k65 : 'K', k68 : '7c1', k67 : 'sgV', k69 : 'XbisEupR'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T1{k51 : false, k50 : -1508104437, k52 : '3nPu', id : 5, k48 : false}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T2{k53 : 'g9kpdz', id : 6, k54 : true, k57 : true, k58 : '3'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T2{k53 : 'l', k55 : false, id : 7, k54 : false, k57 : true, k56 : false, k58 : 'set51i7dM'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T0{k42 : 'K', k44 : true, id : 8, k43 : -3193127, k46 : false, k45 : false, k47 : -1933689259}]->(n1);
+WITH NULL AS a0 SKIP 0 MERGE (n0{k27:'6DMV9', id:9})-[r0 :T4{id:10}]-(n1{id:11})-[r1 :T2{k57:true, id:12}]->(n2{id:13}) SET n1.k=(r1.k56) RETURN n2 AS a1, 1 AS a2;
+WITH NULL AS a0 SKIP 0 MERGE ( n0 { k27 : '6DMV9' , id : 9 } ) - [ r0 : T4 { id : 10 } ] - ( n1 { id : 11 } ) - [ r1 : T2 { k57 : true , id : 12 } ] - > ( n2 { id : 13 } ) WITH * UNWIND [1] as l0 SET n1 . k = ( CASE WHEN TRUE THEN r1 . k56 END ) WITH * RETURN n2 AS a1 , 1 AS a2 LIMIT 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH ( :L6) CREATE ({k36:NULL, id:14}) MERGE p0=(n0{id:15}) RETURN DISTINCT 1 AS a0, 1 AS a1;
+MATCH ()-[*0..0]-( : L6 ) WHERE TRUE CREATE ( { k36 : NULL , id : 14 } ) MERGE p0 = ( n0 { id : 15 } ) RETURN DISTINCT 1 AS a0 , 1 AS a1 SKIP 1 ;

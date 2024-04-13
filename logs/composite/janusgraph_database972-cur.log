@@ -1,0 +1,17 @@
+-- Time: 2024/04/11 14:25:47
+-- Database: janusgraph_database972
+-- Database version: composite
+-- seed value: 1712812407497
+CREATE (n0 :L1{id : 0, k6 : true, k8 : 674580183, k9 : -80410049});
+CREATE (n0 :L4{k27 : false, id : 1, k24 : -1184650864, k23 : false, k26 : 443591835, k25 : true});
+CREATE (n0 {id : 2});
+CREATE (n0 :L3{k17 : false, k19 : true, k18 : -413058772, k20 : 'utba', k22 : 737005882, id : 3, k21 : 'uIoHSI'});
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T2{k49 : 'K', id : 4, k45 : true, k48 : 1606627442}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T3{k51 : 'dbAd', k50 : 2103613475, k53 : 661293661, k52 : true, id : 5, k54 : 'tr', k56 : 1684726529}]->(n1);
+CREATE ( :L3{id:6})<-[r0 :T3{k52:NULL, id:7}]-(n0{id:8}), (n1{k19:false, id:9})<-[ :T3{id:10}]-(n2{id:11}) MERGE (n3{id:12})<-[r1 :T3{k53:-62916219, id:13}]-({id:14}) SET n3.k=(('ocpkfoV'+'M')+'Plkd') RETURN 1 AS a0, n3 AS a1;
+CREATE ( : L3 { id : 6 } ) < - [ r0 : T3 { k52 : NULL , id : 7 } ] - ( n0 { id : 8 } ) CREATE ( n1 { k19 : false , id : 9 } ) < - [ : T3 { id : 10 } ] - ( n2 { id : CASE WHEN TRUE THEN 11 END } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() MERGE ( n3 { id : CASE WHEN TRUE THEN 12 END } ) < - [ r1 : T3 { k53 : -62916219 , id : 13 } ] - ( { id : 14 } ) WITH * SET n3 . k = ( ( 'ocpkfoV' + 'M' ) + 'Plkd' ) WITH * RETURN 1 AS a0 , n3 AS a1 LIMIT 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+CREATE p0=(n0{id:15})-[ :T3{k51:'Bkp', id:16}]->(n1{id:17}), ({id:18})-[ :T3{k50:NULL, id:19}]->(n2 :L3{id:20}) MERGE ({id:21})-[r0 :T3{id:22}]-( :L3{k21:'DSyrSWi', id:23}) DETACH DELETE r0  RETURN 477360282 AS a0, 1 AS a1;
+CREATE (n0{ id : CASE WHEN TRUE THEN 15 END } )CREATE (n0)- [ : T3 { k51 : 'Bkp' , id : 16 } ] - > ( n1 { id : 17 } ) CREATE ( { id : 18 } ) - [ : T3 { k50 : NULL , id : 19 } ] - > ( n2 : L3 { id : 20 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() MERGE ( { id : 21 } ) - [ r0 : T3 { id : 22 } ] - ( : L3 { k21 : 'DSyrSWi' , id : CASE WHEN TRUE THEN 23 END } ) DETACH DELETE r0 WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN 477360282 AS a0 , 1 AS a1 ORDER BY NULL ;

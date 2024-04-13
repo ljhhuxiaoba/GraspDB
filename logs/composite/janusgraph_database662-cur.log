@@ -1,0 +1,13 @@
+-- Time: 2024/04/11 14:02:49
+-- Database: janusgraph_database662
+-- Database version: composite
+-- seed value: 1712812407186
+CREATE (n0 :L2{k17 : 'YeE', k16 : true, id : 0, k12 : true, k15 : true, k14 : false});
+CREATE (n0 :L0{k0 : false, k1 : true, k2 : 'U1aFxAeys', k3 : 'v', k4 : '1', id : 1});
+CREATE (n0 :L5{k31 : -733865222, k33 : false, id : 2, k32 : true, k35 : 'E', k34 : true, k36 : -1592419357});
+CREATE (n0 :L3{k19 : true, k18 : 750270557, k20 : 2091143068, k22 : true, id : 3, k21 : false, k23 : 'l'});
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T2{k53 : true, k55 : 1314342142, id : 4, k54 : 1481639508, k57 : false, k56 : -60610565}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T5{k71 : 1728318405, k73 : 'wt', k72 : 'A', k75 : -2077490945, k74 : false, id : 5}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T6{k80 : -1206435130, k81 : true, k77 : -136564822, id : 6, k76 : false, k79 : -237797284, k78 : false}]->(n1);
+CREATE ( :L0{id:7}), ({id:8}) CREATE p0=({id:9})<-[ :T6{id:10}]-(n0{id:11}), ({id:12}) CREATE ({id:13}), ({id:14})<-[ :T5{id:15}]-({k35:NULL, id:16})-[r0 :T6{id:17}]->(n1{id:18}) RETURN 1 AS a0, 1 AS a1;
+CREATE ( : L0 { id : 7 } ) CREATE ( { id : 8 } ) CREATE p0 = ( { id : 9 } ) < - [ : T6 { id : 10 } ] - ( n0 { id : 11 } ) CREATE ( { id : 12 } ) CREATE ( { id : 13 } ) CREATE ( { id : 14 } ) < - [ : T5 { id : 15 } ] - ( { k35 : NULL , id : 16 } ) - [ r0 : T6 { id : 17 } ] - > ( n1 { id : 18 } ) WITH * RETURN 1 AS a0 , 1 AS a1 ;

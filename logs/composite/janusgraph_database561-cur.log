@@ -1,0 +1,16 @@
+-- Time: 2024/04/11 13:55:20
+-- Database: janusgraph_database561
+-- Database version: composite
+-- seed value: 1712812407085
+CREATE (n0 :L3{k20 : -633210175, id : 0, k24 : true, k23 : -2124868176, k26 : 776603237, k25 : 'K'});
+CREATE (n0 :L0{k0 : 'm', k1 : -888249370, k2 : -97706534, k4 : 'SKdw5xZ0Q', k5 : false, id : 1});
+CREATE (n0 :L3{k20 : 189392562, k22 : true, id : 2, k21 : -391314800, k24 : false, k23 : -970444761, k26 : 712489860, k25 : 'SeCxlzY'});
+CREATE (n0 :L1{k11 : false, id : 3, k10 : 'G', k13 : 2095020830, k8 : false, k12 : false, k9 : false});
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T3{k51 : 'u', k50 : false, k53 : 'VY', k52 : 'y', k55 : 1974639978, id : 4, k54 : false}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T2{k49 : 'T3aEW', id : 5, k46 : 1931923750, k45 : 'A8ZOCyQK', k48 : false, k47 : -1428075888}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T3{k51 : 'u', k50 : true, k53 : 'vkxnsoub', k52 : 'L9memQZ', k55 : -2142475302, id : 6}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T4{id : 7, k57 : 'G', k56 : false, k59 : 'l9', k58 : 167511791}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T3{k51 : 'AopIwD', k50 : true, k52 : 'V0tIsfp', k55 : 1437174471, id : 8, k54 : false}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T0{k38 : 'rp3d4xF2R', k33 : true, id : 9, k35 : 'X', k34 : -1954503057, k36 : false}]->(n1);
+WITH DISTINCT * CREATE (n0{k13:CASE WHEN NULL THEN NULL END, id:10})-[ :T3{id:11}]->(n1{id:12}) CREATE ( :L1{id:13}), ( :L0{id:14})-[r0 :T0{id:15}]->(n2{id:16})<-[r1 :T3{id:17}]-(n3{k20:NULL, id:18}) RETURN 1 AS a0;
+WITH DISTINCT * CREATE ( n0 { k13 : CASE WHEN CASE WHEN TRUE THEN NULL END THEN NULL END , id : CASE WHEN TRUE THEN 10 END } ) - [ : T3 { id : 11 } ] - > ( n1 { id : 12 } ) CREATE ( : L1 { id : 13 } ) CREATE ( : L0 { id : 14 } ) - [ r0 : T0 { id : 15 } ] - > ( n2 { id : 16 } ) < - [ r1 : T3 { id : 17 } ] - ( n3 { k20 : NULL , id : 18 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN 1 AS a0 ;

@@ -1,0 +1,12 @@
+-- Time: 2024/04/11 14:12:03
+-- Database: janusgraph_database787
+-- Database version: composite
+-- seed value: 1712812407311
+CREATE (n0 :L3{k17 : 797019280, k16 : -726416040, k19 : 'p', k18 : 104824364, k20 : '6', k22 : 464103161, id : 0, k21 : true});
+CREATE (n0 :L5{k28 : false, k29 : 1545682510, k31 : true, k30 : false, k33 : true, id : 1, k32 : -569314188});
+CREATE (n0 :L4{k27 : true, id : 2, k23 : true, k25 : 'logcP'});
+CREATE (n0 :L3{k17 : -1442568830, k16 : -1120773413, k19 : '7', k18 : 1183068204, k20 : 'X', k22 : 415466912, id : 3, k21 : false});
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T5{k72 : 'H', k75 : true, k74 : -1805341943, k77 : 'UsMq4GX', id : 4}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T3{k60 : 727212080, k62 : false, k61 : 'Dm', k64 : 1746309113, k63 : true, k66 : false, id : 5, k65 : true}]->(n1);
+MATCH (n0), (n1)<-[]-() WHERE NULL CREATE (n2{id:6})-[r0 :T5{id:7}]->(n3{k22:NULL, id:8}) REMOVE n0.k2 RETURN NULL AS a0;
+MATCH (n0),(n1),()<-[m0]-(),(nn1) WHERE exists((n1)<-[m0]-(nn1)) AND (NULL )CREATE ( n2 { id : 6 } ) - [ r0 : T5 { id : 7 } ] - > ( n3 { k22 : NULL , id : 8 } ) REMOVE n0 . k2 WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN NULL AS a0 ;

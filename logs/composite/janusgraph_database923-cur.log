@@ -1,0 +1,17 @@
+-- Time: 2024/04/11 14:22:09
+-- Database: janusgraph_database923
+-- Database version: composite
+-- seed value: 1712812407448
+CREATE (n0 :L5{k29 : false, k30 : 909127189, k33 : 584213747, id : 0, k32 : 'W', k34 : 1912869758});
+CREATE (n0 {id : 1});
+CREATE (n0 {id : 2});
+CREATE (n0 :L4{k28 : 633318314, k27 : 'y', k22 : -520832580, id : 3, k24 : 'C', k23 : -699830159});
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T2{k55 : 'lX2bFc3Hg', id : 4, k54 : 'G96RoP', k57 : false, k56 : -934766125, k58 : false}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T1{k51 : 'A', k50 : -200623017, id : 5, k46 : true, k45 : true, k47 : false}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T0{k40 : false, k44 : false, id : 6, k43 : true}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T3{k60 : '33eHMTWgv', k62 : 'H', k61 : -1979156238, k64 : -1233857864, k63 : false, id : 7, k59 : 'z'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T1{k49 : 'op', k51 : 'ZLsIPaSIJ', k50 : 1972323446, id : 8, k46 : false, k45 : true, k48 : 'h', k47 : false}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T1{k49 : 'u', k51 : '1o', k50 : 170753768, id : 9, k45 : true, k48 : 'ght2Evv', k47 : false}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T2{k53 : -1442445654, k52 : '3', k55 : 'A', id : 10, k54 : 'q', k57 : false, k56 : -340968885}]->(n1);
+OPTIONAL MATCH ( :L5{k34:-868577394}), ()-[ :T2{k57:CASE WHEN NULL THEN NULL END}]-()-[ :T1{k45:NULL}]->(n0) WHERE NULL DETACH DELETE n0  CREATE ({id:11})-[r0 :T1{k46:false, id:12}]->({id:13})<-[ :T3{id:14}]-(n1{id:15}), (n2 :L5{id:16}) RETURN 1 AS a0;
+OPTIONAL MATCH ( : L5 { k34 : -868577394 } ) ,( ) - [ : T2 { k57 : CASE WHEN FALSE THEN NULL ELSE CASE WHEN NULL THEN CASE WHEN FALSE THEN NULL ELSE NULL END END END } ] - ( ) - [ : T1 { k45 : NULL } ] - > ( n0 ) WHERE NULL DETACH DELETE n0 CREATE ( { id : 11 } ) - [ r0 : T1 { k46 : false , id : 12 } ] - > ( { id : 13 } ) < - [ : T3 { id : 14 } ] - ( n1 { id : 15 } ) CREATE ( n2 : L5 { id : 16 } ) RETURN 1 AS a0 ;

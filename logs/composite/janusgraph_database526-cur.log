@@ -1,0 +1,12 @@
+-- Time: 2024/04/11 13:52:45
+-- Database: janusgraph_database526
+-- Database version: composite
+-- seed value: 1712812407050
+CREATE (n0 :L5{k31 : false, k33 : -69420841, id : 0, k32 : 1317835090, k35 : false, k34 : false, k36 : 'O'});
+CREATE (n0 {id : 1});
+CREATE (n0 :L1{k11 : false, id : 2, k7 : -1541188677, k8 : -1731065157, k12 : true, k9 : false});
+CREATE (n0 :L2{k16 : 1239295724, k18 : 'DyDtdr', id : 3, k13 : 1820609430, k15 : true});
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T0{k39 : 'DC', k38 : false, k40 : -294061755, k42 : false, k41 : -101184268, id : 4, k37 : 'ru'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T3{k60 : 'E', k61 : -665847047, id : 5, k57 : '62w', k59 : true, k58 : 's'}]->(n1);
+UNWIND [p0=(n0)-[ :T3{k61:NULL}]->(n1)-[]-(n2)|endNode(NULL)] AS a0 MATCH (n0)<-[]-(), (n3)-[]->(n4)-[]-(n5) DETACH DELETE n4  RETURN *;
+UNWIND [ p0 = ( n0 ) - [ : T3 { k61 : NULL } ] - > ( n1 ) - [ ] - ( n2 ) | CASE WHEN TRUE THEN endNode ( NULL ) END ] AS a0 MATCH (n0),()<-[m0]-(),(nn1),(n3)-[]->(n4)-[]-(n5) WHERE exists((n0)<-[m0]-(nn1)) UNWIND 1 as l0 DETACH DELETE n4 RETURN * ;

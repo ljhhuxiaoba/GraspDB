@@ -1,0 +1,14 @@
+-- Time: 2024/04/11 14:19:12
+-- Database: janusgraph_database883
+-- Database version: composite
+-- seed value: 1712812407408
+CREATE (n0 {id : 0});
+CREATE (n0 :L1{k5 : false, k11 : -756556828, id : 1, k6 : 1567645233, k10 : false, k7 : true, k8 : '1U', k9 : '7T'});
+CREATE (n0 :L3{k19 : false, k18 : true, k20 : 'N', k22 : '6', id : 2, k21 : false, k24 : 'W', k23 : true});
+CREATE (n0 :L5{k31 : -1024425813, k33 : -1523226113, id : 3, k32 : 'cB2d', k35 : true, k34 : 'tCcQ'});
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T0{k42 : 'uY', k44 : true, id : 4, k46 : 'B', k45 : -838844913, k48 : 'k8r'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T5{k80 : false, k77 : '8', id : 5, k76 : 1352398978, k79 : true}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T5{k80 : true, id : 6, k76 : 408896548, k79 : false, k78 : -1020801525}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T0{k42 : 'l', k44 : false, id : 7, k43 : true, k45 : -857035025, k48 : 'jpl55T9FP', k47 : '1'}]->(n1);
+OPTIONAL MATCH p2=(n2 :L3) REMOVE n2.k2 REMOVE n2.k2 RETURN 1 AS a2, p2 AS a3;
+OPTIONAL MATCH p2 = (n2)-[*0..0]-( n2 : L3 ) REMOVE n2 . k2 WITH * REMOVE n2 . k2 RETURN 1 AS a2 , p2 AS a3 ;

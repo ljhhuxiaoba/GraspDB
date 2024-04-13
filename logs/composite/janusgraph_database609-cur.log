@@ -1,0 +1,17 @@
+-- Time: 2024/04/11 13:58:53
+-- Database: janusgraph_database609
+-- Database version: composite
+-- seed value: 1712812407133
+CREATE (n0 :L4{k28 : true, k27 : -880904748, k29 : false, k31 : 't', k30 : 1605873400, id : 0, k26 : false, k25 : 1306536063});
+CREATE (n0 :L2{k17 : 'dE', k16 : true, id : 1, k13 : 6357496, k15 : 1368015554});
+CREATE (n0 :L1{k11 : 'xcJ', id : 2, k10 : false, k7 : 252632930, k8 : true, k12 : -133427147, k9 : 213442083});
+CREATE (n0 :L4{k28 : false, k27 : -785630786, k29 : true, k30 : -485268082, id : 3, k26 : true, k25 : 1306536063});
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T0{id : 4, k35 : -1572509798, k34 : '6', k37 : false, k36 : true}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T0{k33 : false, id : 5, k32 : -2143376458, k34 : 'Mm', k37 : false}]->(n1);
+OPTIONAL MATCH (), () OPTIONAL MATCH p1=(), (n0) WHERE (NULL >= NULL) MERGE (n1{id:6}) RETURN 1 AS a3;
+OPTIONAL MATCH ( ) ,( ) UNWIND 1 as l0 OPTIONAL MATCH p1 = ( ) ,(n0)-[*0..0]-( n0 ) WHERE ( NULL >= NULL ) OPTIONAL MATCH ()-[:TYPE]-() MERGE pp0=( n1 { id : 6 } ) RETURN 1 AS a3 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+CREATE (n2{id:7}) CREATE (n3{k26:NULL, id:8}) CREATE p0=( :L4{id:9}) RETURN 1 AS a4;
+CREATE ( n2 { id : 7 } ) WITH * CREATE ( n3 { k26 : NULL , id : 8 } ) CREATE p0 = ( : L4 { id : 9 } ) RETURN 1 AS a4 ;

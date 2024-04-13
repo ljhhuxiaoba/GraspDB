@@ -1,0 +1,13 @@
+-- Time: 2024/04/11 14:29:07
+-- Database: janusgraph_database1017
+-- Database version: composite
+-- seed value: 1712812407542
+CREATE (n0 :L3{k19 : 988350189, k20 : 1545861565, k22 : 2027608656, id : 0, k21 : 2132246318, k23 : true});
+CREATE (n0 {id : 1});
+CREATE (n0 :L0{k0 : -1228384269, k1 : false, k2 : 'Z', k4 : true, k5 : false, id : 2});
+CREATE (n0 :L0{k0 : 1546858779, k1 : true, k2 : 'Exl', k4 : false, k5 : false, id : 3});
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T0{k39 : '2yS', k40 : 'tK', id : 4, k35 : true, k37 : -808425791, k36 : -177723363}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T6{k75 : -1127177904, id : 5, k76 : false, k79 : false, k78 : 'o'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T4{k62 : 'WW4m3D', k61 : 1585555560, k64 : false, k63 : true, k66 : true, id : 6, k65 : -220208624}]->(n1);
+CREATE (n0{id:7})<-[r0 :T6{id:8}]-(n1{id:9})-[ :T0{id:10}]->(n2 :L0{id:11}) CREATE p0=({id:12}), ( :L0{id:13}) CREATE ( :L3{id:14})-[ :T4{id:15}]->(n3{id:16}), ({id:17}) RETURN NULL AS a0, 1 AS a1 UNION ALL MATCH (n0)-[r0 :T6{k79:true}]-(), (n1)-[]-(n0) MERGE ({k4:true, id:18})<-[ :T6{k76:false, id:19}]-(n2{id:20})-[ :T0{k40:'9LLTB', id:21}]->(n3 :L0{id:22}) MERGE p0=( :L3{id:23})-[r1 :T4{id:24}]-( :L0{id:25})-[ :T6{id:26}]-(n4{id:27}) RETURN n4 AS a0, 1 AS a1;
+CREATE ( n0 { id : 7 } ) < - [ r0 : T6 { id : 8 } ] - ( n1 { id : 9 } ) - [ : T0 { id : 10 } ] - > ( n2 : L0 { id : 11 } ) CREATE p0 = ( { id : CASE WHEN TRUE THEN 12 END } ) CREATE ( : L0 { id : 13 } ) WITH * CREATE (m0: L3 { id : 14 } )CREATE (m0)- [ : T4 { id : 15 } ] - > ( n3 { id : 16 } ) CREATE ( { id : 17 } ) RETURN NULL AS a0 , 1 AS a1 ORDER BY NULL SKIP 1 UNION ALL MATCH ( n0 ) - [ r0 : T6 { k79 : true } ] - ( ) ,( n1 ) - [ ] - ( n0 ) MERGE pp0=( { k4 : true , id : 18 } ) < - [ : T6 { k76 : CASE WHEN FALSE THEN NULL ELSE false END , id : 19 } ] - ( n2 { id : 20 } ) - [ : T0 { k40 : (''+'9LLTB' ), id : 21 } ] - > ( n3 : L0 { id : 22 } ) MERGE p0 = ( : L3 { id : 23 } ) - [ r1 : T4 { id : 24 } ] - ( : L0 { id : 25 } ) - [ : T6 { id : 26 } ] - ( n4 { id : 27 } ) RETURN DISTINCT CASE WHEN FALSE THEN NULL ELSE n4 END AS a0 , 1 AS a1 ;

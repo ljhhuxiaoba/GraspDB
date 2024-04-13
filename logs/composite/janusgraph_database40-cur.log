@@ -1,0 +1,13 @@
+-- Time: 2024/04/11 13:16:48
+-- Database: janusgraph_database40
+-- Database version: composite
+-- seed value: 1712812406521
+CREATE (n0 :L4{k28 : true, k29 : false, k30 : 'ug', id : 0, k26 : 1778947499});
+CREATE (n0 :L1{k11 : 743746817, id : 1, k10 : false, k7 : 'n', k13 : 720246554, k12 : true, k9 : -975317160});
+CREATE (n0 {id : 2});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 3}), (n1 {id : 2}) MERGE(n0)-[r :T2{k49 : 429949223, k50 : 'x', id : 4, k46 : -1732871876, k48 : 'Of7', k47 : false}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T4{k60 : -215530270, k62 : true, id : 5, k57 : '4AOR', k59 : true, k58 : false}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T3{k51 : true, k53 : 'x', k52 : -312507259, k55 : -893806881, id : 6, k54 : true, k56 : 'hv'}]->(n1);
+CREATE ( :L4{id:7}) MERGE ( :L4{id:8}) CREATE (n0 :L4{id:9}), ({id:10}) RETURN 1 AS a0 SKIP 1;
+CREATE ( : L4 { id : 7 } ) MERGE ( : L4 { id : 8 } ) CREATE ( n0 : L4 { id : 9 } ) CREATE ( { id : 10 } ) RETURN 1 AS a0 SKIP 1 ;

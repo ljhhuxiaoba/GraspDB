@@ -1,0 +1,13 @@
+-- Time: 2024/04/11 14:10:03
+-- Database: janusgraph_database760
+-- Database version: composite
+-- seed value: 1712812407284
+CREATE (n0 :L0{k0 : '1', k1 : true, k2 : 'Zr5rLUC', k3 : -921858162, k4 : 1393251474, k5 : false, id : 0});
+CREATE (n0 {id : 1});
+CREATE (n0 :L3{k19 : false, k18 : false, k20 : 437796268, k22 : true, id : 2, k21 : 1151264492, k24 : -888371365, k23 : 'H8L'});
+CREATE (n0 :L3{k19 : true, k18 : true, k20 : -1259936437, k22 : true, id : 3, k21 : 70744581, k24 : -2018130975, k23 : 'Ph'});
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T5{k72 : 'EQI', id : 4, k68 : false, k69 : -1115292564}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T1{k44 : true, id : 5, k43 : 2021699942, k46 : 1351333495, k45 : -1801511580, k48 : 'IXOLgXX', k47 : 1142995120}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T3{k60 : true, id : 6, k57 : 'v', k56 : false, k59 : 'sKLqsz0xr', k58 : true}]->(n1);
+MATCH ( :L0), (n0)-[ :T1{k47:NULL}]-() REMOVE n0.k2 SET n0.k=NULL RETURN n0 AS a0, n0 AS a1;
+MATCH ( : L0 ) ,( n0 ) - [ : T1 { k47 : NULL } ] - ( ) REMOVE n0 . k2 SET n0 . k = NULL WITH * RETURN DISTINCT n0 AS a0 , n0 AS a1 ORDER BY TRUE ;

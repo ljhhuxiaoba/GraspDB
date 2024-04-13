@@ -1,0 +1,39 @@
+-- Time: 2024/04/11 13:58:44
+-- Database: janusgraph_database607
+-- Database version: composite
+-- seed value: 1712812407131
+CREATE (n0 {id : 0});
+CREATE (n0 :L0{k0 : true, k2 : false, k3 : 1629222835, k4 : true, id : 1});
+CREATE (n0 {id : 2});
+CREATE (n0 :L0{k0 : false, k1 : false, k2 : true, k3 : 1998035681, k4 : true, id : 3});
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T2{k44 : -2011468863, id : 4, k46 : false, k47 : 'm'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T1{k39 : -446000497, k38 : 757235950, k40 : 'k', k42 : 1812906915, k41 : 'nZpIKiiv', id : 5, k37 : true}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T1{k39 : 1212679275, k38 : 228964620, k40 : 'b', k42 : 745387739, k41 : 'nZpIKiiv', id : 6, k43 : 1006041224, k37 : false}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T2{k44 : -2011468863, id : 7, k46 : true, k45 : false, k48 : 1735939533, k47 : 'h'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T5{k64 : true, k63 : 'k56', k66 : 897767910, id : 8, k65 : 431409347, k67 : false}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T0{k33 : true, id : 9, k32 : 'F', k35 : 'DUm', k34 : true, k36 : -795868886}]->(n1);
+MERGE (n0{id:10})-[r0 :T5{k65:round(round(-645328134)), id:11}]->(n1{id:12})-[r1 :T1{id:13}]-({k0:true, id:14}) MERGE p0=(n2{id:15}) SET n2.k=(r0.k67) RETURN (r0.k66) AS a0, 'ge' AS a1;
+MERGE ( n0 { id : 10 } ) - [ r0 : T5 { k65 : CASE WHEN TRUE THEN round ( round ( -645328134 ) ) END , id : 11 } ] - > ( n1 { id : 12 } ) - [ r1 : T1 { id : 13 } ] - ( { k0 : true , id : 14 } ) MERGE p0 = ( n2 { id : 15 } ) WITH * SET n2 . k = ( r0 . k67 ) WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN DISTINCT CASE WHEN FALSE THEN NULL ELSE ( r0 . k66 ) END AS a0 , ('ge' +'') AS a1 SKIP 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE (n0{k1:true, id:16})-[r0 :T2{k46:true, id:17}]->(n1{id:18})-[r1 :T1{id:19}]-({id:20}) REMOVE n0.k2 SET n1.k=-356684239 RETURN r1 AS a0;
+MERGE ( n0 { k1 : true , id : 16 } ) - [ r0 : T2 { k46 : true , id : 17 } ] - > ( n1 { id : 18 } ) - [ r1 : T1 { id : 19 } ] - ( { id : 20 } ) WITH * REMOVE n0 . k2 WITH * SET n1 . k = CASE WHEN FALSE THEN NULL ELSE -356684239 END WITH * UNWIND [NULL] as l0 RETURN r1 AS a0 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+WITH percentileDisc(NULL, 0) AS a0 UNWIND toIntegerList([{k1: -20364090, k2: NULL}]) AS a1 CREATE ({id:21})-[r0 :T2{id:22}]->(n0{id:23}) RETURN 1 AS a2;
+WITH percentileDisc ( NULL , CASE WHEN FALSE THEN NULL ELSE 0 END ) AS a0 UNWIND toIntegerList ( [ { k1 : CASE WHEN FALSE THEN NULL ELSE -20364090 END , k2 : NULL } ] ) AS a1 OPTIONAL MATCH ()-[:TYPE]-() CREATE ( { id : 21 } ) - [ r0 : T2 { id : CASE WHEN TRUE THEN 22 END } ] - > ( n0 { id : 23 } ) WITH * RETURN DISTINCT 1 AS a2 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+UNWIND keys(startNode(relationships(NULL)[toIntegerOrNull(abs(-571459066))])) AS a0 CREATE (n0{id:24}) MERGE p0=({id:25})-[r0 :T5{id:26}]->({id:27}) RETURN 1 AS a1;
+UNWIND keys ( startNode ( (relationships ( NULL ) +[]) [ toIntegerOrNull ( abs ( -571459066 ) ) ] ) ) AS a0 WITH * CREATE ( n0 { id : 24 } ) WITH * MERGE p0 = ( { id : 25 } ) - [ r0 : T5 { id : 26 } ] - > ( { id : 27 } ) WITH * RETURN 1 AS a1 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+OPTIONAL MATCH (n3) MERGE (n4{id:28})-[r5 :T1{id:29}]->({id:30}) MERGE (n5{id:31})<-[ :T5{id:32}]-(n6{id:33})-[ :T1{id:34}]->({id:35}) RETURN n3 AS a1, 'drpHdc' AS a2;
+OPTIONAL MATCH ( n3 ) MERGE ( n4 { id : CASE WHEN TRUE THEN 28 END } ) - [ r5 : T1 { id : CASE WHEN TRUE THEN 29 END } ] - > ( { id : 30 } ) WITH * MERGE ( n5 { id : 31 } ) < - [ : T5 { id : 32 } ] - ( n6 { id : 33 } ) - [ : T1 { id : 34 } ] - > ( { id : 35 } ) RETURN CASE WHEN TRUE THEN n3 END AS a1 , 'drpHdc' AS a2 ;

@@ -1,0 +1,18 @@
+-- Time: 2024/04/11 14:04:39
+-- Database: janusgraph_database687
+-- Database version: composite
+-- seed value: 1712812407211
+CREATE (n0 :L4{k28 : false, k27 : false, k29 : 1394399196, id : 0, k24 : true, k26 : 449188993, k25 : '8B'});
+CREATE (n0 :L6{k39 : true, k38 : 738653789, k40 : 1314969525, id : 1, k37 : 's'});
+CREATE (n0 {id : 2});
+CREATE (n0 :L1{k11 : -2132507510, id : 3, k7 : -11699262, k8 : -1114593653, k9 : 'OGxpNZ4'});
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T2{k51 : -34117773, k53 : 'Ev', k52 : 1709430090, k55 : -128453396, id : 4, k54 : 'yiHc5'}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T2{k51 : -169860032, k53 : 'fDq85eWZ', k52 : 1058361178, k55 : 1984347810, id : 5, k54 : 't'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T0{k42 : '9', k41 : -421755126, k44 : true, id : 6, k43 : 'c', k45 : true}]->(n1);
+WITH isEmpty([(n0)-[r0]->(n1)-[]-(n2)|startNode(NULL)]) AS a0 WHERE NULL MATCH ()-[r0]-(n0)-[]->() DETACH DELETE n0  RETURN *, [p0=(n3 :L6)<-[r1 :T2{k54:NULL}]-(n4) WHERE (n3.k39)|endNode(relationships(NULL)[toIntegerOrNull(abs(-905696122))])] AS a1 ORDER BY NULL, a1 DESC;
+WITH isEmpty ( [ ( n0 ) - [ r0 ] - > ( n1 ) - [ ] - ( n2 ) | startNode ( NULL ) ] ) AS a0 WHERE NULL WITH * MATCH ( ) - [ r0 ] - ( n0 ) - [ ] - > ( ) OPTIONAL MATCH ()-[:TYPE]-() WITH * CALL{WITH *DETACH DELETE CASE WHEN TRUE THEN n0 END } RETURN * , [ p0 = ( n3 : L6 ) < - [ r1 : T2 { k54 : NULL } ] - ( n4 ) WHERE ( n3 . k39 ) | endNode ( relationships ( NULL ) [ toIntegerOrNull ( abs ( -905696122 ) ) ] ) ] AS a1 ORDER BY NULL, a1 DESC ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE ( :L6{id:7}) CREATE ({id:8})-[ :T2{k55:(-1275144047/(-196415935+NULL)), id:9}]->(n0{id:10})-[r0 :T2{id:11}]->(n1{id:12}), p0=({id:13})-[r1 :T2{id:14}]->(n2{id:15})-[ :T0{id:16}]->( :L1{k11:-2026855204, id:17}) MERGE ({id:18}) RETURN 1 AS a0, 1 AS a1;
+MERGE ( : L6 { id : 7 } ) WITH * UNWIND [1] as l0 CREATE ( { id : 8 } ) - [ : T2 { k55 : ( -1275144047 / ( -196415935 + NULL ) ) , id : 9 } ] - > ( n0 { id : 10 } ) - [ r0 : T2 { id : 11 } ] - > ( n1 { id : 12 } ) CREATE p0 = ( { id : 13 } ) - [ r1 : T2 { id : 14 } ] - > ( n2 { id : 15 } ) - [ : T0 { id : CASE WHEN TRUE THEN 16 END } ] - > ( : L1 { k11 : -2026855204 , id : 17 } ) MERGE ( { id : 18 } ) RETURN 1 AS a0 , 1 AS a1 ;

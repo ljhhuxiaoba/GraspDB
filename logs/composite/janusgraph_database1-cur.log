@@ -1,0 +1,22 @@
+-- Time: 2024/04/11 13:13:33
+-- Database: janusgraph_database1
+-- Database version: composite
+-- seed value: 1712812406482
+CREATE (n0 {id : 0});
+CREATE (n0 :L5{k33 : 's', id : 1, k35 : '4', k34 : -1962379619, k37 : true});
+CREATE (n0 :L0{k0 : true, k1 : true, k2 : -1749226208, k3 : false, k4 : 'z', id : 2});
+CREATE (n0 :L1{k5 : 'NBkA', k11 : 'W4', id : 3, k6 : 'x', k10 : false, k7 : 'L', k8 : 1630787815, k9 : -902755739});
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T2{k51 : 794854926, k53 : false, k52 : 'd', k55 : -1774323136, id : 4, k54 : true, k56 : -1706146251}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T3{k60 : false, k62 : 'c', k61 : '3jnlKeN', id : 5, k57 : false, k59 : true, k58 : 619031920}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T3{k60 : true, k61 : 'b', id : 6, k57 : true, k59 : true, k58 : 619031920}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T3{k60 : true, k62 : 'c1kbv', k61 : 'N', id : 7, k59 : false, k58 : 1329544878}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T1{k49 : 'KjoV', k50 : 'f', k44 : false, id : 8, k46 : 1472504276, k45 : 'xN', k47 : -323090309}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T3{k60 : true, k62 : '1VRQuR4j', k61 : 'a', id : 9, k57 : false, k59 : true, k58 : -818244348}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T1{k49 : 'O', k50 : 'X', k44 : false, id : 10, k46 : -237072328, k45 : 'xN', k47 : 575162828}]->(n1);
+CREATE p0=(n0{id:11}) CREATE (n1 :L1{id:12})-[r0 :T3{k61:NULL, id:13}]->(n2{k37:toBooleanOrNull(NULL), id:14}) MERGE ( :L0{id:15})-[r2 :T3{id:16}]-(n6{id:17}) RETURN *;
+CREATE p0 = ( n0 { id : 11 } ) CREATE ( n1 : L1 { id : 12 } ) - [ r0 : T3 { k61 : NULL , id : CASE WHEN FALSE THEN NULL ELSE 13 END } ] - > ( n2 { k37 : toBooleanOrNull ( NULL ) , id : 14 } ) MERGE ( : L0 { id : 15 } ) - [ r2 : T3 { id : 16 } ] - ( n6 { id : 17 } ) RETURN * ORDER BY NULL SKIP 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+OPTIONAL MATCH (n4), ( :L1)-[]-(n3)<-[]-() CREATE (n5{k3:NULL, id:18}), ( :L1{id:19})-[r0 :T3{id:20}]->(n6{id:21})<-[r1 :T3{id:22}]-(n7{k6:NULL, id:23}) SET n3.k=NULL RETURN 1 AS a1, 1 AS a2;
+OPTIONAL MATCH ( n4 ) ,( : L1 ) - [ ] - ( n3 ) < - [ ] - ( ) CREATE ( n5 { k3 : NULL , id : 18 } ) CREATE ( : L1 { id : 19 } ) - [ r0 : T3 { id : 20 } ] - > ( n6 { id : 21 } ) < - [ r1 : T3 { id : 22 } ] - ( n7 { k6 : NULL , id : 23 } ) FOREACH(f in [1]|SET n3 . k = NULL ) RETURN 1 AS a1 , 1 AS a2 ;

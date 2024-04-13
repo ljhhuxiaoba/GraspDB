@@ -1,0 +1,21 @@
+-- Time: 2024/04/11 13:48:36
+-- Database: janusgraph_database470
+-- Database version: composite
+-- seed value: 1712812406993
+CREATE (n0 :L1{k11 : 'YtSykCl5', id : 0, k10 : 1960744201, k7 : -730066159, k13 : 'apH9qdVNB', k12 : 'Lnrk'});
+CREATE (n0 :L4{k28 : 'kIU', k27 : true, k29 : 'L', k30 : false, id : 1, k26 : -1416801661, k25 : 63991669});
+CREATE (n0 :L3{k20 : 'z', k22 : 882985473, id : 2, k21 : 'F', k24 : true});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T1{k39 : -1515849072, k38 : 'n4kp2', k40 : 'p', k42 : true, k41 : true, id : 4, k43 : false, k37 : 277979944}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T4{k55 : false, id : 5, k57 : 1619818470, k56 : false, k59 : 'U', k58 : 'xJ'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T2{k44 : 1202382355, id : 6, k46 : false, k45 : 'RfS', k48 : 380512148, k47 : 'R'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T1{k39 : 1933353411, k38 : 'U', k40 : 'qj', k42 : true, k41 : true, id : 7, k43 : true, k37 : 117903156}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T1{k39 : -1366911318, k38 : 'Qyi7', k40 : 'f', k42 : true, k41 : false, id : 8, k43 : false, k37 : 1950103179}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T0{k31 : true, k33 : 'ya6oIGK3', id : 9, k32 : '5D6m0qPvD', k35 : true, k34 : false, k36 : 397309811}]->(n1);
+OPTIONAL MATCH ({k21:reverse(('ETgPx'+'M'))})-[r0]-(n0)-[r1]->(), (n1) DETACH DELETE n1  CREATE (n2{id:10}), ({id:11}) RETURN NULL AS a0 LIMIT 0;
+OPTIONAL MATCH (nn0),()<-[r0]-(),(n0),()-[r1]->(),(nn1),(n1) WHERE exists((nn0{k21:reverse(('ETgPx'+'M'))})-[r0]-(n0)-[r1]->(nn1)) DETACH DELETE n1 CREATE ( n2 { id : 10 } ) CREATE ( { id : 11 } ) RETURN DISTINCT NULL AS a0 LIMIT 0 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH ()-[]-(n0{k23:1210461375}), (n1)-[]-() DETACH DELETE n0  MERGE ({id:12}) RETURN n1 AS a0;
+MATCH ( ) - [ ] - ( n0 { k23 : 1210461375 } ) ,( n1 ) - [ ] - ( ) WITH * CALL{WITH *DETACH DELETE n0 } MERGE ( { id : 12 } ) RETURN n1 AS a0 ;

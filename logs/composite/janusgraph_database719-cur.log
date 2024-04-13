@@ -1,0 +1,12 @@
+-- Time: 2024/04/11 14:07:01
+-- Database: janusgraph_database719
+-- Database version: composite
+-- seed value: 1712812407243
+CREATE (n0 :L2{k17 : 1839366836, k16 : false, k18 : 364343830, k20 : true, id : 0, k15 : 'QH7svv', k14 : false});
+CREATE (n0 {id : 1});
+CREATE (n0 :L3{k22 : true, id : 2, k21 : 1488810243, k24 : false, k23 : true, k25 : false});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T0{k33 : true, id : 4, k32 : false, k35 : 1177389517, k34 : -74125468, k37 : 'C', k36 : 'g'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T6{k71 : '1g3', k70 : true, k66 : false, id : 5, k68 : -1980736841, k67 : -521976487}]->(n1);
+OPTIONAL MATCH (n0)-[r0]-(), (n0) REMOVE n0.k2 SET n0.k=NULL RETURN r0 AS a0, -1100034757 AS a1 SKIP 0;
+OPTIONAL MATCH ( n0 ) - [ r0 ] - ( ) ,( n0 ) REMOVE n0 . k2 WITH * SET n0 . k = CASE WHEN TRUE THEN NULL END WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN r0 AS a0 , -1100034757 AS a1 SKIP 0 ;

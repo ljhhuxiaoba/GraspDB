@@ -1,0 +1,19 @@
+-- Time: 2024/04/11 14:19:07
+-- Database: janusgraph_database882
+-- Database version: composite
+-- seed value: 1712812407407
+CREATE (n0 :L5{k28 : true, k29 : 'cNfI', k31 : 'Z', k30 : true, k33 : -466351928, id : 0, k32 : true, k34 : -296358606});
+CREATE (n0 :L6{k39 : true, k38 : 'K', id : 1, k35 : 1985526275, k37 : -169353211, k36 : 417011841});
+CREATE (n0 :L6{k38 : '9', id : 2, k35 : 1998148524, k37 : -169353211, k36 : -2029494371});
+CREATE (n0 :L4{k27 : 12895565, id : 3, k24 : 'X4f', k23 : true, k25 : '8gP'});
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T5{k73 : 'p', k75 : 'xVv', k74 : true, k77 : false, id : 4, k76 : '5', k78 : false}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T4{k71 : false, k70 : '6', k72 : true, id : 5, k68 : true, k67 : 'f', k69 : -1743475599}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T1{k49 : '6', k51 : 'f', k50 : true, k52 : true, id : 6, k46 : false, k48 : false, k47 : 'U'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T4{k71 : false, k70 : '6', k72 : true, k66 : 'h', id : 7, k68 : false, k67 : '6VHB6QGs', k69 : 1729784193}]->(n1);
+MERGE (n0{id:8}) DETACH DELETE n0  CREATE ({id:9})-[r0 :T4{id:10}]->(n1 :L4{id:11})-[ :T4{id:12}]->({id:13}), (n2 :L6{id:14})<-[ :T4{id:15}]-(n3{id:16})-[r1 :T4{id:17}]->({id:18}) RETURN 1 AS a0, 1 AS a1;
+MERGE ( n0 { id : 8 } ) WITH * CALL{WITH *DETACH DELETE n0 } WITH * UNWIND [NULL] as l0 CREATE ( { id : 9 } ) - [ r0 : T4 { id : 10 } ] - > ( n1 : L4 { id : 11 } ) - [ : T4 { id : 12 } ] - > ( { id : 13 } ) CREATE ({id:18})<-[ r1 : T4 { id : 17 } ] -(n3{id:16})-[ : T4 { id : 15 } ] ->( n2 : L6 { id : 14 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN 1 AS a0 , 1 AS a1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+OPTIONAL MATCH p0=(n0)<-[ :T4{k69:NULL}]-(), (n1)<-[r0]-(n2) MERGE ({id:19})-[r1 :T4{id:20}]->(n3{id:21})-[ :T4{id:22}]->( :L6{id:23}) DETACH DELETE n0  RETURN 1 AS a0, 1 AS a1;
+OPTIONAL MATCH p0 = ( n0 ) < - [ : T4 { k69 : NULL } ] - ( ) ,( n1 ) < - [ r0 ] - ( n2 ) MERGE ( { id : 19 } ) - [ r1 : T4 { id : CASE WHEN FALSE THEN NULL ELSE 20 END } ] - > ( n3 { id : 21 } ) - [ : T4 { id : CASE WHEN TRUE THEN 22 END } ] - > ( : L6 { id : 23 } ) WITH * DETACH DELETE n0 RETURN DISTINCT 1 AS a0 , 1 AS a1 ORDER BY FALSE ;

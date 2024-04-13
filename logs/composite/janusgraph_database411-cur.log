@@ -1,0 +1,12 @@
+-- Time: 2024/04/11 13:44:14
+-- Database: janusgraph_database411
+-- Database version: composite
+-- seed value: 1712812406934
+CREATE (n0 :L6{k39 : -238856549, k40 : 'n', id : 0, k37 : 'A', k36 : 1460413788});
+CREATE (n0 :L6{k39 : -1810535612, k38 : false, k40 : 'n', id : 1, k37 : 'xPMb', k36 : 1686717542});
+CREATE (n0 :L0{k0 : -1740126176, k1 : false, k2 : '3', id : 2});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T0{k42 : '7', k41 : -909634012, k44 : 828701363, id : 4, k43 : true, k46 : true, k45 : true}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T1{k49 : -1111315822, k51 : false, k50 : false, k53 : '9', k52 : 'SF', id : 5, k48 : false}]->(n1);
+CREATE (n0{k39:-1247069731, id:6})<-[r0 :T1{id:7}]-(n1{id:8}), p0=(n2{id:9}) CREATE p1=({id:10})<-[r1 :T1{id:11}]-({id:12}) MERGE p2=(n3{id:13})<-[r2 :T1{id:14}]-(n4{id:15}) RETURN (r2.k50) AS a0;
+CREATE ( n0 { k39 : -1247069731 , id : 6 } ) < - [ r0 : T1 { id : 7 } ] - ( n1 { id : 8 } ) CREATE p0 = ( n2 { id : 9 } ) CREATE p1 = ( { id : 10 } ) < - [ r1 : T1 { id : 11 } ] - ( { id : 12 } ) WITH * MERGE p2 = ( n3 { id : 13 } ) < - [ r2 : T1 { id : 14 } ] - ( n4 { id : 15 } ) RETURN ( r2 . k50 ) AS a0 ;

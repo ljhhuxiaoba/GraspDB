@@ -1,0 +1,18 @@
+-- Time: 2024/04/11 14:07:05
+-- Database: janusgraph_database720
+-- Database version: composite
+-- seed value: 1712812407244
+CREATE (n0 :L1{k11 : 'Lb4', id : 0, k10 : 'OUeDk0giW', k7 : 1714322540, k8 : false, k12 : 1978929905, k9 : true});
+CREATE (n0 {id : 1});
+CREATE (n0 :L1{k11 : 'z', id : 2, k10 : 'H', k8 : true, k12 : 1130650016, k9 : true});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T3{k64 : true, k63 : true, k66 : -1116882384, id : 4, k65 : -1371037802, k67 : true}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T0{k49 : 'skEz', id : 5, k45 : true, k48 : '8', k47 : -448312752}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T1{k51 : 1840759897, k53 : 852417295, id : 6, k54 : 'B', k56 : 'L'}]->(n1);
+UNWIND NULL AS a0 UNWIND NULL AS a1 CREATE ({id:7})<-[r0 :T1{id:8}]-({id:9}) RETURN 1 AS a2 UNION ALL CREATE (n0{id:10})-[ :T3{id:11}]->(n1{id:12}), ( :L1{id:13}) MERGE ({id:14})-[r0 :T1{k54:'2oio', id:15}]-(n2{k7:-900846688, id:16}) CREATE (n3{id:17}) RETURN 1 AS a2;
+UNWIND CASE WHEN FALSE THEN NULL ELSE NULL END AS a0 UNWIND NULL AS a1 CREATE ( { id : 7 } ) < - [ r0 : T1 { id : 8 } ] - ( { id : 9 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN 1 AS a2 UNION ALL CREATE ( n0 { id : 10 } ) - [ : T3 { id : 11 } ] - > ( n1 { id : 12 } ) CREATE ( : L1 { id : 13 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() MERGE ( { id : 14 } ) - [ r0 : T1 { k54 : (''+'2oio' ), id : 15 } ] - ( n2 { k7 : -900846688 , id : 16 } ) WITH * UNWIND 1 as l0 CREATE ( n3 { id : 17 } ) RETURN 1 AS a2 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+OPTIONAL MATCH p0=()-[]->(n0 :L1) WHERE (n0.k8) DETACH DELETE n0  CREATE (n1{id:18})<-[r0 :T3{id:19}]-({id:20}) RETURN 1 AS a0, 1 AS a1;
+OPTIONAL MATCH p0=()-[]->(n0 :L1) WHERE ( n0 . k8 ) UNWIND [NULL] as l0 DETACH DELETE CASE WHEN FALSE THEN NULL ELSE n0 END CREATE ( n1 { id : 18 } ) < - [ r0 : T3 { id : 19 } ] - ( { id : 20 } ) WITH * UNWIND 1 as l1 RETURN 1 AS a0 , 1 AS a1 ORDER BY 1 LIMIT 1 ;

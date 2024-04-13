@@ -1,0 +1,19 @@
+-- Time: 2024/04/11 14:22:35
+-- Database: janusgraph_database929
+-- Database version: composite
+-- seed value: 1712812407454
+CREATE (n0 :L2{k17 : 'I', k16 : 431679572, id : 0, k13 : 328322817, k15 : false, k14 : true});
+CREATE (n0 :L0{k0 : false, k1 : 'z', k2 : 'b', k3 : true, k4 : 'L', k5 : 'X', id : 1, k6 : 571016693});
+CREATE (n0 {id : 2});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T0{k39 : true, k38 : 134930681, k40 : -582837125, k42 : -102299070, k41 : false, id : 4, k37 : false}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T6{k73 : 'c', k72 : 'j', k74 : 'N', k77 : false, id : 5, k76 : false}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T0{k39 : false, k38 : -1468468753, k40 : 323409850, k41 : true, id : 6, k37 : true}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T3{k53 : -561021182, id : 7, k54 : -1840649182, k57 : false, k56 : 's', k59 : -1941444857, k58 : 'q'}]->(n1);
+MERGE (n0 :L0{k5:'A', id:8})-[r0 :T3{k53:-923574539, id:9}]-({id:10})<-[r1 :T0{k39:true, id:11}]-(n3{id:12}) SET n3.k=NULL DETACH DELETE n0  RETURN DISTINCT (r1.k42) AS a0, n3 AS a1 LIMIT 1;
+MERGE ( n0 : L0 { k5 : 'A' , id : CASE WHEN TRUE THEN 8 END } ) - [ r0 : T3 { k53 : -923574539 , id : 9 } ] - ( { id : 10 } ) < - [ r1 : T0 { k39 : true , id : 11 } ] - ( n3 { id : 12 } ) SET n3 . k = NULL DETACH DELETE CASE WHEN FALSE THEN NULL ELSE n0 END RETURN DISTINCT ( r1 . k42 ) AS a0 , n3 AS a1 LIMIT 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+CREATE ({k17:'5', id:13})-[r0 :T0{id:14}]->({id:15})-[ :T3{id:16}]->(n0{k4:'VNt', id:17}), ({id:18})-[r1 :T3{id:19}]->(n1{id:20}) MERGE ( :L0{id:21})<-[r2 :T3{id:22}]-(n2{id:23})<-[r3 :T0{id:24}]-({id:25}) SET n2.k=(r2.k56) RETURN n2 AS a0;
+CREATE ( { k17 : '5' , id : 13 } ) - [ r0 : T0 { id : 14 } ] - > ( { id : 15 } ) - [ : T3 { id : 16 } ] - > ( n0 { k4 : 'VNt' , id : 17 } ) CREATE (m0{ id : CASE WHEN TRUE THEN 18 END } )CREATE (m0)- [ r1 : T3 { id : 19 } ] - > ( n1 { id : 20 } ) MERGE ( : L0 { id : 21 } ) < - [ r2 : T3 { id : 22 } ] - ( n2 { id : CASE WHEN TRUE THEN 23 END } ) < - [ r3 : T0 { id : 24 } ] - ( { id : 25 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() SET n2 . k = ( r2 . k56 ) WITH * UNWIND [1] as l0 RETURN n2 AS a0 SKIP 1 ;

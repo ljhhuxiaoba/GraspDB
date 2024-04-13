@@ -1,0 +1,17 @@
+-- Time: 2024/04/11 14:19:16
+-- Database: janusgraph_database884
+-- Database version: composite
+-- seed value: 1712812407409
+CREATE (n0 :L2{k17 : -238780440, k16 : -1797325738, k18 : true, id : 0, k13 : 'jD', k12 : true, k15 : false, k14 : 951254627});
+CREATE (n0 :L1{k11 : true, id : 1, k6 : 1692462324, k10 : true, k9 : false});
+CREATE (n0 :L4{k28 : false, k27 : true, k29 : 441480681, id : 2, k24 : false, k26 : '60xUW'});
+CREATE (n0 :L2{k17 : 377457526, k16 : -734140778, k18 : true, id : 3, k13 : 'V5ZMzB', k12 : true, k15 : false, k14 : -506015368});
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T3{k53 : false, k52 : true, k55 : -1201877975, id : 4, k54 : '6', k57 : 'm', k56 : 'GJcSl3iTh'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T3{k52 : false, k55 : 654987330, id : 5, k54 : '4xuW4MO0f', k57 : 'c', k56 : 'xY7MILdmT'}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T2{k49 : 528988288, k51 : true, id : 6, k46 : 'QMOO', k47 : false}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T0{k39 : true, k38 : true, k40 : 'eYE2', id : 7, k36 : -1090574046}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T0{k39 : false, k38 : false, k40 : 'y2Ff6X', id : 8, k37 : -1623360437, k36 : 2040148245}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T1{k41 : -1832262329, k44 : -1691114725, id : 9, k43 : 'Brf', k45 : true}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T3{k52 : true, k55 : 1061598478, id : 10, k54 : '6', k56 : 'J'}]->(n1);
+MATCH ()-[r1]->(n6) CREATE (n7{id:11})<-[r2 :T2{k50:true, id:12}]-( :L4{id:13})-[r3 :T3{k54:NULL, id:14}]->(n8{id:15}), (n9{id:16})-[ :T0{id:17}]->(n10 :L2{id:18})-[r4 :T1{id:19}]->(n11{id:20}) SET n6.k=NULL RETURN n6 AS a1 LIMIT 0;
+MATCH ( ) - [ r1 ] - > ( n6 ) WITH * CREATE ( n7 { id : 11 } ) < - [ r2 : T2 { k50 : true , id : 12 } ] - ( : L4 { id : 13 } ) - [ r3 : T3 { k54 : NULL , id : CASE WHEN FALSE THEN NULL ELSE 14 END } ] - > ( n8 { id : 15 } ) CREATE ( n9 { id : 16 } ) - [ : T0 { id : 17 } ] - > ( n10 : L2 { id : 18 } ) - [ r4 : T1 { id : 19 } ] - > ( n11 { id : 20 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() SET n6 . k = NULL RETURN n6 AS a1 LIMIT 0 ;

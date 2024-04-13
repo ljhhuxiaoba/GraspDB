@@ -1,0 +1,21 @@
+-- Time: 2024/04/11 14:31:12
+-- Database: janusgraph_database1045
+-- Database version: composite
+-- seed value: 1712812407570
+CREATE (n0 :L3{k19 : true, k20 : true, id : 0, k21 : false, k23 : true});
+CREATE (n0 :L0{k0 : 915124092, k1 : false, k2 : true, k3 : false, k4 : 'Z', k5 : -181422759, id : 1});
+CREATE (n0 :L0{k0 : -151222339, k1 : true, k2 : true, k3 : false, k4 : 'I', k5 : 379901843, id : 2});
+CREATE (n0 :L5{k31 : 'L', k33 : 'i', id : 3, k32 : true, k35 : 1357327791, k34 : -791339446});
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T2{k49 : -419138870, k51 : 1213521813, k50 : 1066842905, id : 4, k48 : 'sv', k47 : 1340790684}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T1{k42 : 1822045214, k44 : -1022932162, id : 5, k43 : 1163141853, k46 : 'NfabZ0', k45 : 1071687660}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T4{k60 : -407868079, k62 : true, k61 : -116800732, id : 6, k59 : '0bU'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T1{k44 : 1273369760, id : 7, k43 : 857529738, k46 : 'o', k45 : -1312775945}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T1{k42 : -1963909225, k44 : -1194157875, id : 8, k43 : 857529738, k46 : 'SwxJvL', k45 : -1828886927}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T5{k64 : false, k66 : 'XztFa', id : 9, k65 : false, k68 : -63074411, k69 : 1918225171}]->(n1);
+OPTIONAL MATCH ()-[]-(), p2=(n3) OPTIONAL MATCH p3=()-[]->( :L3), (n4 :L0)<-[]-( :L0{k0:(n4.k5)}) CREATE p4=(n5{id:10})-[r1 :T1{id:11}]->(n6{k36:false, id:12}) RETURN CASE WHEN false THEN [(n4.k0), (n4.k5)] END AS a0;
+OPTIONAL MATCH ()-[]-(),p2=(n3) OPTIONAL MATCH p3 = ( ) - [ ] - > ( : L3 ) ,( n4 : L0 ) < - [ ] - ( : L0 { k0 : ( n4 . k5 ) } ) CREATE p4 = ( n5 { id : 10 } ) - [ r1 : T1 { id : 11 } ] - > ( n6 { k36 : false , id : 12 } ) WITH * UNWIND 1 as l0 RETURN CASE WHEN false THEN ([ CASE WHEN TRUE THEN ( n4 . k0 ) END , ( n4 . k5 ) ] +[]) END AS a0 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+OPTIONAL MATCH ( :L0)-[]-()-[]-(n0{k22:NULL}) OPTIONAL MATCH (n1{k0:CASE WHEN NULL THEN 811278405 END})<-[r0]-()-[]-(n2 :L0) SET n0.k=(n2.k4) RETURN 1 AS a0 LIMIT 0;
+OPTIONAL MATCH ( : L0 ) - [ ] - ( ) - [ ] - ( n0 { k22 : CASE WHEN FALSE THEN NULL ELSE NULL END } ) OPTIONAL MATCH (n1),()<-[r0]-(),(nn0),()<-[m1]-(),(n2:L0) WHERE exists((n1{k0:CASE WHEN NULL THEN 811278405 END})<-[r0]-(nn0)-[m1]-(n2)) WITH * SET n0 . k = CASE WHEN FALSE THEN NULL ELSE ( n2 . k4 ) END RETURN 1 AS a0 ORDER BY FALSE LIMIT 0 ;

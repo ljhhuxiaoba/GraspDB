@@ -1,0 +1,23 @@
+-- Time: 2024/04/11 13:19:37
+-- Database: janusgraph_database78
+-- Database version: composite
+-- seed value: 1712812406559
+CREATE (n0 :L4{k28 : 'I', k29 : true, id : 0, k24 : 'Z', k23 : false, k26 : true, k25 : 'b7W'});
+CREATE (n0 :L1{id : 1, k6 : -1306859951, k10 : false, k8 : true, k9 : true});
+CREATE (n0 :L2{k17 : -849843498, k16 : 'X', id : 2, k13 : -254997005, k14 : true});
+CREATE (n0 :L4{k28 : 'p5i', k27 : 1849039974, k29 : true, id : 3, k24 : 'RDdMjf', k23 : true, k26 : true, k25 : 'v'});
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T0{k42 : '5', k44 : 'Ir', id : 4, k46 : 'D', k45 : 'dOs8DX'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T1{k49 : false, k51 : true, k53 : '22', k52 : false, id : 5, k48 : false, k47 : -351133094}]->(n1);
+OPTIONAL MATCH (n0), p0=() MERGE (n1 :L2{id:6}) SET n0.k=reverse(toStringList(NULL)[toIntegerOrNull(abs((-276133813+(1770053380*286582023))))]) RETURN 1 AS a0;
+OPTIONAL MATCH ( n0 ) ,p0 = ( ) MERGE ( n1 : L2 { id : 6 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() SET n0 . k = CASE WHEN TRUE THEN reverse ( toStringList ( NULL ) [ toIntegerOrNull ( abs ( ( CASE WHEN FALSE THEN NULL ELSE -276133813 + ( 1770053380 * 286582023 ) END ) ) ) ] ) END RETURN CASE WHEN FALSE THEN NULL ELSE 1 END AS a0 LIMIT 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE (n0 :L2{id:7}) DETACH DELETE n0  MERGE p0=(n1{k16:'BEefOjDy', id:8}) RETURN n1 AS a0, NULL AS a1 ORDER BY CASE WHEN false THEN length(NULL) END, a0 DESC;
+MERGE ( n0 : L2 { id : 7 } ) DETACH DELETE n0 MERGE p0 = ( n1 { k16 : 'BEefOjDy' , id : 8 } ) RETURN n1 AS a0 , NULL AS a1 ORDER BY CASE WHEN false THEN length(NULL) END, a0 DESC ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+WITH * WHERE NULL MERGE (n0 :L2{k16:'z', id:9}) CREATE ({id:10}), (n1{id:11})<-[r0 :T1{id:12}]-( :L4{id:13}) RETURN NULL AS a0 ORDER BY -53848871, a0 DESC LIMIT 0;
+WITH * WHERE NULL UNWIND 1 as l0 MERGE pp0=( n0 : L2 { k16 : 'z' , id : 9 } ) WITH * CREATE ( { id : CASE WHEN FALSE THEN NULL ELSE 10 END } ) CREATE (n1{ id : CASE WHEN FALSE THEN NULL ELSE 11 END } )CREATE (n1)< - [ r0 : T1 { id : 12 } ] - ( : L4 { id : 13 } ) RETURN NULL AS a0 ORDER BY -53848871, a0 DESC SKIP 1 LIMIT 0 ;

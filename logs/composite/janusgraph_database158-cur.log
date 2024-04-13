@@ -1,0 +1,29 @@
+-- Time: 2024/04/11 13:25:32
+-- Database: janusgraph_database158
+-- Database version: composite
+-- seed value: 1712812406640
+CREATE (n0 :L2{k17 : false, k16 : -1786910859, k19 : -606158775, k18 : '0o', id : 0, k13 : -1935445820, k15 : -686838851, k14 : 'LC'});
+CREATE (n0 {id : 1});
+CREATE (n0 {id : 2});
+CREATE (n0 :L1{k11 : false, id : 3, k6 : 's', k10 : 'uJ7Y', k7 : 290040409, k8 : 1957827211, k12 : -1208303277, k9 : false});
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T1{id : 4, k46 : 'J', k45 : -2056961656, k48 : -612235535}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 2}) MERGE(n0)-[r :T1{k44 : 'CRTwdBj', id : 5, k46 : '2eOc', k45 : 475363671, k48 : -1710076411, k47 : true}]->(n1);
+UNWIND NULL AS a0 MATCH (n0)<-[]-(n1) CREATE p0=({k11:NULL, id:6}) RETURN 1 AS a1, n1 AS a2 UNION ALL WITH NULL AS a0 LIMIT 0 OPTIONAL MATCH (n0) REMOVE n0.k2 RETURN 1 AS a1, properties(endNode(relationships(NULL)[toIntegerOrNull(abs(-1536657322))])) AS a2 ORDER BY a2 DESC;
+UNWIND CASE WHEN TRUE THEN NULL END AS a0 MATCH ( n0 ) < - [ ] - ( n1 ) WHERE TRUE CREATE p0 = ( { k11 : NULL , id : 6 } ) WITH * UNWIND 1 as l0 RETURN 1 AS a1 , n1 AS a2 UNION ALL WITH CASE WHEN TRUE THEN NULL END AS a0 LIMIT 0 OPTIONAL MATCH ( n0 ) WHERE TRUE REMOVE n0 . k2 RETURN 1 AS a1 , properties ( endNode ( relationships ( CASE WHEN FALSE THEN NULL ELSE NULL END ) [ toIntegerOrNull ( CASE WHEN TRUE THEN abs ( -1536657322 ) END ) ] ) ) AS a2 ORDER BY a2 DESC ,1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+WITH DISTINCT * CREATE (n0{id:7})<-[r0 :T1{id:8}]-(n1{id:9}) CREATE p0=(n2{id:10})<-[ :T1{id:11}]-({id:12}) RETURN CASE WHEN NULL THEN endNode(relationships(NULL)[toIntegerOrNull(abs(708671945))]) END AS a0, 1 AS a1;
+WITH DISTINCT * WITH * CREATE ( n0 { id : 7 } ) < - [ r0 : T1 { id : CASE WHEN FALSE THEN NULL ELSE 8 END } ] - ( n1 { id : 9 } ) CREATE p0 = ( n2 { id : 10 } ) < - [ : T1 { id : 11 } ] - ( { id : 12 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN CASE WHEN FALSE THEN NULL ELSE CASE WHEN NULL THEN endNode ( relationships ( NULL ) [ toIntegerOrNull ( CASE WHEN FALSE THEN NULL ELSE abs ( 708671945 ) END ) ] ) END END AS a0 , 1 AS a1 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+CREATE p0=(n0{k8:1158791475, id:13})-[ :T1{id:14}]->(n1{id:15}), p1=(n2{id:16})<-[ :T1{id:17}]-(n3{id:18}) CREATE (n4{id:19})<-[ :T1{k45:-1488508341, id:20}]-({id:21}), ({id:22})<-[ :T1{k47:false, id:23}]-(n5{id:24}) MERGE ({id:25}) RETURN 1 AS a2 LIMIT 0;
+CREATE p0 = ( n0 { k8 : 1158791475 , id : 13 } ) - [ : T1 { id : 14 } ] - > ( n1 { id : 15 } ) CREATE p1 = ( n2 { id : 16 } ) < - [ : T1 { id : 17 } ] - ( n3 { id : CASE WHEN TRUE THEN 18 END } ) WITH * CREATE (n4{ id : CASE WHEN FALSE THEN NULL ELSE 19 END } )CREATE (n4)< - [ : T1 { k45 : -1488508341 , id : 20 } ] - ( { id : 21 } ) CREATE (n5{id:24})-[ : T1 { k47 : false , id : 23 } ] ->( { id : 22 } ) MERGE ( { id : 25 } ) RETURN 1 AS a2 ORDER BY 1 LIMIT 0 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH p0=(n0)-[r0]->()-[]->() CREATE (n1{id:26}) SET n0.k=NULL RETURN *;
+MATCH p0=(n0)-[r0]->()-[]->() OPTIONAL MATCH ()-[:TYPE]-() CREATE ( n1 { id : 26 } ) WITH * UNWIND [NULL] as l0 SET n0 . k = NULL WITH * RETURN * ;

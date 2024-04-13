@@ -1,0 +1,12 @@
+-- Time: 2024/04/11 14:27:03
+-- Database: janusgraph_database989
+-- Database version: composite
+-- seed value: 1712812407514
+CREATE (n0 :L3{k19 : false, k20 : 104917578, id : 0, k23 : true});
+CREATE (n0 {id : 1});
+CREATE (n0 :L2{k17 : 'zMmYs', k16 : 'CoSol', id : 2, k13 : '7HpoOs6', k12 : 'Ge', k14 : false});
+CREATE (n0 :L0{k0 : false, k1 : 848867183, k2 : 1377212062, k3 : 'WJ', k4 : 'Kt6Lzqq', k5 : true, id : 3});
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T4{k60 : false, k55 : -418243060, id : 4, k54 : 'aARn', k57 : 'R', k56 : 'Uma', k59 : 1859185483, k58 : true}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T0{k29 : '3U', k31 : 1834287936, k30 : 1334473481, k33 : 350655835, id : 5, k32 : 1795757338}]->(n1);
+MATCH () CREATE ({id:6}), (n0{id:7}) MERGE ({id:8}) RETURN 1 AS a0, 1 AS a1;
+MATCH ( ) CREATE ( { id : 6 } ) CREATE ( n0 { id : 7 } ) MERGE ( { id : CASE WHEN TRUE THEN 8 END } ) WITH * UNWIND [NULL] as l0 RETURN 1 AS a0 , 1 AS a1 ;

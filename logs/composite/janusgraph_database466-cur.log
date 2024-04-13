@@ -1,0 +1,21 @@
+-- Time: 2024/04/11 13:48:18
+-- Database: janusgraph_database466
+-- Database version: composite
+-- seed value: 1712812406989
+CREATE (n0 :L3{k19 : 'jwJjtEEw', k20 : -1677706019, k22 : 1473208288, id : 0, k21 : -1086861347, k24 : '9B', k23 : -1040022597, k25 : true});
+CREATE (n0 :L2{k17 : '2lk', k16 : 'Q736NwU', k18 : -949055548, id : 1, k14 : 't'});
+CREATE (n0 {id : 2});
+CREATE (n0 :L1{k11 : 'J6xFX', id : 3, k10 : 1624686769, k7 : 'vs', k13 : true, k8 : true, k12 : 1616100912, k9 : -711084296});
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T3{k66 : true, id : 4, k65 : 'C', k67 : false}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T4{k71 : false, k70 : -1750763361, k72 : 1456033887, id : 5, k68 : true, k69 : true}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T4{k71 : false, k70 : 705836712, k72 : -1945565729, id : 6, k68 : true, k69 : false}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T6{k80 : -606607021, k82 : 'v', k81 : false, k83 : 'n', id : 7, k79 : 'VO'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T1{k51 : 'L0', k50 : true, k53 : true, k52 : -2109211430, k55 : false, id : 8, k54 : 'SW', k56 : 521543078}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T5{k73 : 1114609107, k75 : 1452305395, k74 : 'B', k77 : true, id : 9, k76 : 'PuMvR9Ts', k78 : 'D3Bf7vhWD'}]->(n1);
+MATCH (n0) MATCH ()-[]-(), (n1{k17:'KA'})-[]->(n2) MERGE (n3 :L3{id:10})-[r0 :T4{id:11}]-(n4{id:12}) RETURN 1 AS a0, 1 AS a1 ORDER BY a0;
+MATCH ( n0 ) UNWIND 1 as l0 MATCH (nn0),()<-[m1]-(),(nn2),(n1{k17:'KA'})-[]->(n2) WHERE exists((nn0)-[m1]-(nn2)) UNWIND [NULL] as l1 MERGE ( n3 : L3 { id : CASE WHEN TRUE THEN 10 END } ) - [ r0 : T4 { id : 11 } ] - ( n4 { id : 12 } ) RETURN 1 AS a0 , 1 AS a1 ORDER BY a0 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+WITH CASE WHEN (0 <= NULL) THEN NULL END AS a0 MERGE (n0 :L3{id:13}) SET n0.k=(n0.k19) RETURN *, (n0.k19) AS a1;
+WITH CASE WHEN ( 0 <= NULL ) THEN NULL END AS a0 WHERE TRUE MERGE ( n0 : L3 { id : 13 } ) WITH * UNWIND 1 as l0 SET n0 . k = ( n0 . k19 ) WITH * UNWIND [1] as l1 RETURN * , ( n0 . k19 ) AS a1 ;

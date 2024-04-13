@@ -1,0 +1,14 @@
+{
+  "janusgraph@first": {
+    "port": 8182,
+    "host": "localhost",
+    "username": "janus",
+    "password": "123abc..."
+  },
+  "janusgraph@second": {
+    "port": 8183,
+    "host": "localhost",
+    "username": "janus",
+    "password": "123abc..."
+  }
+}

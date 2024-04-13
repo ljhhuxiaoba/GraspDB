@@ -1,0 +1,19 @@
+-- Time: 2024/04/11 13:18:48
+-- Database: janusgraph_database67
+-- Database version: composite
+-- seed value: 1712812406548
+CREATE (n0 {id : 0});
+CREATE (n0 :L4{k20 : -342671937, k22 : false, id : 1, k21 : false, k24 : 1764679001, k23 : -1804045242});
+CREATE (n0 :L4{k22 : false, id : 2, k21 : true, k24 : -744253477, k23 : 467601823});
+CREATE (n0 :L2{id : 3, k10 : 'jJi9rIGW', k13 : -1650341949, k12 : true, k14 : 'CXo'});
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T5{k71 : 673070884, k70 : 'Z', id : 4, k68 : -1263200916, k67 : false, k69 : true}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T4{k60 : -434654476, k62 : false, k61 : 'VNg', k64 : 1869676030, k63 : 1765260761, k66 : 156885331, id : 5, k65 : '94x5Ejh'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T3{id : 6, k56 : 753287766, k59 : true, k58 : 566539195}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T1{id : 7, k46 : 'wvcS0', k45 : 704905827, k48 : 'LZq97Y', k47 : 1535822227}]->(n1);
+CREATE (n0 :L4{id:8})-[ :T3{id:9}]->({id:10}), p0=(n1{id:11})-[ :T3{id:12}]->(n2{id:13})<-[r0 :T5{k70:NULL, id:14}]-({id:15}) CREATE p1=({id:16}) CREATE (n3{id:17})-[ :T3{id:18}]->({k20:489397045, id:19})<-[r1 :T5{id:20}]-(n4{id:21}) RETURN {k1: (-1353694794 >= CASE WHEN false THEN 2117528402 END), k2: [x IN ['J', 'V']]} AS a0;
+CREATE ( n0 : L4 { id : 8 } ) - [ : T3 { id : 9 } ] - > ( { id : 10 } ) CREATE (n1{ id : 11 } )CREATE (n1)- [ : T3 { id : 12 } ] - > ( n2 { id : 13 } ) < - [ r0 : T5 { k70 : NULL , id : CASE WHEN TRUE THEN 14 END } ] - ( { id : 15 } ) CREATE p1 = ( { id : 16 } ) CREATE ( n3 { id : 17 } ) - [ : T3 { id : 18 } ] - > ( { k20 : 489397045 , id : 19 } ) < - [ r1 : T5 { id : 20 } ] - ( n4 { id : 21 } ) RETURN { k1 : ( -1353694794 >= CASE WHEN false THEN 2117528402 END ) , k2 : [ x IN [ 'J' , 'V' ] ] } AS a0 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE ({id:22}) MERGE ({id:23}) CREATE ({k23:NULL, id:24}) RETURN 1 AS a0, 1 AS a1;
+MERGE ( { id : 22 } ) WITH * UNWIND [1] as l0 MERGE ( { id : 23 } ) WITH * CREATE ( { k23 : CASE WHEN FALSE THEN NULL ELSE NULL END , id : 24 } ) RETURN 1 AS a0 , CASE WHEN FALSE THEN NULL ELSE 1 END AS a1 SKIP 1 LIMIT 1 ;

@@ -1,0 +1,19 @@
+-- Time: 2024/04/11 13:36:24
+-- Database: janusgraph_database305
+-- Database version: composite
+-- seed value: 1712812406828
+CREATE (n0 :L2{k17 : 'yr', k16 : true, k11 : 'Sw', id : 0, k13 : 'GkuRr', k12 : -553732463, k15 : false, k14 : 'HpYOv'});
+CREATE (n0 {id : 1});
+CREATE (n0 :L0{k0 : false, k1 : false, k2 : '2', k3 : 'oDhc', id : 2});
+CREATE (n0 :L0{k0 : true, k1 : false, k2 : '2', k3 : 'WAVP0MmC9', k4 : true, id : 3});
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T1{k39 : -657786901, k38 : false, k40 : 247024211, k41 : false, id : 4}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T4{k55 : 832346421, id : 5, k54 : 942478673, k57 : 'MKU0ym', k56 : true, k59 : true, k58 : 'Yh'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T1{k38 : false, k40 : 1372688237, k42 : 'y', id : 6}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T3{k49 : -117690656, k51 : false, k53 : 1503516659, k52 : 920059587, id : 7, k48 : -1223606857}]->(n1);
+WITH DISTINCT * ORDER BY reverse([(n0)-[]->(n1) WHERE (false OR true)|relationships(NULL)[toIntegerOrNull(abs(-469059805))]]) WHERE true OPTIONAL MATCH p0=(n2), p1=()-[]->(n0)-[]->(n3) DETACH DELETE p1  RETURN p0 AS a0;
+WITH DISTINCT * ORDER BY CASE WHEN TRUE THEN reverse ( [ ( n0 ) - [ ] - > ( n1 ) WHERE ( false OR true ) | CASE WHEN TRUE THEN relationships ( NULL ) [ toIntegerOrNull ( abs ( -469059805 ) ) ] END ] ) END WHERE true OPTIONAL MATCH p0=(n2),p1=()-[]->(n0)-[]->(n3) DETACH DELETE p1 WITH * RETURN DISTINCT p0 AS a0 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+UNWIND [NULL] AS a3 OPTIONAL MATCH (), (n0)-[]-() WHERE true MERGE (n1{id:8}) RETURN 1 AS a4;
+UNWIND [ CASE WHEN FALSE THEN NULL ELSE NULL END ] AS a3 OPTIONAL MATCH ( ) ,( n0 ) - [ ] - ( ) WHERE true WITH * MERGE ( n1 { id : 8 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN 1 AS a4 ;

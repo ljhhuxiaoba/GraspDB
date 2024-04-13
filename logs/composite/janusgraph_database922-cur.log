@@ -1,0 +1,21 @@
+-- Time: 2024/04/11 14:22:05
+-- Database: janusgraph_database922
+-- Database version: composite
+-- seed value: 1712812407447
+CREATE (n0 :L3{k19 : 'fVQgdQx', k22 : 'C', id : 0, k21 : 'Z', k24 : 1151802801, k23 : false});
+CREATE (n0 {id : 1});
+CREATE (n0 :L0{k1 : 1913951786, k2 : 'u', k4 : 'z', k5 : false, id : 2, k6 : true});
+CREATE (n0 :L3{k19 : 'dYZI', k20 : 'E', k22 : '0', id : 3, k21 : 'an', k24 : 128149092, k23 : true});
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T5{k62 : 460425771, k61 : 'Z', k64 : false, k63 : false, id : 4, k65 : -1902371754}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T3{k49 : 997676413, k50 : 'MzR', k52 : 1929815346, id : 5, k48 : 'SB9rKW'}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T1{k39 : 1127204191, k38 : 'ZY', k40 : false, k41 : false, id : 6, k37 : '8', k36 : 'J'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T4{k60 : 246013503, k55 : false, id : 7, k54 : 'v', k57 : true, k56 : false, k59 : 'i'}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T5{k62 : -1667989744, k61 : 'sDgvAM', k64 : true, k63 : false, id : 8}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T1{k39 : -180769523, k40 : true, k41 : false, id : 9, k37 : 'r', k36 : 'GG'}]->(n1);
+UNWIND [[(1142830939 <> -1500396553), NULL], [NULL, NULL]] AS a0 UNWIND [type(relationships(NULL)[toIntegerOrNull(abs(-119947823))])] AS a1 CREATE ({id:10})-[r0 :T4{id:11}]->({id:12}), ({k4:NULL, id:13})-[ :T1{id:14}]->(n0{id:15}) RETURN * ORDER BY 1660105875 SKIP 0;
+UNWIND [ [ ( 1142830939 <> -1500396553 ) , NULL ] , ([]+[ NULL , NULL ] )] AS a0 OPTIONAL MATCH ()-[:TYPE]-() UNWIND ([ (type ( relationships ( NULL ) [ toIntegerOrNull ( abs ( -119947823 ) ) ] ) +'') ] +[]) AS a1 CREATE ( { id : 10 } ) - [ r0 : T4 { id : 11 } ] - > ( { id : 12 } ) CREATE ( { k4 : NULL , id : 13 } ) - [ : T1 { id : 14 } ] - > ( n0 { id : 15 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN * ORDER BY 1660105875 ,FALSE SKIP 0 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+WITH NULL AS a2 MERGE ({id:16}) CREATE p0=(n3{id:17}), ({id:18})-[ :T4{id:19}]->({id:20}) RETURN DISTINCT 1 AS a3, CASE WHEN (NULL > NULL) THEN NULL END AS a4 ORDER BY 'j6bFsDmN', a3;
+WITH NULL AS a2 MERGE ( { id : 16 } ) CREATE p0 = ( n3 { id : 17 } ) CREATE ( { id : 18 } ) - [ : T4 { id : 19 } ] - > ( { id : 20 } ) WITH * RETURN DISTINCT 1 AS a3 , CASE WHEN CASE WHEN FALSE THEN NULL ELSE ( NULL > NULL ) END THEN NULL END AS a4 ORDER BY 'j6bFsDmN', a3 DESC ;

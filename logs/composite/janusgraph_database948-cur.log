@@ -1,0 +1,15 @@
+-- Time: 2024/04/11 14:24:00
+-- Database: janusgraph_database948
+-- Database version: composite
+-- seed value: 1712812407473
+CREATE (n0 :L0{k0 : -1542925915, k1 : false, k2 : false, k3 : '3', k4 : false, k5 : 1753027937, id : 0});
+CREATE (n0 :L0{k0 : 1269123430, k1 : true, k2 : false, k3 : 'H', k4 : true, id : 1, k6 : 1507964211});
+CREATE (n0 :L3{k19 : 's', k20 : true, k22 : 'J', id : 2, k21 : true, k24 : 'R', k23 : false});
+CREATE (n0 :L0{k0 : -846553665, k2 : true, k3 : 'R', k4 : true, k5 : 766098084, id : 3, k6 : -1762679585});
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T3{k51 : 'r', k50 : 'i2', k53 : 'TC', k52 : '2', k55 : 593195447, id : 4, k54 : 'R'}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T0{k31 : 'c', k30 : 'MR0NeVJR', k33 : 406211153, id : 5, k32 : false, k35 : 'sFzuib', k34 : 'Ar7', k36 : true}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T3{k50 : 'd', k53 : 'UW4fd', k52 : 'hj', k55 : 1130875063, id : 6, k54 : '7'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T3{k51 : 'y', k52 : 'ToRp', k55 : -766691606, id : 7}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T4{k60 : -1331069066, k61 : 'b', id : 8, k57 : 'qqb', k56 : -119333310, k59 : 'h3dGnOu', k58 : 108363264}]->(n1);
+CREATE ({id:9})<-[r0 :T3{id:10}]-(n0{id:11}) CREATE (n1{k6:342752070, id:12})-[ :T3{k51:'7', id:13}]->(n2{id:14}), (n3{id:15}) CREATE p0=(n4 :L0{id:16})-[ :T3{id:17}]->(n5{k22:'ATA6Ij', id:18})-[r1 :T3{id:19}]->( :L0{k4:((NULL < CASE WHEN NULL THEN NULL END) AND (1590223836 < NULL)), id:20}), ({k2:false, id:21})<-[r2 :T3{id:22}]-(n6{id:23}) RETURN 1 AS a0;
+CREATE ( { id : CASE WHEN TRUE THEN 9 END } ) < - [ r0 : T3 { id : 10 } ] - ( n0 { id : 11 } ) CREATE ( n1 { k6 : 342752070 , id : 12 } ) - [ : T3 { k51 : '7' , id : 13 } ] - > ( n2 { id : 14 } ) CREATE ( n3 { id : 15 } ) CREATE p0 = ( n4 : L0 { id : 16 } ) - [ : T3 { id : CASE WHEN TRUE THEN 17 END } ] - > ( n5 { k22 : CASE WHEN FALSE THEN NULL ELSE 'ATA6Ij' END , id : 18 } ) - [ r1 : T3 { id : 19 } ] - > ( : L0 { k4 : ( ( NULL < CASE WHEN CASE WHEN TRUE THEN NULL END THEN NULL END ) AND ( 1590223836 < NULL ) ) , id : 20 } ) CREATE ( { k2 : false , id : 21 } ) < - [ r2 : T3 { id : 22 } ] - ( n6 { id : CASE WHEN TRUE THEN 23 END } ) WITH * RETURN 1 AS a0 ;

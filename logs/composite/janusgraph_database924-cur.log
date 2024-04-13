@@ -1,0 +1,20 @@
+-- Time: 2024/04/11 14:22:14
+-- Database: janusgraph_database924
+-- Database version: composite
+-- seed value: 1712812407449
+CREATE (n0 :L4{k27 : 1979003635, k29 : false, k31 : 'FutEc', k30 : '2', id : 0, k26 : 'I', k25 : -2119635041});
+CREATE (n0 :L1{k11 : '5jypf6vh', id : 1, k10 : 1395804267, k7 : -842326729, k8 : true, k12 : -234848112, k9 : true});
+CREATE (n0 {id : 2});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T1{id : 4, k43 : 2137837943, k46 : 'xD1MT1B', k45 : false, k47 : -1385850552}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T1{k44 : 'R', id : 5, k43 : -352490193, k46 : 'Z', k45 : false, k47 : -131532207}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T3{k55 : false, id : 6, k57 : 366817572, k59 : 'i'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T3{k55 : false, id : 7, k57 : -700137674, k56 : 'u', k59 : 'i', k58 : -162513300}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T3{k55 : false, id : 8, k56 : 'j', k59 : 'NBa', k58 : 2082630832}]->(n1);
+MATCH ( :L1)-[*0..1]-(n0 :L4) WHERE (((n0.k31)+(n0.k26)) ENDS WITH ('G'+(n0.k28))) SET n0.k=(n0.k25) SET n0.k=true RETURN 1 AS a0 ORDER BY a0;
+MATCH ()-[*0..0]-( : L1 ) - [ * 0 .. 1 ] - ( n0 : L4 ) WHERE ( ( ( n0 . k31 ) + ( n0 . k26 ) ) ENDS WITH ( 'G' + ( n0 . k28 ) ) ) SET n0 . k = ( n0 . k25 ) WITH * FOREACH(f in [1]|SET n0 . k = true ) RETURN 1 AS a0 ORDER BY a0 DESC LIMIT 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE (n0{id:9}) MERGE ({id:10})-[r0 :T1{id:11}]-({k12:827269283, id:12})-[r1 :T3{id:13}]->({id:14}) REMOVE n0.k2 RETURN 1 AS a0 SKIP 0;
+MERGE ( n0 { id : 9 } ) WITH * MERGE ( { id : 10 } ) - [ r0 : T1 { id : 11 } ] - ( { k12 : CASE WHEN TRUE THEN 827269283 END , id : CASE WHEN FALSE THEN NULL ELSE 12 END } ) - [ r1 : T3 { id : 13 } ] - > ( { id : 14 } ) REMOVE n0 . k2 RETURN 1 AS a0 SKIP CASE WHEN TRUE THEN 0 END ;

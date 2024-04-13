@@ -1,0 +1,25 @@
+-- Time: 2024/04/11 13:27:41
+-- Database: janusgraph_database187
+-- Database version: composite
+-- seed value: 1712812406710
+CREATE (n0 :L2{k16 : false, id : 0, k10 : 'HzIWI0A', k13 : 'd', k12 : false, k15 : '0', k14 : true});
+CREATE (n0 {id : 1});
+CREATE (n0 {id : 2});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T1{k49 : 1360427464, k51 : 1306467330, k52 : 'aiWDutM', id : 4, k54 : -1951789255}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T3{k62 : true, k64 : true, k66 : 1751168484, id : 5, k65 : true, k68 : -187669627, k67 : 'QAy'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T4{k71 : 1994618886, k73 : '9t', k72 : true, k75 : 780631071, id : 6, k69 : true}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T6{k83 : '0', k86 : false, k85 : true, k88 : true, id : 7, k87 : 206685672}]->(n1);
+MATCH p0=()-[ :T6{k87:((toIntegerOrNull(NULL)-((NULL+NULL)*(NULL+NULL)))-1625817498)}]->()-[ :T4{k70:NULL}]-(n3 :L2), () REMOVE n3.k2 SET n3.k=CASE WHEN true THEN NULL END RETURN n3 AS a0;
+MATCH p0 = ()-[*0..0]-( ) - [ : T6 { k87 : ( ( toIntegerOrNull ( NULL ) - ( ( NULL + NULL ) * ( NULL + NULL ) ) ) -1625817498 ) } ] - > ( ) - [ : T4 { k70 : NULL } ] - ( n3 : L2 ) ,( ) REMOVE n3 . k2 FOREACH(f in [1]|SET n3 . k = CASE WHEN true THEN CASE WHEN FALSE THEN NULL ELSE NULL END END ) WITH * RETURN n3 AS a0 LIMIT 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+UNWIND toStringList(relationships(NULL)) AS a0 MATCH ()-[]-(n0), ()-[ :T3{k66:NULL}]-(n0)-[r0]-(n1) CREATE p0=( :L2{id:8}) RETURN n0 AS a1 SKIP 0;
+UNWIND toStringList ( relationships ( NULL ) ) AS a0 MATCH ( ) - [ ] - ( n0 ) ,( ) - [ : T3 { k66 : CASE WHEN FALSE THEN NULL ELSE NULL END } ] - ( n0 ) - [ r0 ] - ( n1 ) WHERE TRUE CREATE p0 = ( : L2 { id : 8 } ) RETURN n0 AS a1 SKIP 0 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+CREATE (n6{id:9})-[r2 :T6{id:10}]->(n7{id:11}) MERGE (n8{id:12})<-[ :T6{id:13}]-({id:14}) SET n8.k=NULL RETURN 1 AS a1, 1 AS a2;
+CREATE ( n6 { id : 9 } ) - [ r2 : T6 { id : 10 } ] - > ( n7 { id : 11 } ) WITH * MERGE ( n8 { id : 12 } ) < - [ : T6 { id : 13 } ] - ( { id : 14 } ) SET n8 . k = NULL WITH * RETURN 1 AS a1 , CASE WHEN TRUE THEN 1 END AS a2 ;

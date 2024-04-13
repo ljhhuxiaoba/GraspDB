@@ -1,0 +1,17 @@
+-- Time: 2024/04/11 13:37:49
+-- Database: janusgraph_database324
+-- Database version: composite
+-- seed value: 1712812406847
+CREATE (n0 :L3{k17 : 'r', k16 : 'O0', k19 : -1681888230, k18 : true, k20 : true, id : 0});
+CREATE (n0 :L1{k5 : -552277985, id : 1, k6 : -108448150, k7 : -1881563383, k8 : 'a1Yfh', k9 : -1140434879});
+CREATE (n0 :L4{k22 : false, id : 2, k21 : false, k23 : false, k26 : true});
+CREATE (n0 :L0{k0 : 'z', k1 : 888458543, k2 : -85876174, k3 : 'z4', k4 : true, id : 3});
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T3{k60 : 'x', id : 4, k57 : -471057289, k59 : 't', k58 : 55972823}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T5{k70 : true, k73 : 'l', k72 : 2070089375, id : 5, k68 : false, k67 : 1320875844, k69 : false}]->(n1);
+UNWIND [[NULL, '3qX8Rt'], NULL] AS a0 CREATE (n0 :L4{k24:NULL, id:6})-[r0 :T3{id:7}]->(n1{k7:NULL, id:8}), (n2{id:9})-[r1 :T5{k70:true, id:10}]->(n3{id:11}) MERGE p0=(n4{k0:'y2uJKZinH', id:12})-[r2 :T5{id:13}]-(n5{id:14})-[r3 :T3{id:15}]-({id:16}) RETURN 1 AS a1;
+UNWIND [ ([]+[ CASE WHEN TRUE THEN NULL END , (''+'3qX8Rt' )] ), NULL ] AS a0 WITH * CREATE ( n0 : L4 { k24 : NULL , id : 6 } ) - [ r0 : T3 { id : 7 } ] - > ( n1 { k7 : NULL , id : 8 } ) CREATE ( n2 { id : 9 } ) - [ r1 : T5 { k70 : CASE WHEN FALSE THEN NULL ELSE true END , id : CASE WHEN FALSE THEN NULL ELSE 10 END } ] - > ( n3 { id : 11 } ) MERGE p0 = ( n4 { k0 : 'y2uJKZinH' , id : 12 } ) - [ r2 : T5 { id : 13 } ] - ( n5 { id : 14 } ) - [ r3 : T3 { id : 15 } ] - ( { id : 16 } ) WITH * UNWIND 1 as l0 RETURN CASE WHEN TRUE THEN 1 END AS a1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (n0)-[r0 :T5{k73:'z'}]-({k6:(r0.k71)}), p0=() OPTIONAL MATCH ()-[]-({k2:(((r0.k72)*(r0.k71))--1781232144)}), p1=()<-[*..2]-() DETACH DELETE n0  RETURN 1 AS a0;
+MATCH ( n0 ) - [ r0 : T5 { k73 : 'z' } ] - ( { k6 : ( r0 . k71 ) } ) ,p0 = ( ) OPTIONAL MATCH ()-[*0..0]-( ) - [ ] - ( { k2 : CASE WHEN TRUE THEN ( ( ( r0 . k72 ) * ( CASE WHEN TRUE THEN r0 . k71 END ) ) - -1781232144 ) END } ) ,p1 = ( ) < - [ * .. 2 ] - ( ) OPTIONAL MATCH ()-[:TYPE]-() DETACH DELETE n0 WITH * UNWIND [1] as l0 RETURN CASE WHEN TRUE THEN 1 END AS a0 ;

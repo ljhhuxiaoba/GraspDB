@@ -1,0 +1,19 @@
+-- Time: 2024/04/11 13:44:36
+-- Database: janusgraph_database416
+-- Database version: composite
+-- seed value: 1712812406939
+CREATE (n0 :L0{k0 : -1329865352, k1 : 'U', k2 : '8wd', k3 : -331299645, k4 : -613961209, id : 0});
+CREATE (n0 {id : 1});
+CREATE (n0 :L1{k5 : 41838929, k11 : 1893442540, id : 2, k6 : -1595883578, k10 : 1931582195, k7 : false, k8 : 2141706872, k9 : 1623922132});
+CREATE (n0 :L4{k27 : 'c', id : 3, k24 : 1696851194, k23 : -249422412, k26 : true, k25 : 2067680986});
+MATCH (n0 {id : 3}), (n1 {id : 2}) MERGE(n0)-[r :T4{k64 : -1872410570, k63 : 482632890, k66 : false, id : 4, k65 : true, k67 : -1096330548}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T1{k49 : 231160604, k50 : -1887799566, k44 : false, id : 5, k46 : true, k45 : 126806871, k47 : -477751771}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T2{k51 : false, k53 : false, k52 : false, k55 : 'Iz', id : 6, k54 : 'mm0pj7eaB', k56 : true}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T4{k63 : 742631755, k66 : false, id : 7, k65 : false, k67 : -1118784197}]->(n1);
+CREATE ({k9:NULL, id:8}), ( :L1{id:9})<-[ :T4{k65:NULL, id:10}]-( :L4{k24:NULL, id:11})<-[r0 :T1{k48:NULL, id:12}]-(n0 :L0{id:13}) CREATE p0=({k3:NULL, id:14})-[ :T1{id:15}]->({id:16}), (n1{id:17})-[r1 :T4{k65:isEmpty(properties(startNode(NULL))), id:18}]->( :L1{k6:-2043425841, id:19})-[r2 :T2{k51:NULL, id:20}]->( :L4{k26:NULL, id:21}) MERGE (n2{id:22}) RETURN 1 AS a0;
+CREATE ( { k9 : NULL , id : 8 } ) CREATE ( : L1 { id : CASE WHEN TRUE THEN 9 END } ) < - [ : T4 { k65 : CASE WHEN TRUE THEN NULL END , id : 10 } ] - ( : L4 { k24 : NULL , id : 11 } ) < - [ r0 : T1 { k48 : NULL , id : 12 } ] - ( n0 : L0 { id : 13 } ) CREATE (m0{ k3 : NULL , id : CASE WHEN FALSE THEN NULL ELSE 14 END } )CREATE (m0)- [ : T1 { id : CASE WHEN TRUE THEN 15 END } ] - > ( { id : CASE WHEN FALSE THEN NULL ELSE 16 END } ) CREATE ( n1 { id : 17 } ) - [ r1 : T4 { k65 : isEmpty ( CASE WHEN TRUE THEN properties ( startNode ( NULL ) ) END ) , id : 18 } ] - > ( : L1 { k6 : -2043425841 , id : 19 } ) - [ r2 : T2 { k51 : NULL , id : 20 } ] - > ( : L4 { k26 : NULL , id : 21 } ) MERGE ( n2 { id : CASE WHEN TRUE THEN 22 END } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN 1 AS a0 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+CREATE (n0{id:23})-[r0 :T2{id:24}]->({id:25})<-[r1 :T1{id:26}]-(n1{id:27}), (n2{id:28})<-[r2 :T1{id:29}]-(n3{id:30}) CREATE ({id:31})-[r3 :T2{id:32}]->(n4{id:33}), (n5 :L4{id:34}) CREATE ({k9:314333812, id:35})-[ :T2{id:36}]->( :L4{k25:1664079114, id:37})-[ :T4{k67:NULL, id:38}]->(n6{id:39}), ({id:40})-[r4 :T4{id:41}]->({k4:(666711159+(709993945-(NULL/1480291401))), id:42})-[ :T1{id:43}]->({k23:NULL, id:44}) RETURN 1 AS a0;
+CREATE (n0{ id : 23 } )CREATE (n0)- [ r0 : T2 { id : 24 } ] - > ( { id : 25 } ) < - [ r1 : T1 { id : 26 } ] - ( n1 { id : 27 } ) CREATE ( n2 { id : 28 } ) < - [ r2 : T1 { id : CASE WHEN TRUE THEN 29 END } ] - ( n3 { id : 30 } ) CREATE (m0{ id : CASE WHEN FALSE THEN NULL ELSE 31 END } )CREATE (m0)- [ r3 : T2 { id : CASE WHEN TRUE THEN 32 END } ] - > ( n4 { id : 33 } ) CREATE ( n5 : L4 { id : 34 } ) CREATE ( { k9 : 314333812 , id : 35 } ) - [ : T2 { id : CASE WHEN FALSE THEN NULL ELSE 36 END } ] - > ( : L4 { k25 : 1664079114 , id : CASE WHEN TRUE THEN 37 END } ) - [ : T4 { k67 : NULL , id : 38 } ] - > ( n6 { id : CASE WHEN FALSE THEN NULL ELSE 39 END } ) CREATE ( { id : 40 } ) - [ r4 : T4 { id : CASE WHEN FALSE THEN NULL ELSE 41 END } ] - > ( { k4 : CASE WHEN TRUE THEN ( 666711159 + ( 709993945 - ( NULL / 1480291401 ) ) ) END , id : 42 } ) - [ : T1 { id : 43 } ] - > ( { k23 : NULL , id : 44 } ) WITH * RETURN 1 AS a0 ;

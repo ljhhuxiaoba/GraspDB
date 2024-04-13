@@ -1,0 +1,18 @@
+-- Time: 2024/04/11 13:31:40
+-- Database: janusgraph_database241
+-- Database version: composite
+-- seed value: 1712812406764
+CREATE (n0 {id : 0});
+CREATE (n0 :L4{k27 : false, k31 : -692555051, k30 : false, id : 1, k26 : -326181670, k25 : 'YL5'});
+CREATE (n0 {id : 2});
+CREATE (n0 :L3{k19 : false, k20 : 2030607477, k22 : '5', id : 3, k21 : -1792004294, k24 : '6smh', k23 : false});
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T1{k49 : 705058831, k51 : -1231977919, k50 : 'xYr', k53 : false, k52 : true, id : 4, k54 : 912899413}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T3{k60 : false, k61 : 'KFQe', k64 : true, k63 : true, k66 : 'MU', id : 5, k65 : true}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T5{k73 : 'h', k75 : false, k74 : 'xFZKCiIOC', k77 : true, id : 6, k76 : 1320905926, k78 : true}]->(n1);
+CREATE ({id:7}), (n0{id:8}) MERGE (n1 :L4{id:9})-[r0 :T5{k76:-1017467051, id:10}]-(n2{id:11})-[r1 :T1{id:12}]->(n3 :L4{k29:1642486345, id:13}) CREATE ({id:14})<-[r2 :T5{k75:(reverse('2n') STARTS WITH (r1.k50)), id:15}]-({k31:round(CASE WHEN true THEN (1013576610+22885729) END), id:16})-[r3 :T3{id:17}]->({id:18}) RETURN n3 AS a0;
+CREATE ( { id : 7 } ) CREATE ( n0 { id : 8 } ) MERGE ( n1 : L4 { id : 9 } ) - [ r0 : T5 { k76 : -1017467051 , id : 10 } ] - ( n2 { id : 11 } ) - [ r1 : T1 { id : 12 } ] - > ( n3 : L4 { k29 : 1642486345 , id : 13 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() CREATE ( { id : 14 } ) < - [ r2 : T5 { k75 : ( reverse ( '2n' ) STARTS WITH ( r1 . k50 ) ) , id : 15 } ] - ( { k31 : CASE WHEN TRUE THEN round ( CASE WHEN true THEN ( 1013576610 + 22885729 ) END ) END , id : 16 } ) - [ r3 : T3 { id : CASE WHEN FALSE THEN NULL ELSE 17 END } ] - > ( { id : 18 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN n3 AS a0 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE (n0{id:19}) MERGE (n1{id:20}) DETACH DELETE n0  RETURN n1 AS a3;
+MERGE ( n0 { id : 19 } ) MERGE ( n1 { id : 20 } ) WITH * UNWIND 1 as l0 DETACH DELETE CASE WHEN FALSE THEN NULL ELSE n0 END WITH * RETURN n1 AS a3 ;

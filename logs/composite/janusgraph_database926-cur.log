@@ -1,0 +1,12 @@
+-- Time: 2024/04/11 14:22:22
+-- Database: janusgraph_database926
+-- Database version: composite
+-- seed value: 1712812407451
+CREATE (n0 {id : 0});
+CREATE (n0 {id : 1});
+CREATE (n0 :L5{k31 : -125548901, k30 : -648796269, k33 : '3', id : 2, k32 : 1550926835, k35 : -1793911004, k34 : -1612785589, k36 : -834228623});
+CREATE (n0 :L4{k28 : -1314388390, id : 3, k26 : true});
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T0{k39 : false, k38 : -525416685, k40 : 'I', k41 : '3', id : 4, k43 : 'c25eMH', k37 : 'w'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T4{k62 : 'a5IhATz', k61 : 798121729, k64 : 'BDc', k63 : false, id : 5, k65 : -762815293, k67 : 'CM'}]->(n1);
+OPTIONAL MATCH (n0)<-[]-(n1) WHERE true OPTIONAL MATCH p0=(n0)-[]-(n1), (n2)-[]-(n3) SET n0.k='F' RETURN 1 AS a0, NULL AS a1;
+OPTIONAL MATCH (n0)-[*0..0]-( n0 ) < - [ ] - ( n1 ) WHERE true OPTIONAL MATCH p0 = (n0)-[*0..0]-( n0 ) - [ ] - ( n1 ) ,( n2 ) - [ ] - ( n3 ) SET n0 . k = 'F' RETURN 1 AS a0 , NULL AS a1 ;

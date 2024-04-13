@@ -1,0 +1,20 @@
+-- Time: 2024/04/11 14:31:31
+-- Database: janusgraph_database1049
+-- Database version: composite
+-- seed value: 1712812407574
+CREATE (n0 :L1{k11 : 'JcKN', id : 0, k6 : '4', k10 : 'V', k7 : 'N', k8 : true, k12 : true, k9 : true});
+CREATE (n0 :L3{k19 : 1065763458, k20 : true, k22 : 'T', id : 1, k21 : 'xD5mf6nJ', k24 : 'V', k23 : 1280172528});
+CREATE (n0 :L4{k28 : false, k27 : -1996941044, k29 : false, id : 2, k26 : 2012784093, k25 : 'JehdM'});
+CREATE (n0 :L3{k19 : 1354137637, k20 : false, k22 : 'm6f', id : 3, k21 : 'mKz', k24 : 'AZhk', k23 : 1432311019});
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T0{k31 : false, k30 : 'nWpmlkC', k33 : '3cAO', id : 4, k32 : false, k35 : '1', k34 : -428600483}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T4{id : 5, k54 : 1591058333, k57 : -1308413660, k56 : false, k59 : 'P', k58 : true}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T4{k55 : true, id : 6, k54 : 559006161, k57 : -391573586, k56 : true, k59 : 'P', k58 : false}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T3{k49 : -1686394491, k51 : -866380573, k50 : -613650989, k53 : 607082894, k52 : 'O1', id : 7, k48 : -2064149526}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T2{k44 : 'BS', id : 8, k43 : '18', k46 : -643431527, k45 : false, k47 : false}]->(n1);
+MATCH (n0)-[ :T0{k35:'4ZdS'}]-(n1)-[]-(), () CREATE ({k26:-1226828342, id:9})-[r0 :T4{id:10}]->( :L4{id:11})-[r1 :T2{id:12}]->({k21:'pp8FBsv', id:13}) SET n1.k=(-1089058509/640535094) RETURN n1 AS a0, (substring(elementId(NULL), toIntegerOrNull(abs(CASE WHEN true THEN 1743905878 END)), toIntegerOrNull(abs(-803714756))) <= reverse('J6')) AS a1;
+MATCH ( n0 ) - [ : T0 { k35 : '4ZdS' } ] - ( n1 ) - [ ] - ( ) ,( ) WHERE TRUE WITH * CREATE ({k21:'pp8FBsv', id:13})<-[ r1 : T2 { id : 12 } ] -( :L4{id:11})<-[ r0 : T4 { id : 10 } ] -( { k26 : -1226828342 , id : 9 } ) SET n1 . k = ( CASE WHEN TRUE THEN -1089058509 / 640535094 END ) RETURN n1 AS a0 , ( CASE WHEN TRUE THEN substring ( CASE WHEN TRUE THEN elementId ( CASE WHEN TRUE THEN NULL END ) END , toIntegerOrNull ( abs ( CASE WHEN true THEN CASE WHEN TRUE THEN 1743905878 END END ) ) , CASE WHEN FALSE THEN NULL ELSE toIntegerOrNull ( abs ( -803714756 ) ) END ) <= reverse ( CASE WHEN FALSE THEN NULL ELSE ('J6' +'') END ) END ) AS a1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH ()-[r0]-() WHERE false CREATE (n0{id:14})-[ :T0{id:15}]->({id:16})<-[ :T2{id:17}]-(n1{id:18}) DETACH DELETE r0  RETURN 1 AS a0;
+MATCH ()-[*0..0]-( ) - [ r0 ] - ( ) WITH * WHERE false CREATE ( n0 { id : CASE WHEN FALSE THEN NULL ELSE 14 END } ) - [ : T0 { id : 15 } ] - > ( { id : 16 } ) < - [ : T2 { id : 17 } ] - ( n1 { id : 18 } ) DETACH DELETE r0 WITH * RETURN CASE WHEN FALSE THEN NULL ELSE 1 END AS a0 ;

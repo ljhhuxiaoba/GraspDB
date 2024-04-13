@@ -1,0 +1,13 @@
+-- Time: 2024/04/11 13:51:34
+-- Database: janusgraph_database510
+-- Database version: composite
+-- seed value: 1712812407034
+CREATE (n0 {id : 0});
+CREATE (n0 :L5{k31 : -1667335738, k30 : 629743921, k33 : 'W7', id : 1});
+CREATE (n0 :L3{k17 : true, k19 : 'v', k18 : '6x1aKrr', k20 : true, k22 : true, id : 2, k21 : -1082024439, k23 : false});
+CREATE (n0 :L6{k39 : false, k38 : true, id : 3, k35 : true, k37 : 1684801337, k36 : 1632739645});
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T1{k49 : 'g', k51 : true, k50 : -353161039, k52 : true, id : 4, k48 : true, k47 : 'Qm'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T4{k66 : 638610411, id : 5, k65 : 'a', k68 : 'P', k67 : false}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T3{k60 : true, k62 : -634283853, k61 : true, k63 : 'M', id : 6, k59 : -2122255393}]->(n1);
+MERGE (n0{id:7})-[r0 :T1{id:8}]-(n1{id:9}) DETACH DELETE n0  SET n1.k=NULL RETURN 1 AS a0, 1 AS a1;
+MERGE ( n0 { id : 7 } ) - [ r0 : T1 { id : 8 } ] - ( n1 { id : 9 } ) DETACH DELETE n0 SET n1 . k = NULL WITH * RETURN 1 AS a0 , 1 AS a1 ;

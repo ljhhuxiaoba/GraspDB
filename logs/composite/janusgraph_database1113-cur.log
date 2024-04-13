@@ -1,0 +1,23 @@
+-- Time: 2024/04/11 14:36:15
+-- Database: janusgraph_database1113
+-- Database version: composite
+-- seed value: 1712812407638
+CREATE (n0 :L4{k27 : 960216015, id : 0, k24 : 'h', k23 : 2068185357, k26 : 'a', k25 : true});
+CREATE (n0 :L0{k0 : false, k1 : false, k2 : true, k3 : 'o', k4 : 1541342438, id : 1});
+CREATE (n0 :L2{k17 : -738214049, k16 : -473475838, k11 : false, id : 2, k12 : -225169142, k15 : false});
+CREATE (n0 :L1{k5 : 'Ibu', id : 3, k10 : 950670761, k7 : -79587225, k8 : 292544204});
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T0{k39 : '3', k38 : false, k40 : 198361134, k41 : -22302319, id : 4, k35 : false, k37 : -452028735, k36 : 172501138}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T5{k66 : -1100909817, id : 5, k68 : 214574027, k67 : -550995530, k69 : false}]->(n1);
+WITH * WHERE NULL OPTIONAL MATCH (n0 :L1) WHERE ((n0.k6) AND false) SET n0.k=1765140437 RETURN (n0.k10) AS a0, n0 AS a1;
+WITH * WHERE NULL OPTIONAL MATCH ( n0 : L1 ) WHERE ( ( n0 . k6 ) AND false ) SET n0 . k = 1765140437 WITH * RETURN ( CASE WHEN FALSE THEN NULL ELSE n0 . k10 END ) AS a0 , n0 AS a1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+OPTIONAL MATCH p0=()-[]->({k7:CASE WHEN NULL THEN -2054148512 END}) WHERE (NULL <= NULL) UNWIND [x IN [NULL, NULL]|reverse('M')] AS a0 CREATE (n0{id:6})-[r0 :T0{id:7}]->( :L1{id:8}) RETURN p0 AS a1, 1 AS a2 ORDER BY NULL;
+OPTIONAL MATCH p0 = ( ) - [ ] - > ( { k7 : CASE WHEN CASE WHEN TRUE THEN NULL END THEN -2054148512 END } ) WHERE ( NULL <= NULL ) UNWIND [1] as l0 UNWIND [ x IN CASE WHEN TRUE THEN ([]+[ NULL , NULL ] )END | reverse ( 'M' ) ] AS a0 CREATE ( n0 { id : 6 } ) - [ r0 : T0 { id : 7 } ] - > ( : L1 { id : 8 } ) RETURN p0 AS a1 , 1 AS a2 ORDER BY NULL ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+CREATE ({k12:NULL, id:9})<-[r0 :T0{id:10}]-({k23:NULL, id:11}), (n0{id:12}) MERGE ( :L2{id:13}) CREATE p0=({id:14})<-[ :T0{id:15}]-({id:16}), ({k11:NULL, id:17}) RETURN 1 AS a0 UNION ALL UNWIND NULL AS a0 MATCH p0=(n0) WHERE true REMOVE n0.k2 RETURN a0 AS a0;
+CREATE ( { k12 : NULL , id : CASE WHEN TRUE THEN 9 END } ) < - [ r0 : T0 { id : 10 } ] - ( { k23 : NULL , id : 11 } ) CREATE ( n0 { id : 12 } ) MERGE ( : L2 { id : 13 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() CREATE p0 = ( { id : 14 } ) < - [ : T0 { id : 15 } ] - ( { id : 16 } ) CREATE ( { k11 : NULL , id : 17 } ) WITH * RETURN 1 AS a0 UNION ALL UNWIND NULL AS a0 MATCH p0 = (n0)-[*0..0]-( n0 ) WITH * WHERE true REMOVE n0 . k2 WITH * UNWIND 1 as l0 RETURN a0 AS a0 ORDER BY FALSE ;

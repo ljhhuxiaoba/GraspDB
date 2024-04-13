@@ -1,0 +1,17 @@
+-- Time: 2024/04/11 14:03:33
+-- Database: janusgraph_database672
+-- Database version: composite
+-- seed value: 1712812407196
+CREATE (n0 :L5{k31 : 'B', k30 : false, k33 : true, id : 0, k32 : false});
+CREATE (n0 :L3{k16 : 198978708, k19 : 'm', k18 : true, k20 : false, id : 1, k21 : 1383072635});
+CREATE (n0 :L0{k0 : 'A', k1 : true, k2 : true, k3 : 1308867387, k4 : 256380306, id : 2});
+CREATE (n0 :L0{k0 : 'vA', k1 : false, k2 : false, k3 : 1631949090, k4 : 2012607649, id : 3});
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T5{k70 : 'q', k73 : 393652505, k72 : true, k75 : false, k74 : 'D', id : 4, k69 : false}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 2}) MERGE(n0)-[r :T4{k64 : 1656208267, k66 : 526094267, id : 5, k65 : false, k68 : false, k67 : true}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T0{k39 : -2119127200, k42 : 'sW', k41 : -1538416598, id : 6, k43 : 557175580}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T3{k60 : 'QjIEZ3Ld', k62 : true, k61 : true, k63 : 'o', id : 7, k57 : 'E', k59 : true, k58 : -1031334092}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T2{k51 : true, k53 : -1825085046, k52 : true, k55 : true, id : 8, k54 : true, k56 : -257749657}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T4{k64 : -663993593, k66 : -622105928, id : 9, k65 : true, k68 : false, k67 : true}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T1{k49 : false, k50 : '8', k44 : -468634995, id : 10, k46 : '2', k45 : -222008167, k48 : 1667424376, k47 : '1'}]->(n1);
+UNWIND NULL AS a0 CREATE (n0{k29:-373486703, id:11})-[r0 :T0{k43:NULL, id:12}]->( :L0{k3:NULL, id:13}) CREATE p0=(n1{id:14})<-[ :T4{id:15}]-(n2{k18:NULL, id:16})<-[ :T2{id:17}]-({id:18}), ({id:19})-[r1 :T3{k59:false, id:20}]->(n3{id:21}) RETURN DISTINCT 1 AS a1, properties(NULL) AS a2 ORDER BY false, a1;
+UNWIND CASE WHEN TRUE THEN NULL END AS a0 OPTIONAL MATCH ()-[:TYPE]-() CREATE ( n0 { k29 : -373486703 , id : 11 } ) - [ r0 : T0 { k43 : NULL , id : 12 } ] - > ( : L0 { k3 : NULL , id : 13 } ) CREATE p0 = ( n1 { id : 14 } ) < - [ : T4 { id : CASE WHEN TRUE THEN 15 END } ] - ( n2 { k18 : NULL , id : CASE WHEN FALSE THEN NULL ELSE 16 END } ) < - [ : T2 { id : 17 } ] - ( { id : 18 } ) CREATE ( { id : 19 } ) - [ r1 : T3 { k59 : false , id : 20 } ] - > ( n3 { id : 21 } ) RETURN DISTINCT 1 AS a1 , properties ( NULL ) AS a2 ORDER BY false, a1 ;

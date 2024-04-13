@@ -1,0 +1,21 @@
+-- Time: 2024/04/11 14:11:45
+-- Database: janusgraph_database783
+-- Database version: composite
+-- seed value: 1712812407307
+CREATE (n0 :L4{k28 : false, k27 : false, id : 0, k24 : true, k26 : false, k25 : 'O'});
+CREATE (n0 :L2{k17 : -42211833, k16 : 'x', k11 : -2083796179, id : 1, k13 : false, k15 : 'tlL9b9hi3', k14 : 'g'});
+CREATE (n0 :L0{k0 : -76089564, k1 : 10089156, k2 : true, k3 : 'z', id : 2});
+CREATE (n0 :L5{k29 : false, k31 : false, k30 : -1426680797, id : 3, k32 : false, k34 : 'CMewygGXK'});
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T1{k40 : '1', k42 : false, k41 : true, k44 : 'C', id : 4, k43 : true}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T3{k51 : 'A', k53 : -614706991, k52 : 'wKSsCKJzu', id : 5, k54 : -693680595, k56 : 'hf'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T1{k40 : 'jv', k42 : true, k41 : true, k44 : 'MY', id : 6, k43 : true}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T1{k40 : 'XkHZw8WqS', k42 : true, k44 : 'vUMC', id : 7, k43 : false}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T5{k70 : false, k64 : 1275458005, k66 : 'oLB9', id : 8, k65 : '4WTPuABF', k67 : false}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T4{k60 : true, k61 : 'x', k63 : 1120088542, id : 9, k59 : true, k58 : 2082966467}]->(n1);
+MATCH ()-[*0..1]->(n0 :L2)<-[r0]-(n1), p0=( :L2) MATCH () SET n1.k=((n0.k15) STARTS WITH 'Ayu4D') RETURN p0 AS a0;
+MATCH ()-[*0..1]->(n0 :L2)<-[r0]-(n1),p0=( :L2) WITH * OPTIONAL MATCH ()-[:TYPE]-() MATCH ()-[*0..0]-( ) SET n1 . k = CASE WHEN TRUE THEN ( ( n0 . k15 ) STARTS WITH 'Ayu4D' ) END RETURN p0 AS a0 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+CREATE ( :L2{k12:false, id:10})-[r0 :T1{id:11}]->(n0 :L5{id:12})-[r1 :T5{id:13}]->( :L4{id:14}), ( :L2{id:15}) MERGE (n1 :L0{id:16})-[r2 :T3{id:17}]->({k13:true, id:18}) MERGE ( :L0{id:19}) RETURN n1 AS a0;
+CREATE ( :L4{id:14})<-[ r1 : T5 { id : 13 } ] -(n0 :L5{id:12})<-[ r0 : T1 { id : 11 } ] -( : L2 { k12 : CASE WHEN TRUE THEN false END , id : 10 } ) CREATE ( : L2 { id : 15 } ) WITH * MERGE ( n1 : L0 { id : 16 } ) - [ r2 : T3 { id : CASE WHEN FALSE THEN NULL ELSE 17 END } ] - > ( { k13 : CASE WHEN TRUE THEN true END , id : 18 } ) WITH * UNWIND [1] as l0 MERGE ( : L0 { id : 19 } ) WITH * RETURN n1 AS a0 ;

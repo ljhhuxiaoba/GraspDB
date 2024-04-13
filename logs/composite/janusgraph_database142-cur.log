@@ -1,0 +1,13 @@
+-- Time: 2024/04/11 13:24:21
+-- Database: janusgraph_database142
+-- Database version: composite
+-- seed value: 1712812406624
+CREATE (n0 {id : 0});
+CREATE (n0 :L3{k19 : 485921705, k18 : 'H', k20 : false, k22 : -1509751838, id : 1, k21 : true});
+CREATE (n0 :L1{id : 2, k6 : true, k10 : -1527526265, k7 : '9', k8 : true, k9 : true});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T5{k73 : false, k72 : 1674734260, k75 : 1010673202, k74 : false, k77 : 'U', id : 4}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T3{k60 : 508806178, k61 : true, k64 : true, k63 : 1991649770, id : 5, k65 : true}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T6{k80 : false, k82 : false, k81 : 'KghE1Pt', id : 6, k79 : '1', k78 : '3'}]->(n1);
+MERGE (n0{id:7})-[r0 :T6{k80:true, id:8}]->(n1{id:9}) CREATE p0=({id:10}) MERGE ( :L1{id:11})-[ :T6{id:12}]-(n2 :L1{id:13}) RETURN * LIMIT 0;
+MERGE ( n0 { id : 7 } ) - [ r0 : T6 { k80 : true , id : CASE WHEN FALSE THEN NULL ELSE 8 END } ] - > ( n1 { id : 9 } ) CREATE p0 = ( { id : 10 } ) MERGE ( : L1 { id : 11 } ) - [ : T6 { id : 12 } ] - ( n2 : L1 { id : 13 } ) WITH * RETURN * LIMIT 0 ;

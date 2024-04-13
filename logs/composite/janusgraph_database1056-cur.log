@@ -1,0 +1,18 @@
+-- Time: 2024/04/11 14:32:02
+-- Database: janusgraph_database1056
+-- Database version: composite
+-- seed value: 1712812407581
+CREATE (n0 :L3{k19 : 1971104985, k18 : true, k20 : true, k22 : 'vP', id : 0, k23 : true});
+CREATE (n0 {id : 1});
+CREATE (n0 :L3{k19 : 869524520, k20 : false, k22 : '4', id : 2, k21 : 563147746, k23 : false});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T4{k53 : -1775776740, k55 : -1123624255, id : 4, k54 : '30', k57 : -1611115656, k56 : 625267658}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T3{k49 : 1723626536, k51 : false, k50 : '71L051O', id : 5, k48 : true}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T4{k53 : 2100825069, k55 : -824416137, id : 6, k54 : '7', k57 : -1125459124, k56 : -919467464}]->(n1);
+UNWIND NULL AS a1 MERGE p0=(n1{k22:'I', id:7}) SET n1.k=NULL RETURN n1 AS a2;
+UNWIND NULL AS a1 MERGE p0 = ( n1 { k22 : 'I' , id : 7 } ) SET n1 . k = NULL RETURN DISTINCT CASE WHEN FALSE THEN NULL ELSE n1 END AS a2 LIMIT 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (n0) WHERE NULL DETACH DELETE n0  CREATE p0=(n1{id:8})<-[ :T3{id:9}]-({id:10})-[r0 :T4{id:11}]->({id:12}) RETURN 1 AS a0, max(NULL) AS a1;
+MATCH ( n0 ) WHERE NULL DETACH DELETE n0 WITH * OPTIONAL MATCH ()-[:TYPE]-() CREATE p0=({id:12})<-[ r0 : T4 { id : 11 } ] -({id:10})-[ : T3 { id : 9 } ] ->( n1 { id : CASE WHEN FALSE THEN NULL ELSE 8 END } ) WITH * RETURN 1 AS a0 , max ( NULL ) AS a1 ;

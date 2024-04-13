@@ -1,0 +1,24 @@
+-- Time: 2024/04/11 13:38:51
+-- Database: janusgraph_database338
+-- Database version: composite
+-- seed value: 1712812406861
+CREATE (n0 :L5{k31 : 'O', k30 : -2086887033, k33 : false, id : 0, k32 : 'FCG', k34 : -512144933});
+CREATE (n0 :L1{k11 : 'U', id : 1, k6 : 'n', k10 : 1072678618, k7 : 'x', k8 : -1243692680, k9 : -320879217});
+CREATE (n0 :L1{id : 2, k6 : 'uNfJySQfZ', k7 : 'h', k8 : -502196061, k9 : 2005616388});
+CREATE (n0 :L5{k31 : 'h8', k30 : 705954430, k33 : true, id : 3, k32 : 'K', k34 : -494322937});
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T4{k60 : -29361169, k61 : 'vxl', k64 : false, k63 : false, id : 4, k59 : -2044747668}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T1{k42 : 1292698100, k41 : true, k44 : true, id : 5, k43 : true, k45 : 1039258735}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T1{k42 : -1949455028, k41 : false, k44 : true, id : 6, k43 : true, k45 : 313744059}]->(n1);
+OPTIONAL MATCH (n0)-[ :T1{k44:false}]-(n1), (n2) WHERE ((NULL+substring('l', toIntegerOrNull(abs(-981410525)), toIntegerOrNull(abs(1504955968)))) CONTAINS NULL) DETACH DELETE n0  SET n1.k=NULL RETURN n2 AS a0, NULL AS a1;
+OPTIONAL MATCH (n0)-[ :T1{k44:false}]-(n1),(n2) WHERE ( ( NULL + substring ( 'l' , toIntegerOrNull ( abs ( -981410525 ) ) , toIntegerOrNull ( abs ( 1504955968 ) ) ) ) CONTAINS NULL ) FOREACH(f in [1]|DETACH DELETE n0 ) WITH * SET n1 . k = NULL RETURN n2 AS a0 , NULL AS a1 LIMIT 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE (n0{k31:'3Y26', id:7})-[r0 :T1{k44:false, id:8}]-(n1{id:9})-[r1 :T1{id:10}]-( :L1{k6:'B8ugab', id:11}) REMOVE n0.k2 DETACH DELETE r1  RETURN 1 AS a0, n0 AS a1;
+MERGE ( n0 { k31 : '3Y26' , id : 7 } ) - [ r0 : T1 { k44 : false , id : 8 } ] - ( n1 { id : 9 } ) - [ r1 : T1 { id : 10 } ] - ( : L1 { k6 : (''+'B8ugab' ), id : 11 } ) WITH * UNWIND [1] as l0 REMOVE n0 . k2 DETACH DELETE CASE WHEN FALSE THEN NULL ELSE r1 END RETURN DISTINCT CASE WHEN FALSE THEN NULL ELSE 1 END AS a0 , n0 AS a1 ORDER BY 1 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE (n0{id:12})-[r0 :T1{id:13}]->(n1{k32:'1', id:14}) SET n1.k=(r0.k44) SET n0.k=NULL RETURN 1 AS a0, 1 AS a1;
+MERGE ( n0 { id : 12 } ) - [ r0 : T1 { id : 13 } ] - > ( n1 { k32 : '1' , id : 14 } ) SET n1 . k = ( r0 . k44 ) SET n0 . k = NULL RETURN 1 AS a0 , 1 AS a1 ;

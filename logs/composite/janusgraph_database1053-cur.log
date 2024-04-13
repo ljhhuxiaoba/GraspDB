@@ -1,0 +1,21 @@
+-- Time: 2024/04/11 14:31:49
+-- Database: janusgraph_database1053
+-- Database version: composite
+-- seed value: 1712812407578
+CREATE (n0 :L0{k0 : 1140249699, k1 : '6uXuRIZ', k2 : false, k3 : true, k4 : -1654605050, k5 : -986712066, id : 0});
+CREATE (n0 :L3{k17 : 'esKF0Bc', k19 : true, k18 : true, k20 : 1886596968, k22 : '6afWpap', id : 1});
+CREATE (n0 {id : 2});
+CREATE (n0 :L0{k0 : 1365924179, k1 : '0Q', k2 : false, k3 : true, k4 : 1187286538, k5 : -766736560, id : 3});
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T3{k53 : 1410850313, k55 : true, id : 4, k54 : 'XCj', k57 : 1471702925, k58 : 'K12NZ0r'}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T4{k60 : false, k62 : false, k61 : 1197158055, k64 : 'b77o', k63 : false, id : 5, k65 : true, k59 : 'o'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T2{k50 : 744301143, k52 : 'm', id : 6, k48 : false, k47 : 'M'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T5{k71 : true, k70 : false, k72 : 1210355598, k66 : 822939830, id : 7, k68 : false, k67 : '4q', k69 : true}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T2{k49 : true, k51 : 'gbldp0', k50 : 1942155688, k52 : 'QlHZa', id : 8, k48 : false, k47 : 'M'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T3{k53 : 1429646520, k55 : true, id : 9, k54 : '7taVwxsQ', k57 : 575406293, k56 : -1940301358, k58 : 'm'}]->(n1);
+MATCH (), (n0)-[ :T2{k51:'e1GPO83'}]-(n1) SET n1.k='CY' CREATE ({id:10})<-[r0 :T3{id:11}]-({id:12})<-[ :T3{id:13}]-(n2{k22:reverse(toStringList(NULL)[toIntegerOrNull(abs(NULL))]), id:14}) RETURN n0 AS a0 SKIP 1;
+MATCH ( ) ,( n0 ) - [ : T2 { k51 : 'e1GPO83' } ] - ( n1 ) SET n1 . k = 'CY' CREATE ( { id : CASE WHEN TRUE THEN 10 END } ) < - [ r0 : T3 { id : CASE WHEN TRUE THEN 11 END } ] - ( { id : 12 } ) < - [ : T3 { id : 13 } ] - ( n2 { k22 : reverse ( toStringList ( NULL ) [ toIntegerOrNull ( abs ( NULL ) ) ] ) , id : 14 } ) RETURN n0 AS a0 ORDER BY FALSE SKIP 1 LIMIT 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+WITH * MATCH ()<-[r0]-(n0) REMOVE n0.k2 RETURN DISTINCT 1 AS a0, 1 AS a1;
+WITH * MATCH ( ) < - [ r0 ] - ( n0 ) WITH * REMOVE n0 . k2 RETURN DISTINCT 1 AS a0 , 1 AS a1 ORDER BY NULL DESC ;

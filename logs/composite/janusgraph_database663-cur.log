@@ -1,0 +1,16 @@
+-- Time: 2024/04/11 14:02:53
+-- Database: janusgraph_database663
+-- Database version: composite
+-- seed value: 1712812407187
+CREATE (n0 :L5{k33 : -1911697147, id : 0, k35 : 'C', k34 : true, k37 : 'H', k36 : 370334299});
+CREATE (n0 :L2{k17 : true, k16 : 560164237, k19 : true, k18 : '4', id : 1, k13 : true, k14 : -1767430770});
+CREATE (n0 :L3{k20 : 'U', k22 : true, id : 2, k24 : 1128481747, k23 : -915454183, k26 : false, k25 : -241233626});
+CREATE (n0 :L1{k11 : true, id : 3, k6 : 'iEpys', k10 : 'f', k7 : 'y', k9 : 't'});
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T2{k51 : -80846704, k52 : true, id : 4, k48 : 'n6p'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T0{k39 : false, k38 : true, k40 : -246047522, k42 : -522551635, id : 5}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 2}) MERGE(n0)-[r :T1{k44 : false, id : 6, k46 : true, k45 : true, k47 : 255455009}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T3{k53 : 833670032, k55 : 1984352760, id : 7, k56 : '8'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T3{k55 : 1275437165, id : 8, k54 : 'brLX6hL', k57 : 'I', k56 : 'aLKd', k58 : 323116678}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T5{k64 : 633365787, k66 : 'IC9NIA7pY', id : 9, k65 : false, k68 : 'E7dW', k67 : 'xy', k69 : -579568795}]->(n1);
+CREATE ({k13:NULL, id:10})<-[ :T5{id:11}]-( :L1{k7:NULL, id:12}), p0=(n0 :L1{k8:1898322676, id:13})-[r0 :T2{id:14}]->(n1 :L1{id:15})-[ :T5{id:16}]->({id:17}) CREATE (n2{k15:NULL, id:18}) MERGE (n3{id:19})-[r1 :T2{id:20}]->({id:21}) RETURN 1 AS a0;
+CREATE ( { k13 : NULL , id : 10 } ) < - [ : T5 { id : CASE WHEN FALSE THEN NULL ELSE 11 END } ] - ( : L1 { k7 : NULL , id : 12 } ) CREATE p0 = ( n0 : L1 { k8 : 1898322676 , id : 13 } ) - [ r0 : T2 { id : 14 } ] - > ( n1 : L1 { id : CASE WHEN FALSE THEN NULL ELSE 15 END } ) - [ : T5 { id : 16 } ] - > ( { id : 17 } ) CREATE ( n2 { k15 : NULL , id : 18 } ) MERGE ( n3 { id : CASE WHEN FALSE THEN NULL ELSE 19 END } ) - [ r1 : T2 { id : 20 } ] - > ( { id : CASE WHEN FALSE THEN NULL ELSE 21 END } ) RETURN 1 AS a0 ;

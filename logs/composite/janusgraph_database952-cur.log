@@ -1,0 +1,17 @@
+-- Time: 2024/04/11 14:24:18
+-- Database: janusgraph_database952
+-- Database version: composite
+-- seed value: 1712812407477
+CREATE (n0 :L1{id : 0, k7 : 1168276925, k8 : true});
+CREATE (n0 :L0{k0 : false, k1 : 'u', k2 : 'qiWYR', k3 : 1387485869, k4 : true, id : 1, k6 : 'dZe'});
+CREATE (n0 :L1{k11 : 'z9j', id : 2, k10 : false, k8 : false, k9 : '7'});
+CREATE (n0 :L4{k27 : -892013171, k29 : 1062539463, id : 3, k26 : true, k25 : '4'});
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T1{k42 : -1363115506, k44 : true, id : 4, k43 : false, k46 : true, k45 : 'Q'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T0{k39 : 1415201653, k38 : 'PlWzv2', k40 : 'n', k41 : false, id : 5, k35 : 592006397, k37 : true, k36 : 'GjW'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T3{k60 : 1697977078, k55 : 'ihL', id : 6, k54 : -1720242438, k57 : 'bfiBsmAOB', k56 : -327449135, k58 : '4N'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T2{k49 : -1310875003, k51 : false, k53 : -1646356709, k52 : -1655977419, id : 7, k47 : false}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T1{k42 : -602186989, k44 : false, id : 8, k43 : true, k46 : false, k45 : '5'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T1{k42 : 615806243, k44 : true, id : 9, k43 : true, k46 : false, k45 : '0H'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T3{k60 : -1311680450, id : 10, k54 : 544671584, k57 : 'MuDINoW', k56 : 341690152, k59 : true, k58 : 'u'}]->(n1);
+CREATE (n0{id:11})-[r0 :T3{k54:NULL, id:12}]->(n1{id:13}) MERGE p0=(n2{id:14})-[r1 :T1{k45:'5UQW', id:15}]->({id:16})-[r2 :T2{id:17}]-({k27:-1003196664, id:18}) SET n2.k=(r2.k51) RETURN 1 AS a0, 1 AS a1 LIMIT 1;
+CREATE ( n0 { id : CASE WHEN TRUE THEN 11 END } ) - [ r0 : T3 { k54 : NULL , id : 12 } ] - > ( n1 { id : 13 } ) MERGE p0 = ( n2 { id : 14 } ) - [ r1 : T1 { k45 : CASE WHEN FALSE THEN NULL ELSE '5UQW' END , id : 15 } ] - > ( { id : 16 } ) - [ r2 : T2 { id : 17 } ] - ( { k27 : -1003196664 , id : 18 } ) WITH * SET n2 . k = ( r2 . k51 ) RETURN 1 AS a0 , 1 AS a1 LIMIT 1 ;

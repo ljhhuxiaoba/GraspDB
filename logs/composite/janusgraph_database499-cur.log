@@ -1,0 +1,27 @@
+-- Time: 2024/04/11 13:50:45
+-- Database: janusgraph_database499
+-- Database version: composite
+-- seed value: 1712812407023
+CREATE (n0 :L1{k5 : -671958096, id : 0, k6 : true, k7 : true, k8 : true, k9 : true});
+CREATE (n0 :L4{k28 : true, k27 : -1982589387, id : 1, k24 : 217353123, k26 : false, k25 : 754543719});
+CREATE (n0 :L4{k28 : true, k27 : -1762438191, id : 2, k24 : 293922889, k26 : false, k25 : 140079556});
+CREATE (n0 :L2{k11 : 305936299, id : 3, k12 : 'l4a8R', k15 : false, k14 : false});
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T3{k53 : 'sFgR5hC1F', k52 : 'aDO', k55 : 'XC', id : 4, k54 : 1292676819}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T4{k60 : 'W', k62 : 440901225, k61 : 'a', k63 : false, id : 5, k57 : -359674122, k59 : 'M', k58 : -618930303}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T1{k42 : 'DgZWB3', k41 : true, k44 : 'V4', id : 6, k43 : -210977076, k45 : 935589727}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T3{k52 : 'tXn', k55 : 'T', id : 7, k54 : 1714251968, k56 : false}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T5{k70 : '3', k64 : -1858414946, k66 : true, id : 8, k65 : false, k68 : 'z', k67 : 'aO', k69 : -1764828990}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T0{k38 : -885849370, k40 : -1514267065, id : 9, k35 : 354640546, k37 : -1785643399, k36 : 'l'}]->(n1);
+OPTIONAL MATCH p2=(n0)-[]-(n1), p3=(n5{k10:NULL}) CREATE p4=({k25:(-1529345597*NULL), id:10})-[ :T3{k54:NULL, id:11}]->(n6 :L4{k27:NULL, id:12}) CREATE (n7 :L1{k7:NULL, id:13})-[ :T1{id:14}]->(n8 :L4{k25:NULL, id:15}) RETURN 1 AS a2 ORDER BY ('M'+'SX'), a2;
+OPTIONAL MATCH p2=(n0)-[]-(n1),p3=(n5{k10:NULL}) UNWIND 1 as l0 CREATE (m0{ k25 : ( -1529345597 * NULL ) , id : 10 } )CREATE (m0)- [ : T3 { k54 : NULL , id : 11 } ] - > ( n6 : L4 { k27 : NULL , id : 12 } ) CREATE ( n7 : L1 { k7 : NULL , id : 13 } ) - [ : T1 { id : 14 } ] - > ( n8 : L4 { k25 : NULL , id : 15 } ) WITH * RETURN 1 AS a2 ORDER BY ('M'+'SX'), a2 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+WITH * OPTIONAL MATCH (n0)-[*0..1]->(n1)-[ :T1{k43:NULL}]-() MERGE (n2 :L4{id:16})<-[ :T1{id:17}]-({id:18})-[r0 :T0{k37:round(233945097), id:19}]->(n3{id:20}) RETURN DISTINCT n1 AS a0, 1 AS a1;
+WITH * OPTIONAL MATCH (n0),()-[*0..1]->(),(n1),()<-[m0:T1{k43:NULL}]-(),(nn1) WHERE exists((n0)-[*0..1]->(n1)-[m0]-(nn1)) MERGE pp0=( n2 : L4 { id : 16 } ) < - [ : T1 { id : 17 } ] - ( { id : 18 } ) - [ r0 : T0 { k37 : round ( 233945097 ) , id : 19 } ] - > ( n3 { id : 20 } ) RETURN DISTINCT n1 AS a0 , 1 AS a1 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE (n0 :L2{id:21})-[r0 :T5{id:22}]->(n1{id:23})-[r1 :T3{id:24}]-({id:25}) MERGE (n2{id:26}) CREATE (n3 :L2{id:27})-[r2 :T4{k63:(n0.k15), id:28}]->(n4{id:29}) RETURN n2 AS a0, n0 AS a1;
+MERGE ( n0 : L2 { id : 21 } ) - [ r0 : T5 { id : 22 } ] - > ( n1 { id : 23 } ) - [ r1 : T3 { id : 24 } ] - ( { id : 25 } ) MERGE ( n2 { id : CASE WHEN TRUE THEN 26 END } ) CREATE (n3: L2 { id : CASE WHEN FALSE THEN NULL ELSE 27 END } )CREATE (n3)- [ r2 : T4 { k63 : ( n0 . k15 ) , id : CASE WHEN TRUE THEN 28 END } ] - > ( n4 { id : 29 } ) WITH * UNWIND 1 as l0 RETURN n2 AS a0 , n0 AS a1 ;

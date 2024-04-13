@@ -1,0 +1,51 @@
+-- Time: 2024/04/11 14:11:18
+-- Database: janusgraph_database777
+-- Database version: composite
+-- seed value: 1712812407301
+CREATE (n0 :L5{k29 : '9uRlaKtbN', k31 : 'mMTHwbk4', k30 : 'I', k33 : -588761301, id : 0, k32 : 'Nj'});
+CREATE (n0 :L4{k28 : 1066495255, id : 1, k24 : '4', k26 : false, k25 : false});
+CREATE (n0 :L3{k19 : true, k18 : 'Pl7Zl', k20 : 'lJ6', k22 : true, id : 2, k21 : 'eF', k23 : false});
+CREATE (n0 :L5{k29 : 'ELU5', k30 : '40S9', k33 : -1875839203, id : 3, k32 : '7'});
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T4{k64 : false, k66 : 'a', id : 4, k68 : 1583673269, k67 : 'a', k69 : '1'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T4{k64 : true, k66 : 'NS', id : 5, k65 : 'F0EBbI6lw', k68 : -1579695646, k67 : 'N', k69 : 'k'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T0{k39 : -2099799825, k40 : -1910101478, k42 : '4BC6tJBTR', k41 : false, k44 : 'q', id : 6, k43 : -1211518323, k45 : '7'}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T4{k64 : false, k66 : 'usgKR7Y7G', id : 7, k65 : 'rWV', k68 : 1489745433, k67 : 'JVGHbOH'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T4{k64 : false, k66 : 'rknHZdT7B', id : 8, k65 : 'lgWv9', k68 : -1266111195, k67 : 'Q'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T0{k39 : 1629054332, k42 : 'L', k41 : false, k44 : 'v', id : 9, k43 : 1162250552}]->(n1);
+CREATE p0=({k25:(NULL CONTAINS reverse('Bqcjfo7Qv')), id:10}), ({id:11})-[r0 :T4{id:12}]->(n0{id:13}) CREATE (n1{id:14})<-[r1 :T4{k68:-85931618, id:15}]-({id:16}) MERGE ({id:17})<-[r2 :T4{k65:'ss', id:18}]-(n2{id:19})-[r3 :T4{k65:'Z', id:20}]->( :L3{id:21}) RETURN DISTINCT n2 AS a0;
+CREATE p0 = ( { k25 : ( CASE WHEN FALSE THEN NULL ELSE NULL CONTAINS reverse ( ('Bqcjfo7Qv' +'') ) END ) , id : 10 } ) CREATE (m0{ id : 11 } )CREATE (m0)- [ r0 : T4 { id : 12 } ] - > ( n0 { id : 13 } ) CREATE ( n1 { id : 14 } ) < - [ r1 : T4 { k68 : -85931618 , id : 15 } ] - ( { id : 16 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() MERGE ( { id : 17 } ) < - [ r2 : T4 { k65 : 'ss' , id : 18 } ] - ( n2 { id : 19 } ) - [ r3 : T4 { k65 : 'Z' , id : 20 } ] - > ( : L3 { id : 21 } ) WITH * RETURN DISTINCT n2 AS a0 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE ( :L5{k30:'r', id:22}) CREATE (n0{id:23})-[ :T4{id:24}]->(n1{k30:reverse('p'), id:25}), p0=( :L4{id:26})-[r0 :T4{id:27}]->(n2{id:28})<-[r1 :T0{id:29}]-({k25:false, id:30}) MERGE ( :L4{k25:true, id:31}) RETURN CASE WHEN NULL THEN NULL END AS a0, 1 AS a1 SKIP 0;
+MERGE ( : L5 { k30 : 'r' , id : 22 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() CREATE ( n0 { id : 23 } ) - [ : T4 { id : 24 } ] - > ( n1 { k30 : reverse ( 'p' ) , id : 25 } ) CREATE p0=({k25:false, id:30})-[ r1 : T0 { id : 29 } ] ->(n2{id:28})<-[ r0 : T4 { id : 27 } ] -( : L4 { id : 26 } ) MERGE pp0=( : L4 { k25 : true , id : 31 } ) RETURN DISTINCT CASE WHEN NULL THEN NULL END AS a0 , 1 AS a1 SKIP 0 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+CREATE (n0 :L3{id:32})-[ :T4{id:33}]->(n1{k26:NULL, id:34}) MERGE ({k18:'K2E', id:35})-[r0 :T4{k68:1778154891, id:36}]-(n2{id:37}) REMOVE n2.k2 RETURN DISTINCT n2 AS a0;
+CREATE (n0: L3 { id : 32 } )CREATE (n0)- [ : T4 { id : 33 } ] - > ( n1 { k26 : NULL , id : 34 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() MERGE ( { k18 : 'K2E' , id : 35 } ) - [ r0 : T4 { k68 : 1778154891 , id : 36 } ] - ( n2 { id : 37 } ) WITH * REMOVE n2 . k2 WITH * UNWIND [NULL] as l0 RETURN DISTINCT CASE WHEN FALSE THEN NULL ELSE n2 END AS a0 SKIP 1 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (n0)-[r0]-(n1{k32:NULL}) WHERE NULL OPTIONAL MATCH (n2)-[*0..0]->(n3 :L5) CREATE p0=({id:38}), ( :L5{k29:(((n3.k30)+'R')+('L4zw2d'+('qI'+substring('4', toIntegerOrNull(abs(1382689280)), toIntegerOrNull(abs(1233422626)))))), id:39}) RETURN n1 AS a0, r0 AS a1 UNION CREATE (n0 :L4{id:40})-[ :T0{id:41}]->({k30:'x', id:42}), ( :L5{id:43})<-[r0 :T4{id:44}]-( :L4{id:45})<-[r1 :T4{id:46}]-( :L3{k20:NULL, id:47}) MERGE p0=(n1{k33:1443973048, id:48})-[ :T0{id:49}]-( :L4{id:50}) REMOVE n1.k2 RETURN 1 AS a0, n1 AS a1 SKIP 0;
+MATCH ( n0 ) - [ r0 ] - ( n1 { k32 : CASE WHEN FALSE THEN NULL ELSE NULL END } ) WHERE NULL OPTIONAL MATCH ( n2 ) - [ * 0 .. 0 ] - > ( n3 : L5 ) CREATE p0 = ( { id : 38 } ) CREATE ( : L5 { k29 : ( ( ( n3 . k30 ) + 'R' ) + ( ('L4zw2d' +'') + ( 'qI' + substring ( '4' , toIntegerOrNull ( abs ( 1382689280 ) ) , toIntegerOrNull ( abs ( 1233422626 ) ) ) ) ) ) , id : 39 } ) WITH * UNWIND [1] as l0 RETURN n1 AS a0 , CASE WHEN TRUE THEN r0 END AS a1 UNION CREATE ( n0 : L4 { id : 40 } ) - [ : T0 { id : 41 } ] - > ( { k30 : 'x' , id : 42 } ) CREATE ( : L5 { id : 43 } ) < - [ r0 : T4 { id : 44 } ] - ( : L4 { id : 45 } ) < - [ r1 : T4 { id : 46 } ] - ( : L3 { k20 : NULL , id : 47 } ) MERGE p0 = ( n1 { k33 : 1443973048 , id : 48 } ) - [ : T0 { id : 49 } ] - ( : L4 { id : 50 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() REMOVE n1 . k2 RETURN 1 AS a0 , n1 AS a1 SKIP 0 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+OPTIONAL MATCH (n0)-[ :T4{k64:true}]-()<-[]-( :L4), (n1)<-[]-(n0) OPTIONAL MATCH ()-[ :T0{k44:substring('lp40T', toIntegerOrNull(abs(-397651734)), toIntegerOrNull(abs(NULL)))}]-(n2), ()-[]-(n3)-[]-({k33:1480189145}) WHERE toBooleanList(CASE WHEN NULL THEN [p0=(n0)-[]-( :L3)<-[]-(n0)|'woOBMAM2W'] END)[toIntegerOrNull(abs(toIntegerList(NULL)[toIntegerOrNull(abs(NULL))]))] REMOVE n3.k2 RETURN DISTINCT 1 AS a0 UNION OPTIONAL MATCH ()<-[]-(n0), (n1) UNWIND [NULL, NULL] AS a0 CREATE (n2{id:51})<-[r0 :T0{id:52}]-({id:53})-[ :T4{id:54}]->( :L5{k31:substring(type(NULL), toIntegerOrNull(abs(1470519271)), toIntegerOrNull(abs(round(round(-1728178297))))), id:55}), (n3 :L5{id:56})<-[ :T0{k39:1220616890, id:57}]-(n4{id:58}) RETURN DISTINCT n1 AS a0;
+OPTIONAL MATCH ( n0 ) - [ : T4 { k64 : true } ] - ( ) < - [ ] - ( : L4 ) ,( n1 ) < - [ ] - ( n0 ) OPTIONAL MATCH ()-[:TYPE]-() OPTIONAL MATCH ( ) - [ : T0 { k44 : substring ( 'lp40T' , toIntegerOrNull ( abs ( -397651734 ) ) , toIntegerOrNull ( abs ( NULL ) ) ) } ] - ( n2 ) ,( ) - [ ] - ( n3 ) - [ ] - ( { k33 : 1480189145 } ) WHERE toBooleanList ( CASE WHEN NULL THEN [ p0 = ( n0 ) - [ ] - ( : L3 ) < - [ ] - ( n0 ) | 'woOBMAM2W' ] END ) [ toIntegerOrNull ( abs ( toIntegerList ( NULL ) [ CASE WHEN FALSE THEN NULL ELSE toIntegerOrNull ( abs ( NULL ) ) END ] ) ) ] UNWIND [1] as l0 REMOVE n3 . k2 WITH * UNWIND 1 as l1 RETURN DISTINCT 1 AS a0 UNION OPTIONAL MATCH ( ) < - [ ] - ( n0 ) ,( n1 ) WITH * UNWIND [ NULL , NULL ] AS a0 UNWIND 1 as l2 CREATE ( n2 { id : 51 } ) < - [ r0 : T0 { id : 52 } ] - ( { id : 53 } ) - [ : T4 { id : 54 } ] - > ( : L5 { k31 : CASE WHEN FALSE THEN NULL ELSE substring ( CASE WHEN TRUE THEN type ( NULL ) END , toIntegerOrNull ( abs ( CASE WHEN FALSE THEN NULL ELSE 1470519271 END ) ) , toIntegerOrNull ( abs ( round ( round ( -1728178297 ) ) ) ) ) END , id : 55 } ) CREATE ( n3 : L5 { id : 56 } ) < - [ : T0 { k39 : 1220616890 , id : 57 } ] - ( n4 { id : 58 } ) WITH * UNWIND [1] as l3 RETURN DISTINCT n1 AS a0 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+OPTIONAL MATCH (n0), () REMOVE n0.k2 REMOVE n0.k2 RETURN 1 AS a0, n0 AS a1 ORDER BY CASE WHEN false THEN relationships(NULL)[toIntegerOrNull(abs((-803850604/-1993879421)))] END DESC;
+OPTIONAL MATCH ( n0 ) ,( ) WITH * REMOVE n0 . k2 REMOVE n0 . k2 RETURN 1 AS a0 , n0 AS a1 ORDER BY CASE WHEN false THEN relationships(NULL)[toIntegerOrNull(abs((-803850604/-1993879421)))] END DESC ,TRUE SKIP 1 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+OPTIONAL MATCH p0=(n0)-[*0..1]->() SET n0.k=NULL SET n0.k=NULL RETURN n0 AS a0, p0 AS a1 SKIP 1;
+OPTIONAL MATCH p0 = (n0)-[*0..0]-( n0 ) - [ * 0 .. 1 ] - > ( ) WHERE TRUE SET n0 . k = NULL WITH * UNWIND [NULL] as l0 SET n0 . k = NULL RETURN n0 AS a0 , p0 AS a1 SKIP 1 ;

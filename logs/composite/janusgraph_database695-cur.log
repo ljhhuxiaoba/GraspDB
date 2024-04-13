@@ -1,0 +1,34 @@
+-- Time: 2024/04/11 14:05:15
+-- Database: janusgraph_database695
+-- Database version: composite
+-- seed value: 1712812407219
+CREATE (n0 :L0{k0 : 1636439841, k1 : '68', k2 : true, k3 : 'C', k4 : false, id : 0});
+CREATE (n0 {id : 1});
+CREATE (n0 :L3{k17 : -1619765168, k19 : -967995663, k18 : 18272367, k20 : false, k22 : 787180461, id : 2, k21 : true, k23 : true});
+CREATE (n0 :L3{k19 : -1579524723, k18 : 927193754, k20 : false, k22 : 513629754, id : 3, k21 : false, k23 : true});
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T0{k39 : 'EAIt', k38 : '08', k40 : '0hjUtcoAg', k41 : 's', id : 4, k37 : true, k36 : false}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T4{k62 : 419880464, k61 : 'j', id : 5, k65 : 1893378906}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T4{k62 : -65819186, k61 : 'C', k64 : 'Vc', k63 : -2006828409, id : 6, k65 : -912875989}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T3{k60 : false, k55 : true, id : 7, k54 : -315217877, k57 : 'REx', k56 : true, k59 : 'kL', k58 : 1344958646}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T4{k62 : 676719892, k61 : 'm', k64 : 'B', id : 8, k65 : 314171223}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T3{k60 : true, k55 : false, id : 9, k57 : 'n6eP', k56 : true, k59 : 'NOBainXLv', k58 : -2125054321}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T2{k49 : true, k50 : -309271738, k53 : 865104975, k52 : 'ah3Sk1FF', id : 10}]->(n1);
+UNWIND [nodes(NULL)[toIntegerOrNull(abs(530726584))]] AS a0 CREATE (n0{k4:isEmpty(toStringList(NULL)[toIntegerOrNull(abs(NULL))]), id:11})-[ :T0{id:12}]->({k17:-292406283, id:13}), ({id:14}) MERGE (n1{id:15}) RETURN *, 1 AS a1;
+UNWIND [ CASE WHEN FALSE THEN NULL ELSE nodes ( NULL ) [ toIntegerOrNull ( abs ( 530726584 ) ) ] END ] AS a0 CREATE ( n0 { k4 : isEmpty ( toStringList ( NULL ) [ toIntegerOrNull ( abs ( NULL ) ) ] ) , id : 11 } ) - [ : T0 { id : 12 } ] - > ( { k17 : -292406283 , id : 13 } ) CREATE ( { id : 14 } ) MERGE ( n1 { id : 15 } ) WITH * RETURN * , 1 AS a1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+CREATE (n0{id:16}), p0=(n1{id:17})-[r0 :T2{id:18}]->({id:19}) MERGE p1=({k19:1095750462, id:20}) CREATE ({id:21}), (n2{k20:NULL, id:22})-[r1 :T4{k61:toStringList([(n3 :L0)-[r2]->(n4) WHERE true|1904086593])[toIntegerOrNull(abs(round(1819706259)))], id:23}]->({k18:1899041588, id:24})<-[r3 :T0{id:25}]-(n5{id:26}) RETURN 1 AS a0, 1 AS a1 SKIP 1;
+CREATE ( n0 { id : 16 } ) CREATE p0 = ( n1 { id : 17 } ) - [ r0 : T2 { id : 18 } ] - > ( { id : 19 } ) MERGE p1 = ( { k19 : 1095750462 , id : 20 } ) CREATE ( { id : 21 } ) CREATE ( n2 { k20 : NULL , id : 22 } ) - [ r1 : T4 { k61 : toStringList ( CASE WHEN FALSE THEN NULL ELSE [ ( n3 : L0 ) - [ r2 ] - > ( n4 ) WHERE true | 1904086593 ] END ) [ toIntegerOrNull ( abs ( round ( 1819706259 ) ) ) ] , id : 23 } ] - > ( { k18 : 1899041588 , id : 24 } ) < - [ r3 : T0 { id : 25 } ] - ( n5 { id : 26 } ) RETURN 1 AS a0 , 1 AS a1 SKIP CASE WHEN FALSE THEN NULL ELSE 1 END ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+OPTIONAL MATCH (n0 :L3)-[ :T2{k52:type(NULL)}]-(n1{k3:reverse(substring(NULL, toIntegerOrNull(abs(-1114414695)), toIntegerOrNull(abs((n0.k17)))))})-[]-(), (n2)-[]-(n1)-[]-(n0) REMOVE n2.k2 SET n0.k=size(NULL) RETURN n1 AS a0, 1 AS a1;
+OPTIONAL MATCH ( n0 : L3 ) - [ : T2 { k52 : type ( NULL ) } ] - ( n1 { k3 : reverse ( substring ( NULL , toIntegerOrNull ( abs ( -1114414695 ) ) , toIntegerOrNull ( abs ( ( n0 . k17 ) ) ) ) ) } ) - [ ] - ( ) ,( n2 ) - [ ] - ( n1 ) - [ ] - ( n0 ) OPTIONAL MATCH ()-[:TYPE]-() REMOVE n2 . k2 WITH * UNWIND [NULL] as l0 SET n0 . k = size ( NULL ) RETURN n1 AS a0 , 1 AS a1 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE ({id:27}) MERGE (n0{id:28}) SET n0.k=NULL RETURN 1 AS a0, n0 AS a1;
+MERGE ( { id : 27 } ) WITH * MERGE ( n0 { id : 28 } ) SET n0 . k = NULL RETURN 1 AS a0 , n0 AS a1 SKIP 1 LIMIT 1 ;

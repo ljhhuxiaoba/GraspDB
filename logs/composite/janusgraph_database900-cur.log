@@ -1,0 +1,13 @@
+-- Time: 2024/04/11 14:20:28
+-- Database: janusgraph_database900
+-- Database version: composite
+-- seed value: 1712812407425
+CREATE (n0 {id : 0});
+CREATE (n0 :L2{k16 : true, id : 1, k13 : 2114610694, k12 : 'H', k15 : 'QO', k14 : 422903062});
+CREATE (n0 {id : 2});
+CREATE (n0 :L4{k28 : 366049264, k27 : false, k30 : 'Krtc', id : 3, k26 : 'T6riYiNt', k25 : 'PDMMR'});
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T3{k60 : true, k62 : 1681553532, k61 : 'vps', k63 : 'GOX', id : 4, k59 : 'A', k58 : false}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T2{k51 : -513450694, k53 : '4', k52 : -1776513454, k55 : 'CPN', id : 5, k54 : true, k56 : true}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T0{k39 : 'U', k38 : 'l', k40 : 40174333, k42 : 'h', k44 : false, id : 6, k43 : true}]->(n1);
+WITH * UNWIND NULL AS a0 CREATE (n0{id:7})-[r0 :T2{id:8}]->(n1{id:9}) RETURN a0 AS a1, 1 AS a2 LIMIT 1;
+WITH * OPTIONAL MATCH ()-[:TYPE]-() UNWIND NULL AS a0 WITH * CREATE ( n0 { id : 7 } ) - [ r0 : T2 { id : 8 } ] - > ( n1 { id : 9 } ) RETURN a0 AS a1 , 1 AS a2 LIMIT 1 ;

@@ -1,0 +1,15 @@
+-- Time: 2024/04/11 14:02:40
+-- Database: janusgraph_database660
+-- Database version: composite
+-- seed value: 1712812407184
+CREATE (n0 :L1{k5 : 'P', k11 : 'X', id : 0, k6 : 'POaO', k10 : false, k7 : -754556856, k8 : 481965552, k9 : 1859862339});
+CREATE (n0 :L2{k16 : true, id : 1, k13 : '9', k12 : false, k15 : 'G', k14 : -1378537951});
+CREATE (n0 {id : 2});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T5{k60 : false, k61 : -337517086, id : 4, k57 : true, k56 : -393791524, k59 : 1357252340, k58 : true}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T6{k62 : true, k64 : 1994323256, k66 : 'm', id : 5, k65 : true}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T6{k62 : true, k64 : 1850496871, k63 : true, k66 : 'L4', id : 6, k65 : true}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T5{k60 : true, k61 : 1103337202, id : 7, k57 : true, k56 : 793149229, k59 : -2040593268, k58 : true}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T3{k44 : 'gE', id : 8, k46 : false, k45 : -785747275, k48 : 734896597, k47 : true}]->(n1);
+MATCH (n0{k8:NULL})-[r0]->(n1), (n0) CREATE (n2 :L1{k9:NULL, id:9})<-[ :T5{k56:NULL, id:10}]-({id:11})-[r1 :T3{id:12}]->(n3 :L2{k13:NULL, id:13}) DETACH DELETE n0  RETURN 1 AS a0, n1 AS a1;
+MATCH ( n0 { k8 : NULL } ) - [ r0 ] - > ( n1 ) ,( n0 ) WITH * CREATE ( n2 : L1 { k9 : CASE WHEN TRUE THEN NULL END , id : 9 } ) < - [ : T5 { k56 : NULL , id : 10 } ] - ( { id : 11 } ) - [ r1 : T3 { id : 12 } ] - > ( n3 : L2 { k13 : NULL , id : CASE WHEN TRUE THEN 13 END } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() DETACH DELETE n0 RETURN 1 AS a0 , CASE WHEN TRUE THEN n1 END AS a1 ORDER BY FALSE ;

@@ -1,0 +1,23 @@
+-- Time: 2024/04/11 14:34:20
+-- Database: janusgraph_database1087
+-- Database version: composite
+-- seed value: 1712812407612
+CREATE (n0 :L2{k16 : true, k19 : '0Gv3', k18 : false, id : 0, k13 : 'q', k15 : true, k14 : 818576119});
+CREATE (n0 {id : 1});
+CREATE (n0 :L3{k20 : -1568725855, k22 : true, id : 2, k21 : false, k24 : 86133831, k23 : -1012580962, k25 : 'h'});
+CREATE (n0 :L2{k17 : false, k16 : true, k19 : 'I', k18 : false, id : 3, k13 : '8f04N', k15 : true, k14 : 241115475});
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T2{k49 : 347062572, k44 : 'F', id : 4, k43 : false, k46 : true, k45 : -569460252, k48 : -760196750, k47 : -397740913}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T5{k64 : 'SY', k63 : 'y', k66 : 'KsWEe6XVX', id : 5, k68 : 1408979468, k67 : 'lF1', k69 : -8242864}]->(n1);
+MERGE ({id:6})-[r0 :T5{id:7}]-({k19:'t0', id:8}) DETACH DELETE r0  MERGE (n0{id:9}) RETURN n0 AS a0 LIMIT 0;
+MERGE ( { id : 6 } ) - [ r0 : T5 { id : 7 } ] - ( { k19 : (''+'t0' ), id : 8 } ) WITH * CALL{WITH *DETACH DELETE r0 } MERGE ( n0 { id : CASE WHEN TRUE THEN 9 END } ) RETURN n0 AS a0 SKIP 1 LIMIT 0 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH ( :L2)-[]-(n0) DETACH DELETE n0  CREATE ( :L2{id:10})-[ :T5{k67:NULL, id:11}]->({id:12}), p0=( :L2{k13:substring('U', toIntegerOrNull(abs(NULL)), toIntegerOrNull(abs(-1300812753))), id:13}) RETURN max(NULL) AS a0, 1 AS a1;
+MATCH ( : L2 ) - [ ] - ( n0 ) DETACH DELETE n0 CREATE ( : L2 { id : 10 } ) - [ : T5 { k67 : NULL , id : 11 } ] - > ( { id : 12 } ) CREATE p0 = ( : L2 { k13 : substring ( 'U' , toIntegerOrNull ( abs ( NULL ) ) , toIntegerOrNull ( abs ( -1300812753 ) ) ) , id : 13 } ) WITH * UNWIND 1 as l0 RETURN DISTINCT max ( NULL ) AS a0 , 1 AS a1 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+CREATE ( :L2{k14:2146163154, id:14}) MERGE p0=( :L2{id:15}) CREATE (n0 :L2{id:16}), (n1 :L2{k13:NULL, id:17}) RETURN 1 AS a0, NULL AS a1 SKIP 0;
+CREATE ( : L2 { k14 : 2146163154 , id : 14 } ) MERGE p0 = ( : L2 { id : 15 } ) CREATE ( n0 : L2 { id : 16 } ) CREATE ( n1 : L2 { k13 : NULL , id : 17 } ) RETURN CASE WHEN TRUE THEN 1 END AS a0 , CASE WHEN TRUE THEN NULL END AS a1 SKIP 0 ;

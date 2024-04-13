@@ -1,0 +1,16 @@
+-- Time: 2024/04/11 13:33:49
+-- Database: janusgraph_database270
+-- Database version: composite
+-- seed value: 1712812406793
+CREATE (n0 :L1{id : 0, k6 : '4', k10 : 'u', k7 : true, k8 : true, k9 : -1264376251});
+CREATE (n0 {id : 1});
+CREATE (n0 :L2{k17 : 'Ai', k16 : false, k18 : -645934705, id : 2, k13 : 'jXgZ', k12 : '8', k15 : -1217904075, k14 : true});
+CREATE (n0 :L4{k28 : 'pYj', k27 : 1123315285, k29 : true, id : 3, k26 : 'KBN', k25 : 1944949590});
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T5{k75 : true, k74 : false, k77 : true, id : 4, k76 : true, k79 : 1375702858, k78 : 'qjwMwB'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T2{k60 : false, id : 5, k57 : false, k56 : -125495163, k59 : 1110796518, k58 : -1137545763}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 2}) MERGE(n0)-[r :T4{k71 : true, k70 : -96168281, k73 : -190623863, k72 : true, id : 6, k68 : 412236513, k67 : true, k69 : 't'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T1{k51 : 1317538979, k50 : false, k53 : 'B', k52 : false, id : 7, k54 : false}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T1{k51 : -1915926911, k50 : false, k53 : 'A', k52 : false, id : 8, k54 : true}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T3{k62 : 789361339, k61 : 't', k64 : false, k63 : -252829008, k66 : 'g', id : 9, k65 : -580915416}]->(n1);
+MATCH ( :L1{k6:'J'})<-[r0]-(n1) DETACH DELETE r0  SET n1.k=true RETURN DISTINCT 1 AS a1 UNION UNWIND [1503604038, ((NULL-CASE WHEN false THEN -1883288473 END)/(1888070546+size([])))] AS a0 MATCH (), (n0)-[r0]->()-[*0..]->(n1) CREATE (n2{id:10}), (n3{id:11})-[r1 :T1{id:12}]->( :L1{id:13})<-[r2 :T2{k57:NULL, id:14}]-({id:15}) RETURN 1 AS a1 SKIP 1;
+MATCH ( : L1 { k6 : CASE WHEN TRUE THEN 'J' END } ) < - [ r0 ] - ( n1 ) DETACH DELETE r0 SET n1 . k = true WITH * RETURN DISTINCT 1 AS a1 UNION UNWIND [ 1503604038 , ( CASE WHEN FALSE THEN NULL ELSE ( NULL - CASE WHEN false THEN -1883288473 END ) / ( 1888070546 + size ( CASE WHEN FALSE THEN NULL ELSE [ ] END ) ) END ) ] AS a0 UNWIND [NULL] as l0 MATCH ()-[*0..0]-( ) ,( n0 ) - [ r0 ] - > ( ) - [ * 0 .. ] - > ( n1 ) OPTIONAL MATCH ()-[:TYPE]-() CREATE ( n2 { id : 10 } ) CREATE ( n3 { id : 11 } ) - [ r1 : T1 { id : 12 } ] - > ( : L1 { id : 13 } ) < - [ r2 : T2 { k57 : NULL , id : CASE WHEN TRUE THEN 14 END } ] - ( { id : 15 } ) WITH * RETURN DISTINCT 1 AS a1 SKIP 1 ;

@@ -1,0 +1,12 @@
+-- Time: 2024/04/11 13:21:37
+-- Database: janusgraph_database105
+-- Database version: composite
+-- seed value: 1712812406587
+CREATE (n0 {id : 0});
+CREATE (n0 :L2{k11 : 1508288921, id : 1, k13 : -2088093312, k12 : true, k14 : -1542447360});
+CREATE (n0 {id : 2});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T1{k38 : 82919403, k33 : 'S7', id : 4, k35 : 'm', k34 : 'tUT5', k37 : true, k36 : -1296330397}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T3{k44 : -23780102, id : 5, k46 : 'R6VoSuyLm', k45 : false, k48 : 1986973445, k47 : false}]->(n1);
+OPTIONAL MATCH (n0) REMOVE n0.k2 CREATE ({id:6}) RETURN 1 AS a0, 1 AS a1 LIMIT 1;
+OPTIONAL MATCH ( n0 ) REMOVE n0 . k2 CREATE ( { id : 6 } ) RETURN 1 AS a0 , 1 AS a1 SKIP 1 LIMIT 1 ;

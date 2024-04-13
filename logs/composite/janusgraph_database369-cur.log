@@ -1,0 +1,24 @@
+-- Time: 2024/04/11 13:41:08
+-- Database: janusgraph_database369
+-- Database version: composite
+-- seed value: 1712812406892
+CREATE (n0 :L0{k0 : 1962722240, k1 : -1918547532, k2 : true, k3 : false, k4 : -882321979, k5 : 1488549819, id : 0, k6 : -441199909});
+CREATE (n0 :L1{k11 : '9', id : 1, k10 : true, k7 : '5pjgM0Zq', k8 : -1905895624, k12 : 'X', k9 : 'y'});
+CREATE (n0 :L0{k0 : -2019594913, k1 : 507329298, k2 : true, k3 : true, k4 : -1915271802, k5 : -516034571, id : 2, k6 : 268954363});
+CREATE (n0 :L1{k11 : 'JHbuxik', id : 3, k10 : false, k7 : 'KL2Y', k8 : -1905895624});
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T1{k39 : false, k38 : false, k40 : false, k42 : 976610457, k41 : true, id : 4, k43 : '2', k37 : 1470024779}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T3{k51 : 559025289, k50 : false, k53 : 'j1', k52 : '5', id : 5, k56 : 1531128566}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T2{k44 : 'uf', id : 6, k46 : '4w', k45 : 'xQy2F3F14', k48 : -88987538}]->(n1);
+OPTIONAL MATCH (n0)<-[]-(n1) REMOVE n0.k2 REMOVE n0.k2 RETURN 1 AS a0 SKIP 0;
+OPTIONAL MATCH ( n0 ) < - [ ] - ( n1 ) WITH * CALL{WITH *REMOVE n0 . k2 } WITH * OPTIONAL MATCH ()-[:TYPE]-() REMOVE n0 . k2 RETURN 1 AS a0 SKIP 0 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+UNWIND [NULL] AS a2 OPTIONAL MATCH ()-[]->()<-[r0]-(n1 :L1{k12:reverse(toStringList([-1763298640])[toIntegerOrNull(abs(NULL))])}) CREATE ( :L1{id:7})-[ :T3{id:8}]->({k2:(n1.k10), id:9}), (n4{id:10}) RETURN 1 AS a3, (n1.k8) AS a4;
+UNWIND [ CASE WHEN FALSE THEN NULL ELSE NULL END ] AS a2 OPTIONAL MATCH ( ) - [ ] - > ( ) < - [ r0 ] - ( n1 : L1 { k12 : CASE WHEN TRUE THEN reverse ( toStringList ( CASE WHEN TRUE THEN ([]+[ -1763298640 ] )END ) [ toIntegerOrNull ( abs ( NULL ) ) ] ) END } ) CREATE ({k2:(n1.k10), id:9})<-[ : T3 { id : 8 } ] -( : L1 { id : 7 } ) CREATE ( n4 { id : CASE WHEN FALSE THEN NULL ELSE 10 END } ) RETURN 1 AS a3 , ( n1 . k8 ) AS a4 SKIP 1 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE p0=({id:11}) MERGE ({id:12}) CREATE ({id:13}), ({id:14}) RETURN 1 AS a0, 1 AS a1;
+MERGE p0 = ( { id : 11 } ) WITH * UNWIND [1] as l0 MERGE pp0=( { id : 12 } ) WITH * CREATE ( { id : CASE WHEN TRUE THEN 13 END } ) CREATE ( { id : CASE WHEN FALSE THEN NULL ELSE 14 END } ) WITH * RETURN CASE WHEN FALSE THEN NULL ELSE 1 END AS a0 , 1 AS a1 SKIP 1 ;

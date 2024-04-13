@@ -1,0 +1,22 @@
+-- Time: 2024/04/11 14:24:13
+-- Database: janusgraph_database951
+-- Database version: composite
+-- seed value: 1712812407476
+CREATE (n0 :L5{k31 : 'KSmT', k30 : 'm', id : 0, k32 : false, k35 : true, k34 : -1395909734});
+CREATE (n0 :L4{k28 : '0nlb', k27 : true, k29 : false, id : 1, k24 : 'yb', k26 : false, k25 : 'd'});
+CREATE (n0 {id : 2});
+CREATE (n0 :L3{k19 : 'Tv', k18 : 337518892, k20 : 1515603532, id : 3, k21 : true, k23 : 1170542180});
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T3{k55 : 1766882285, id : 4, k57 : false, k56 : false, k58 : true}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T4{k60 : true, k62 : 'R', k64 : 'EoF', k63 : -314074669, k66 : -111527752, id : 5, k65 : 'c'}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T4{k60 : true, k62 : '0n9QnHvn', k61 : 'uBsdL', k63 : -776371753, id : 6, k65 : 'Y'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T5{k71 : 'o4Nh', k70 : 1839132507, id : 7, k68 : 'kqJ', k69 : true}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T6{k73 : 1081964550, k72 : 'T', k75 : 'pr', id : 8, k76 : 'KhDz'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T4{k60 : false, k62 : 'o', k61 : 'j', k64 : 'bzV2x', k63 : -1396228057, k66 : -695936424, id : 9, k65 : 'Y'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T3{k55 : 463772904, id : 10, k57 : true, k56 : false, k59 : 'xYn21to9', k58 : true}]->(n1);
+UNWIND CASE WHEN NULL THEN NULL END AS a0 OPTIONAL MATCH ()<-[r0 :T5{k68:NULL}]-( :L3{k23:-820788356}), (n0) MERGE ({k22:'r05CG6g', id:11}) RETURN collect(CASE WHEN false THEN r0 END)[toIntegerOrNull(abs(-1787345497))] AS a1;
+UNWIND CASE WHEN NULL THEN NULL END AS a0 OPTIONAL MATCH ( ) < - [ r0 : T5 { k68 : CASE WHEN FALSE THEN NULL ELSE NULL END } ] - ( : L3 { k23 : CASE WHEN FALSE THEN NULL ELSE -820788356 END } ) ,(n0)-[*0..0]-( n0 ) MERGE ( { k22 : 'r05CG6g' , id : 11 } ) RETURN collect ( CASE WHEN false THEN r0 END ) [ toIntegerOrNull ( abs ( -1787345497 ) ) ] AS a1 SKIP 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH p0=(n0), (n1 :L4) MERGE ( :L5{id:12}) SET n1.k='X' RETURN 1 AS a0, 1 AS a1;
+MATCH p0=(n0),(n1 :L4) MERGE ( : L5 { id : 12 } ) WITH * UNWIND [NULL] as l0 SET n1 . k = 'X' RETURN 1 AS a0 , 1 AS a1 ORDER BY TRUE ;

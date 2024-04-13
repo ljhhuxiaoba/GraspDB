@@ -1,0 +1,18 @@
+-- Time: 2024/04/11 14:03:24
+-- Database: janusgraph_database670
+-- Database version: composite
+-- seed value: 1712812407194
+CREATE (n0 :L3{k17 : -710330081, k19 : 'F', k18 : 890189076, k20 : -869504990, k22 : -966720579, id : 0, k21 : 'ppxH'});
+CREATE (n0 {id : 1});
+CREATE (n0 :L4{k28 : 1997962262, k27 : 1237621923, id : 2, k24 : 'NuA5hn0', k23 : -513595232, k26 : 1868766148, k25 : -745212943});
+CREATE (n0 :L3{k17 : -781765770, k19 : '5Qg', k18 : -624685453, k20 : -577750273, k22 : -627078047, id : 3, k21 : 'e'});
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T1{k38 : true, id : 4, k35 : 'P', k37 : true, k36 : -1732930247}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T5{k60 : 917030569, k62 : 'L', k61 : 'Bp', k64 : 1263073915, k63 : -1369173147, id : 5, k65 : 'YvZ', k59 : 415609594}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T3{k51 : -671793222, k50 : 'sS', k52 : false, id : 6, k48 : true, k47 : false}]->(n1);
+CREATE (n0{id:7})-[r0 :T5{id:8}]->(n1{id:9})-[ :T3{id:10}]->({id:11}), p0=(n2{id:12})-[r1 :T3{id:13}]->({id:14}) MERGE ({id:15})-[r2 :T3{id:16}]-({id:17}) DETACH DELETE r2  RETURN 1 AS a0;
+CREATE ({id:11})<-[ : T3 { id : CASE WHEN TRUE THEN 10 END } ] -(n1{id:9})<-[ r0 : T5 { id : 8 } ] -( n0 { id : 7 } ) CREATE p0 = ( n2 { id : 12 } ) - [ r1 : T3 { id : 13 } ] - > ( { id : 14 } ) WITH * UNWIND [1] as l0 MERGE ( { id : 15 } ) - [ r2 : T3 { id : 16 } ] - ( { id : 17 } ) DETACH DELETE r2 WITH * UNWIND 1 as l1 RETURN 1 AS a0 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH ()-[]->(), (n0{k18:NULL})-[]-(n1) UNWIND [[NULL]] AS a0 MERGE (n2 :L3{k18:-922992156, id:18}) RETURN n1 AS a1;
+MATCH (nn0),()-[m1]->(),(nn2),(n0{k18:NULL})-[]-(n1) WHERE exists((nn0)-[m1]->(nn2)) UNWIND CASE WHEN TRUE THEN [ [ CASE WHEN FALSE THEN NULL ELSE NULL END ] ] END AS a0 MERGE ( n2 : L3 { k18 : -922992156 , id : 18 } ) RETURN DISTINCT CASE WHEN TRUE THEN n1 END AS a1 LIMIT 1 ;

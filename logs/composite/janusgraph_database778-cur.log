@@ -1,0 +1,17 @@
+-- Time: 2024/04/11 14:11:23
+-- Database: janusgraph_database778
+-- Database version: composite
+-- seed value: 1712812407302
+CREATE (n0 {id : 0});
+CREATE (n0 :L1{k11 : 'j', id : 1, k10 : -634774107, k7 : '6', k8 : -809912775, k9 : 'I'});
+CREATE (n0 :L3{k19 : 2128972526, k18 : 'r', k20 : false, k22 : 'v1', id : 2, k24 : true, k23 : true});
+CREATE (n0 :L3{k19 : 1253644634, k18 : 'pGSs', k20 : false, k22 : 'f0vnPz', id : 3, k21 : 1246983559, k24 : true, k23 : false});
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T2{k49 : 74802115, k50 : 586409505, id : 4, k46 : 'MT', k48 : false, k47 : 'FLPcWs'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T5{k62 : false, k64 : 1460027016, k63 : 'N', k66 : false, id : 5, k65 : false, k67 : -81954549}]->(n1);
+MATCH (), ()-[r0]-() UNWIND NULL AS a0 CREATE ({id:6})<-[r1 :T5{id:7}]-({k20:toBooleanOrNull(NULL), id:8}) RETURN DISTINCT *;
+MATCH ()-[*0..0]-( ) ,( ) - [ r0 ] - ( ) WITH * WHERE TRUE UNWIND NULL AS a0 CREATE ({k20:toBooleanOrNull(NULL), id:8})-[ r1 : T5 { id : 7 } ] ->( { id : 6 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN DISTINCT * LIMIT 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MERGE (n0{id:9})-[r0 :T5{k68:448697405, id:10}]-(n1{id:11}) CREATE ({id:12}), p0=(n2{id:13})<-[r1 :T5{id:14}]-(n3 :L3{k21:(r0.k67), id:15}) REMOVE n0.k2 RETURN n0 AS a0, n1 AS a1;
+MERGE pp0=( n0 { id : 9 } ) - [ r0 : T5 { k68 : 448697405 , id : CASE WHEN FALSE THEN NULL ELSE 10 END } ] - ( n1 { id : 11 } ) CREATE ( { id : 12 } ) CREATE p0 = ( n2 { id : 13 } ) < - [ r1 : T5 { id : 14 } ] - ( n3 : L3 { k21 : ( r0 . k67 ) , id : 15 } ) WITH * UNWIND [NULL] as l0 REMOVE n0 . k2 WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN n0 AS a0 , n1 AS a1 ;

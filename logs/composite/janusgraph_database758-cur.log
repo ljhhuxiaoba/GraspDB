@@ -1,0 +1,23 @@
+-- Time: 2024/04/11 14:09:54
+-- Database: janusgraph_database758
+-- Database version: composite
+-- seed value: 1712812407282
+CREATE (n0 :L4{k28 : 'D2vLkN2I', k27 : -2053857776, id : 0, k24 : 477260259, k23 : 'b', k26 : true, k25 : 'uK9k'});
+CREATE (n0 :L2{k11 : 1610639284, id : 1, k13 : true, k12 : '64b85v', k15 : '6Jn3R6', k14 : 'BRD8TOR9H'});
+CREATE (n0 {id : 2});
+CREATE (n0 :L5{k29 : 1245558942, k31 : -658102769, k30 : 841226833, k33 : 352642535, id : 3, k32 : 336713003, k35 : false, k34 : false});
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T4{k62 : false, k61 : -830487615, k64 : true, k63 : 'E', id : 4, k65 : -189995704, k67 : 313647177}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T3{k60 : '3O5A', k55 : 1730507300, id : 5, k54 : 'ndF', k57 : true, k56 : true, k59 : 178529121, k58 : 'R'}]->(n1);
+OPTIONAL MATCH (n0) MERGE ({id:6})-[r0 :T4{id:7}]->(n1{id:8})-[r1 :T3{id:9}]-(n2{k11:897033964, id:10}) SET n2.k=(r0.k64) RETURN n0 AS a0;
+OPTIONAL MATCH ( n0 ) MERGE ( { id : 6 } ) - [ r0 : T4 { id : 7 } ] - > ( n1 { id : 8 } ) - [ r1 : T3 { id : 9 } ] - ( n2 { k11 : CASE WHEN FALSE THEN NULL ELSE 897033964 END , id : 10 } ) SET n2 . k = ( r0 . k64 ) RETURN n0 AS a0 ORDER BY 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+WITH * UNWIND toStringList([(('v' <> 'nf') IS NOT NULL), (false OR true)]) AS a0 MERGE (n0{id:11})<-[r0 :T3{id:12}]-({id:13}) RETURN a0 AS a1 LIMIT 1;
+WITH * UNWIND [1] as l0 UNWIND ([]+toStringList ( ([ ( ( 'v' <> 'nf' ) IS NOT NULL ) , ( false OR true ) ] +[]) ) )AS a0 WITH * MERGE ( n0 { id : 11 } ) < - [ r0 : T3 { id : 12 } ] - ( { id : 13 } ) RETURN a0 AS a1 LIMIT 1 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH p0=( :L2{k13:((NULL/NULL) <> (NULL-NULL))}) DETACH DELETE p0  CREATE ({k27:1471478956, id:14})-[r0 :T4{id:15}]->({id:16})-[ :T3{k54:NULL, id:17}]->({k10:'1guAvq', id:18}), p1=(n0{id:19})<-[ :T3{id:20}]-({id:21})<-[r1 :T4{id:22}]-( :L4{id:23}) RETURN keys(properties(startNode(NULL))) AS a0, 1 AS a1;
+MATCH p0 = ( : L2 { k13 : ( ( NULL / NULL ) <> ( NULL - NULL ) ) } ) WHERE TRUE DETACH DELETE p0 CREATE ( { k27 : 1471478956 , id : 14 } ) - [ r0 : T4 { id : 15 } ] - > ( { id : 16 } ) - [ : T3 { k54 : CASE WHEN FALSE THEN NULL ELSE NULL END , id : 17 } ] - > ( { k10 : CASE WHEN FALSE THEN NULL ELSE '1guAvq' END , id : 18 } ) CREATE p1 = ( n0 { id : 19 } ) < - [ : T3 { id : 20 } ] - ( { id : 21 } ) < - [ r1 : T4 { id : 22 } ] - ( : L4 { id : CASE WHEN TRUE THEN 23 END } ) RETURN DISTINCT CASE WHEN TRUE THEN keys ( properties ( startNode ( NULL ) ) ) END AS a0 , 1 AS a1 ;

@@ -1,0 +1,22 @@
+-- Time: 2024/04/11 14:36:02
+-- Database: janusgraph_database1110
+-- Database version: composite
+-- seed value: 1712812407635
+CREATE (n0 :L4{k28 : false, k27 : 'DX', k29 : true, id : 0, k26 : 'd'});
+CREATE (n0 :L1{k5 : false, k11 : -2108767415, id : 1, k6 : false, k10 : 'D', k7 : false, k8 : 'a1AYoANA2', k9 : 1402440577});
+CREATE (n0 :L3{k19 : 'OCa', k18 : false, k20 : 'Nw', k22 : 'FjvRzGXLV', id : 2, k21 : 'fFn', k24 : 1751230054, k23 : 530469702});
+CREATE (n0 :L2{k17 : 'y', k16 : 'spYo', id : 3, k13 : 925494406, k12 : 'YG', k15 : 180953362, k14 : 'W'});
+MATCH (n0 {id : 0}), (n1 {id : 1}) MERGE(n0)-[r :T1{k39 : 'yNC', k38 : true, k40 : false, k41 : false, id : 4, k35 : 'GPf27', k37 : 'e', k36 : 'D'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T4{k60 : true, k55 : 739738047, id : 5, k57 : 1306398703, k56 : true, k58 : true}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 2}) MERGE(n0)-[r :T0{k31 : 2072971172, k30 : 'i9ifI0km', k33 : -470322936, id : 6, k32 : -1505234218, k34 : 'kg'}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T1{k39 : 'T', k38 : false, k40 : true, k41 : true, id : 7, k35 : 'fS', k37 : 'vF', k36 : '2G'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T5{k62 : 'r', k61 : 1594697306, k64 : -1504037897, k63 : false, k66 : false, id : 8, k65 : -2122374403}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T4{k60 : true, id : 9, k57 : -1627393631, k56 : false, k59 : 1240073280}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T0{k31 : -925836776, k30 : 'yc', k33 : 238054239, id : 10, k32 : -374173535, k34 : '2IYD'}]->(n1);
+MERGE ( :L2{id:11}) MERGE ({id:12}) CREATE ( :L1{k5:NULL, id:13})<-[r0 :T1{k35:NULL, id:14}]-({id:15}), p0=({k14:'RaEX', id:16})-[r1 :T4{k58:NULL, id:17}]->(n0 :L2{id:18}) RETURN 1 AS a0, 1 AS a1 SKIP 0;
+MERGE ( : L2 { id : 11 } ) WITH * MERGE ( { id : 12 } ) WITH * UNWIND [1] as l0 CREATE ( : L1 { k5 : NULL , id : 13 } ) < - [ r0 : T1 { k35 : NULL , id : 14 } ] - ( { id : 15 } ) CREATE p0 = ( { k14 : 'RaEX' , id : 16 } ) - [ r1 : T4 { k58 : CASE WHEN TRUE THEN NULL END , id : 17 } ] - > ( n0 : L2 { id : 18 } ) RETURN 1 AS a0 , 1 AS a1 SKIP CASE WHEN TRUE THEN 0 END ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+OPTIONAL MATCH ()-[]-(n0), p0=() REMOVE n0.k2 REMOVE n0.k2 RETURN n0 AS a0;
+OPTIONAL MATCH ()-[]-(n0),p0=() REMOVE n0 . k2 WITH * OPTIONAL MATCH ()-[:TYPE]-() REMOVE n0 . k2 WITH * UNWIND [1] as l0 RETURN CASE WHEN FALSE THEN NULL ELSE n0 END AS a0 SKIP 1 ;

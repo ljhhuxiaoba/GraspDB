@@ -1,0 +1,14 @@
+-- Time: 2024/04/11 14:27:30
+-- Database: janusgraph_database995
+-- Database version: composite
+-- seed value: 1712812407520
+CREATE (n0 {id : 0});
+CREATE (n0 :L3{k17 : -1457583051, k19 : false, k18 : 2096155891, k20 : true, id : 1});
+CREATE (n0 :L0{k0 : false, k1 : -145836526, k3 : false, k4 : -1560135193, k5 : 1298969886, id : 2});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T2{k40 : 'B', k42 : 971308085, k41 : true, k44 : '8blT', id : 4, k43 : -1974001802}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T0{k28 : 'nr1', k27 : false, k29 : '0', k31 : false, k30 : 'q', id : 5, k32 : -1028516385, k26 : 'h'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T0{k28 : 'jY', k29 : '3', k31 : false, k30 : '3TE', id : 6, k32 : -1618878831, k26 : 'NgDLBRKi'}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T0{k28 : 'FaOR', k27 : false, k29 : 'GIm9cQ0', k30 : '9i', id : 7, k32 : -680110356, k26 : 'R'}]->(n1);
+MERGE (n0 :L3{id:8}) REMOVE n0.k2 DETACH DELETE n0  RETURN [NULL] AS a0;
+MERGE ( n0 : L3 { id : 8 } ) REMOVE n0 . k2 WITH * UNWIND [NULL] as l0 DETACH DELETE CASE WHEN FALSE THEN NULL ELSE n0 END WITH * RETURN DISTINCT [ NULL ] AS a0 ;

@@ -1,0 +1,12 @@
+-- Time: 2024/04/11 13:56:22
+-- Database: janusgraph_database575
+-- Database version: composite
+-- seed value: 1712812407099
+CREATE (n0 :L4{k28 : 'MYw', k27 : 'cqjFm', k29 : true, k31 : 2049018842, k30 : -152078102, id : 0, k32 : false, k26 : false});
+CREATE (n0 :L3{k22 : 1004229406, id : 1, k21 : false, k24 : 'z', k23 : 2023370883, k25 : 'Fp'});
+CREATE (n0 :L2{k17 : true, k16 : -1787907565, k19 : -575512893, k18 : false, id : 2, k13 : 'M9OdHKzV', k15 : 'o', k14 : 'txSz2'});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T5{k62 : true, k61 : true, k64 : 63528770, k63 : true, k66 : false, id : 4, k65 : -717540716, k67 : -903100378}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T1{k39 : 'sm', k38 : -1705212739, k42 : 1572965171, k41 : 'e', id : 5}]->(n1);
+MATCH ({k30:NULL})<-[r0]-() OPTIONAL MATCH () WHERE ('1O1O' < 'YrXFD') MERGE (n2{id:6}) RETURN 1 AS a1, n2 AS a2;
+MATCH ( { k30 : NULL } ) < - [ r0 ] - ( ) WITH * OPTIONAL MATCH ( ) WHERE ( CASE WHEN TRUE THEN '1O1O' < 'YrXFD' END ) OPTIONAL MATCH ()-[:TYPE]-() MERGE ( n2 { id : 6 } ) WITH * RETURN CASE WHEN TRUE THEN 1 END AS a1 , n2 AS a2 ;

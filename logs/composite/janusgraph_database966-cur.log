@@ -1,0 +1,17 @@
+-- Time: 2024/04/11 14:25:20
+-- Database: janusgraph_database966
+-- Database version: composite
+-- seed value: 1712812407491
+CREATE (n0 :L6{k39 : 'P', k40 : 'pceIK', k42 : 2057635704, k41 : '9', k44 : 'N93qy2W5', id : 0, k43 : false});
+CREATE (n0 :L4{k28 : 184954564, k29 : '2YtHXJRU4', k31 : -377623938, k30 : 'J', id : 1});
+CREATE (n0 :L6{k39 : 'I5oYJT', k40 : 'uNnrOPzOf', k42 : 240376278, k41 : 'LCW', id : 2, k43 : false});
+CREATE (n0 :L3{k20 : 'x', k22 : -417649306, id : 3, k21 : 'J2U1FfA', k24 : true, k23 : '56dk', k26 : false, k25 : -1157835911});
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T1{k50 : 'yc', k53 : 2045407855, k52 : 1995455810, id : 4, k54 : true}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T5{k74 : true, k77 : false, id : 5, k76 : 637460093, k79 : 116579226, k78 : 521166054}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T3{k62 : 885367797, k64 : 'dO0lqZC', k63 : 1425006617, k66 : true, id : 6, k65 : 'xP', k67 : true}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T6{k80 : -2118319134, k82 : 729797104, k81 : 'q', k84 : 'w', k83 : 'S', k86 : false, k85 : 'i', id : 7}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T1{k51 : true, k50 : '84', k53 : 1330762611, k52 : 1116459254, id : 8, k54 : true}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T0{k49 : true, id : 9, k45 : 1314089016, k48 : false, k47 : false}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T3{k62 : -627785456, k64 : 'UOw', k63 : 1738877929, k66 : true, id : 10, k65 : 'ilq6AkqXp', k67 : false}]->(n1);
+WITH * OPTIONAL MATCH ()<-[*0..]-(n0)-[]->() WHERE NULL CREATE ({id:11})-[ :T5{k74:NULL, id:12}]->({id:13})<-[ :T0{id:14}]-(n1{id:15}), ({id:16})<-[r0 :T3{id:17}]-( :L4{id:18})-[r1 :T1{id:19}]->(n2 :L6{k43:false, id:20}) RETURN n0 AS a0 SKIP 0;
+WITH * OPTIONAL MATCH ( ) < - [ * 0 .. ] - ( n0 ) - [ ] - > ( ) WHERE CASE WHEN FALSE THEN NULL ELSE NULL END OPTIONAL MATCH ()-[:TYPE]-() CREATE ( { id : 11 } ) - [ : T5 { k74 : NULL , id : CASE WHEN FALSE THEN NULL ELSE 12 END } ] - > ( { id : 13 } ) < - [ : T0 { id : 14 } ] - ( n1 { id : 15 } ) CREATE (m0{ id : 16 } )CREATE (m0)< - [ r0 : T3 { id : 17 } ] - ( : L4 { id : CASE WHEN FALSE THEN NULL ELSE 18 END } ) - [ r1 : T1 { id : 19 } ] - > ( n2 : L6 { k43 : false , id : 20 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN DISTINCT n0 AS a0 SKIP 0 ;

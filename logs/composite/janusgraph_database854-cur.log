@@ -1,0 +1,23 @@
+-- Time: 2024/04/11 14:17:02
+-- Database: janusgraph_database854
+-- Database version: composite
+-- seed value: 1712812407378
+CREATE (n0 :L3{k17 : 's', k19 : true, k18 : -701042156, k20 : 1782572322, k22 : -2044181626, id : 0, k21 : 'n', k23 : -990733113});
+CREATE (n0 :L5{k29 : 2003825585, k31 : '8n', k30 : 'X', k33 : -246330642, id : 1, k32 : -545222290});
+CREATE (n0 :L4{k28 : true, k27 : 487257563, id : 2, k24 : true, k26 : -841086718, k25 : true});
+CREATE (n0 :L0{k0 : 'KkYjQa', k1 : 566757892, k3 : 'l', k5 : true, id : 3});
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T4{k55 : -1125500423, id : 4, k57 : false, k56 : 1951744581, k58 : false}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T0{k38 : 'ugd3xmXk', id : 5, k35 : 1640068041, k34 : 'RK', k37 : true, k36 : 598703339}]->(n1);
+CREATE (n0 :L0{k5:false, id:6}) MERGE ({id:7}) CREATE ({k4:1393825657, id:8}), p0=( :L0{id:9}) RETURN 1 AS a0 LIMIT 1;
+CREATE ( n0 : L0 { k5 : false , id : CASE WHEN TRUE THEN 6 END } ) MERGE ( { id : 7 } ) CREATE ( { k4 : 1393825657 , id : 8 } ) CREATE p0 = ( : L0 { id : 9 } ) WITH * UNWIND [1] as l0 RETURN 1 AS a0 LIMIT 1 ;
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+CREATE ({id:10})<-[ :T0{id:11}]-(n0{id:12})<-[ :T4{id:13}]-({id:14}) MERGE ( :L5{id:15})<-[r0 :T0{id:16}]-(n1{id:17}) CREATE ( :L4{k24:(r0.k37), id:18})-[ :T0{id:19}]->( :L3{k19:false, id:20}) RETURN r0 AS a0 ORDER BY CASE WHEN (459267435 <= (166633368/(r0.k35))) THEN (r0.k34) END, a0;
+CREATE ( { id : 10 } ) < - [ : T0 { id : 11 } ] - ( n0 { id : CASE WHEN FALSE THEN NULL ELSE 12 END } ) < - [ : T4 { id : 13 } ] - ( { id : 14 } ) MERGE ( : L5 { id : 15 } ) < - [ r0 : T0 { id : CASE WHEN FALSE THEN NULL ELSE 16 END } ] - ( n1 { id : 17 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() CREATE (m0: L4 { k24 : ( r0 . k37 ) , id : 18 } )CREATE (m0)- [ : T0 { id : 19 } ] - > ( : L3 { k19 : false , id : 20 } ) RETURN CASE WHEN FALSE THEN NULL ELSE r0 END AS a0 ORDER BY CASE WHEN (459267435 <= (166633368/(r0.k35))) THEN (r0.k34) END, a0 ;
+MATCH (a) RETURN count(a);
+MATCH (a) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+MATCH (b)-[a]->(c) RETURN count(a);
+OPTIONAL MATCH ()<-[]-(n0) WHERE (('zdqaKHJ'+NULL) <> 'A9pTT') REMOVE n0.k2 DETACH DELETE n0  RETURN 1 AS a0 ORDER BY NULL, a0 DESC;
+OPTIONAL MATCH ( ) < - [ ] - ( n0 ) WHERE ( ( 'zdqaKHJ' + NULL ) <> 'A9pTT' ) REMOVE n0 . k2 DETACH DELETE n0 RETURN 1 AS a0 ORDER BY NULL, a0 DESC ;
