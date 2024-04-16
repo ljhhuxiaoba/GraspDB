@@ -157,3 +157,5 @@ The following table shows the number of bugs detected by GraspDB.
 | SUM        | 77        | 31              | 43    | 15                      | 19                         | 45         |13    |
 
 
+>>>>>>>>>
+
