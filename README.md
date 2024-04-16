@@ -142,7 +142,7 @@ agensgraph
 
 We compare graph state as a new oracle to detect writing-related logic bugs and we apply a simplified version of the algorithm VF2 to check if two labeled property graphs are the same. And here's our algorithm:
 
-![example_expr.drawio](./example_expr.drawio.png)
+![Isomorphism of LPG](./Isomorphism of LPG.png)
 
 # Bugs Found by GraspDB
 
