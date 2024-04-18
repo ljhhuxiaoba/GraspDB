@@ -1,14 +1,14 @@
 {
-  "janusgraph@first": {
-    "port": 8182,
+  "neo4j@first": {
+    "port": 7687,
     "host": "localhost",
-    "username": "janus",
+    "username": "neo4j",
     "password": "123abc..."
   },
-  "janusgraph@second": {
-    "port": 8183,
+  "neo4j@second":{
+    "port": 7688,
     "host": "localhost",
-    "username": "janus",
+    "username": "neo4j",
     "password": "123abc..."
   }
 }

@@ -1,30 +1,17 @@
 
-import com.google.gson.JsonObject;
 import com.orientechnologies.orient.jdbc.OrientJdbcConnection;
 import org.apache.hugegraph.driver.CypherManager;
 import org.apache.hugegraph.driver.GremlinManager;
 import org.apache.hugegraph.driver.HugeClient;
 import org.apache.hugegraph.structure.gremlin.ResultSet;
 import org.apache.tinkerpop.gremlin.driver.Client;
-import org.apache.tinkerpop.gremlin.driver.Result;
-import org.example.cyphertransform.AbstractAction;
-import org.example.cyphertransform.MainOptions;
-import org.example.cyphertransform.common.log.LoggableFactory;
-import org.example.cyphertransform.common.query.GDSmithResultSet;
-import org.example.cyphertransform.cypher.*;
-import org.example.cyphertransform.janusGraph.JanusOptions;
-import org.example.cyphertransform.janusGraph.JanusConnection;
-import org.example.cyphertransform.janusGraph.gen.JanusNodeGenerator;
-import org.example.cyphertransform.janusGraph.schema.JanusSchema;
-import org.example.cyphertransform.janusGraph.gen.JanusGraphGenerator;
+import org.example.graspdb.janusGraph.JanusConnection;
 import org.apache.tinkerpop.gremlin.driver.Cluster;
-import org.opencypher.gremlin.client.CypherGremlinClient;
 import org.opencypher.gremlin.translation.TranslationFacade;
 
 import java.io.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.util.List;
 import java.util.Properties;
 
 

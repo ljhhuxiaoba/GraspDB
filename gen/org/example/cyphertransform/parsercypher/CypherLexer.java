@@ -1,5 +1,5 @@
 // Generated from C:/Users/21072/Desktop/Cypher-Transform-master/src/main/java/org/example/cyphertransform/parsercypher\CypherLexer.g4 by ANTLR 4.12.0
-package org.example.cyphertransform.parsercypher;
+package org.example.graspdb.parsercypher;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
