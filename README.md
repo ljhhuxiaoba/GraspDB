@@ -66,7 +66,7 @@ Then run the following command:
 java -jar GraspDB.jar --num-tries 1000 -num-queries 50 --database-type neo4j composite
 ```
 The testing should begin, GraspDB will generate 1000 graphs and for each graph it will generate 50 queries.
-All the graph data and test case pairs will be recorded in ```logs``` directory. And the bug reports are recorded in "GraspDB/log.txt".
+All the graph data and test case pairs will be recorded in ```logs``` directory. And the bug reports are recorded in ```GraspDB/log.txt```.
 
 
 # Using GraspDB
