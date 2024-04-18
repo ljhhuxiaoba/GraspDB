@@ -3,72 +3,48 @@
     "port": 7687,
     "host": "localhost",
     "username": "neo4j",
-    "password": "123abc..."
+    "password": "GraspDB"
   },
   "neo4j@second":{
     "port": 7688,
     "host": "localhost",
     "username": "neo4j",
-    "password": "123abc..."
+    "password": "GraspDB"
   },
   "redisgraph@first":{
     "port": 6379,
     "host": "localhost",
     "username": "redis",
-    "password": "123abc..."
+    "password": "GraspDB"
   },
   "redisgraph@second":{
     "port": 6380,
     "host": "localhost",
     "username": "redis",
-    "password": "123abc..."
+    "password": "GraspDB"
   },
   "memgraph@first":{
     "port": 7689,
     "host": "localhost",
     "username": "memgraph",
-    "password": "123abc..."
+    "password": "GraspDB"
   },
   "memgraph@second":{
     "port": 7690,
     "host": "localhost",
     "username": "memgraph",
-    "password": "123abc..."
+    "password": "GraspDB"
   },
   "agensgraph@first": {
     "port": 5432,
     "host": "localhost",
     "username": "postgres",
-    "password": "agensgraph"
+    "password": "GraspDB"
   },
   "agensgraph@second":{
     "port": 5433,
     "host": "localhost",
     "username": "postgres",
-    "password": "agensgraph"
-  },
-  "janusgraph@first": {
-    "port": 8182,
-    "host": "localhost",
-    "username": "janus",
-    "password": "123abc..."
-  },
-  "janusgraph@second": {
-    "port": 8183,
-    "host": "localhost",
-    "username": "janus",
-    "password": "123abc..."
-  },
-  "hugegraph@first": {
-    "port": 8080,
-    "host": "localhost",
-    "username": "admin",
-    "password": "admin"
-  },
-  "hugegraph@second": {
-    "port": 8081,
-    "host": "localhost",
-    "username": "admin",
-    "password": "admin"
+    "password": "GraspDB"
   }
 }
