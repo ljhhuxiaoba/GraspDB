@@ -1,0 +1,18 @@
+-- Time: 2024/07/05 16:33:14
+-- Database: memgraph_database94
+-- Database version: composite
+-- seed value: 1720168297069
+CREATE (n0 :L3{k19 : 'nUSsNC4', k20 : 2010362054, k22 : 1707000537, id : 0, k21 : true, k23 : true});
+CREATE (n0 :L3{k19 : 'jSi', k22 : 1625067, id : 1, k21 : false, k23 : false});
+CREATE (n0 :L3{k19 : 'unyy', k20 : -642659308, k22 : 1625067, id : 2, k21 : false, k23 : false});
+CREATE (n0 :L3:L4{k28 : 987646737, k27 : 2056583169, k19 : 'm', k20 : -899530327, k30 : 'y', id : 3, k21 : false, k24 : 'slW5', k26 : 'A', k25 : '7'});
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T3{k51 : 'L', k50 : 'q', k53 : 'o', k52 : 451962622, k55 : false, id : 4, k54 : 'sCSJIfs'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T1{k39 : 122914239, k38 : 'R', k40 : 'h', k42 : -1675062392, k41 : true, id : 5, k37 : 'xkSHi'}]->(n1);
+MERGE (n0 :L3{id:6}) SET n0.k=(n0.k22) MERGE ( :L3{id:7})<-[r0 :T3{k51:'K', id:8}]-({id:9}) RETURN (n0.k20) AS a0, 1 AS a1 ORDER BY NULL, a0 SKIP 1;
+MERGE ( n0 : L3 { id : reduce(a=6 ,b IN []|a) } ) CREATE (c0{id:-1}) DELETE (c0) FOREACH(f in [1]|SET n0 . k = reduce(a=( n0 . k22 ) ,b IN []|a) ) SET (NULL).k=1 MERGE pp0=( : L3 { id : 7 } ) < - [ r0 : T3 { k51 : 'K' , id : 8 } ] - ( { id : 9 } ) RETURN ( n0 . k20 ) AS a0 , 1 AS a1 ORDER BY NULL, a0 SKIP 1 LIMIT 1 ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH ()<-[]-({k19:'q'}) WHERE (NULL ENDS WITH NULL) CREATE ( :L3{id:10}), ({id:11}) CREATE ({id:12})<-[ :T3{id:13}]-(n0{k22:NULL, id:14}) RETURN 1 AS a0, NULL AS a1 ORDER BY a0, a1;
+MATCH (nn0),()<-[m1]-(),(nn2) WHERE exists((nn0)<-[m1]-(nn2{k19:'q'})) AND (( NULL ENDS WITH NULL ) )CREATE (c0{id:-1}) DELETE (c0) CREATE ( : L3 { id : 10 } ) CREATE ( { id : 11 } ) WITH * UNWIND [NULL] as l0 CREATE (m3{ id : 12 } )CREATE (m3)< - [ : T3 { id : 13 } ] - ( n0 { k22 : NULL , id : 14 } ) RETURN 1 AS a0 , NULL AS a1 ORDER BY a0, a1 ,FALSE ;

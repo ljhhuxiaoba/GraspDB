@@ -1,0 +1,19 @@
+-- Time: 2024/07/05 16:32:58
+-- Database: memgraph_database77
+-- Database version: composite
+-- seed value: 1720168297052
+CREATE (n0 :L3{k19 : -871127848, k18 : 'ajd', k20 : false, k22 : 'CE6A', id : 0, k21 : 'p'});
+CREATE (n0 :L4{k27 : 'Q', id : 1, k24 : true, k23 : 'UPG', k26 : 'v'});
+CREATE (n0 :L2:L6{k17 : false, k38 : 'Z', k11 : 'vlh', id : 2, k13 : true, k35 : false, k12 : 912916505, k37 : 'A', k14 : false, k36 : '8'});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T1{k49 : 'E', k51 : 1282818082, k50 : -797826031, id : 4, k48 : false, k47 : 'E'}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T0{k40 : 'Q5', k42 : 'MzOtzUjqZ', k41 : true, k44 : -1054826669, id : 5, k43 : -477906000, k45 : true}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 2}) MERGE(n0)-[r :T4{k70 : 'xbOH', k66 : -8927385, id : 6, k68 : true, k67 : true, k69 : true}]->(n1);
+UNWIND NULL AS a0 MERGE ({id:7}) CREATE (n0{id:8})<-[ :T1{id:9}]-({id:10})-[ :T0{k44:round(NULL), id:11}]->({k25:-726237094, id:12}) RETURN 1 AS a1, a0 AS a2;
+UNWIND NULL AS a0 OPTIONAL MATCH ()-[:TYPE]-() MERGE ( { id : 7 } ) WITH * CREATE ( n0 { id : 8 } ) < - [ : T1 { id : 9 } ] - ( { id : 10 } ) - [ : T0 { k44 : CASE WHEN TRUE THEN round ( NULL ) END , id : 11 } ] - > ( { k25 : -726237094 , id : 12 } ) RETURN CASE WHEN FALSE THEN NULL ELSE 1 END AS a1 , a0 AS a2 ORDER BY TRUE ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+OPTIONAL MATCH ()-[r0 :T4{k69:(NULL AND true)}]-(n0) SET n0.k=reverse('gQ6') MERGE (n1{k27:'1', id:13})-[r1 :T0{k44:-1796590889, id:14}]-(n2{k38:'2', id:15})-[ :T4{id:16}]-({id:17}) RETURN 1 AS a0;
+OPTIONAL MATCH (nn0),()<-[r0:T4{k69:(NULL AND true)}]-(),(n0) WHERE exists((nn0)-[r0]-(n0)) UNWIND [1] as l0 SET n0 . k = reverse ( 'gQ6' ) SET (NULL).TRUE=1 MERGE ( n1 { k27 : '1' , id : 13 } ) - [ r1 : T0 { k44 : reduce(a=-1796590889 ,b IN []|a) , id : 14 } ] - ( n2 { k38 : '2' , id : reduce(a=15 ,b IN []|a) } ) - [ : T4 { id : 16 } ] - ( { id : 17 } ) RETURN 1 AS a0 ;

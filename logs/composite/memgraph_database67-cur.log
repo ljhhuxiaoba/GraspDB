@@ -1,0 +1,36 @@
+-- Time: 2024/07/05 16:32:47
+-- Database: memgraph_database67
+-- Database version: composite
+-- seed value: 1720168297042
+CREATE (n0 :L4{k22 : 'Y', id : 0, k24 : 1196911014, k23 : 1210442797, k26 : -155543035, k25 : 1906076273});
+CREATE (n0 {id : 1});
+CREATE (n0 {id : 2});
+CREATE (n0 :L1{k5 : false, id : 3, k6 : '6CE', k8 : true, k9 : false});
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T6{k64 : 1778431157, k63 : 1351318917, k66 : false, id : 4, k65 : 1847709942, k68 : -381663590, k67 : -1748360332, k69 : -1506940379}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T1{k39 : 1019105662, k38 : -162768339, k33 : 1270462006, id : 5, k35 : 'u', k34 : '5g9', k37 : 'e', k36 : 'P'}]->(n1);
+CREATE (n0{id:6}), (n1 :L1{k9:true, id:7})<-[r0 :T6{id:8}]-(n2{id:9}) MERGE ({id:10})-[r1 :T6{id:11}]-(n3{id:12}) MERGE (n4{id:13}) RETURN n4 AS a0;
+CREATE ( n0 { id : CASE WHEN TRUE THEN 6 END } ) CREATE ( n1 : L1 { k9 : true , id : 7 } ) < - [ r0 : T6 { id : 8 } ] - ( n2 { id : 9 } ) MERGE ( { id : 10 } ) - [ r1 : T6 { id : 11 } ] - ( n3 { id : 12 } ) MERGE ( n4 { id : 13 } ) WITH * RETURN n4 AS a0 ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+UNWIND NULL AS a0 MERGE ( :L4{id:14})-[r0 :T1{id:15}]-({id:16}) CREATE (n0{id:17})<-[ :T1{k33:(r0.k38), id:18}]-({k26:(r0.k38), id:19}), (n1{id:20})<-[ :T6{k69:(r0.k39), id:21}]-(n2 :L1{id:22}) RETURN 1 AS a1, r0 AS a2;
+UNWIND CASE WHEN TRUE THEN NULL END AS a0 MERGE ( : L4 { id : reduce(a=14 ,b IN []|a) } ) - [ r0 : T1 { id : 15 } ] - ( { id : reduce(a=16 ,b IN []|a) } ) CREATE (n0{ id : 17 } )CREATE (n0)< - [ : T1 { k33 : ( r0 . k38 ) , id : 18 } ] - ( { k26 : ( r0 . k38 ) , id : CASE WHEN FALSE THEN NULL ELSE 19 END } ) CREATE ( n1 { id : 20 } ) < - [ : T6 { k69 : ( r0 . k39 ) , id : 21 } ] - ( n2 : L1 { id : 22 } ) RETURN reduce(a=1 ,b IN []|a) AS a1 , r0 AS a2 ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+CREATE (n0{k6:NULL, id:23})<-[ :T6{k65:reduce(a=-1412563766,b IN [-1536424444, NULL]|b), id:24}]-({id:25}), ({id:26})<-[ :T6{id:27}]-({id:28}) MERGE (n1 :L1{id:29})-[r0 :T1{id:30}]-({id:31}) MERGE ( :L1{id:32})<-[ :T1{id:33}]-({id:34}) RETURN (n1.k6) AS a0, 1 AS a1;
+CREATE (n0{ k6 : NULL , id : CASE WHEN FALSE THEN NULL ELSE 23 END } )CREATE (n0)< - [ : T6 { k65 : reduce ( a = CASE WHEN TRUE THEN -1412563766 END , b IN ([ -1536424444 , NULL ] +[]) | b ) , id : 24 } ] - ( { id : 25 } ) CREATE ( { id : 26 } ) < - [ : T6 { id : CASE WHEN TRUE THEN 27 END } ] - ( { id : 28 } ) MERGE ( n1 : L1 { id : 29 } ) - [ r0 : T1 { id : 30 } ] - ( { id : 31 } ) CREATE (c0{id:-1}) DELETE (c0) MERGE ( : L1 { id : 32 } ) < - [ : T1 { id : 33 } ] - ( { id : 34 } ) RETURN ( n1 . k6 ) AS a0 , 1 AS a1 ORDER BY FALSE ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MERGE (n0{id:35}) DETACH DELETE n0,NULL  MERGE ({id:36}) RETURN 1 AS a0, 1 AS a1;
+MERGE ( n0 { id : 35 } ) DETACH DELETE n0 , reduce(a=NULL ,b IN []|a) MERGE ( { id : 36 } ) CREATE (c0{id:-1}) DELETE (c0) RETURN DISTINCT 1 AS a0 , 1 AS a1 LIMIT 1 ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+FOREACH(a0 IN [keys(startNode(NULL)), [reduce(a=634398886,b IN [687918975, -1449938798]|a)]]|MERGE ( :L4{k23:-1806684544, id:37}) CREATE ({id:38}), ({id:39})<-[ :T1{id:40}]-(n0 :L4{id:41}) MERGE ({id:42})) CREATE ({id:43})<-[ :T1{id:44}]-( :L4{k26:round(NULL), id:45}) CREATE ({id:46}) RETURN 1 AS a1;
+FOREACH ( a0 IN ([]+[ keys ( startNode ( NULL ) ) , [ reduce ( a = 634398886 , b IN [ 687918975 , -1449938798 ] | a ) ] ] )| MERGE ( : L4 { k23 : -1806684544 , id : 37 } ) SET (NULL).TRUE=1 CREATE ( { id : 38 } ) CREATE (n0 :L4{id:41})-[ : T1 { id : 40 } ] ->( { id : reduce(a=39 ,b IN []|a) } ) MERGE ( { id : 42 } ) DETACH DELETE (NULL) ) WITH * OPTIONAL MATCH ()-[:TYPE]-() CREATE (m0{ id : 43 } )CREATE (m0)< - [ : T1 { id : 44 } ] - ( : L4 { k26 : round ( NULL ) , id : 45 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() CREATE ( { id : 46 } ) REMOVE (NULL).k RETURN 1 AS a1 ;

@@ -1,0 +1,21 @@
+-- Time: 2024/07/05 16:31:42
+-- Database: memgraph_database2
+-- Database version: composite
+-- seed value: 1720168296977
+CREATE (n0 :L2:L0{k16 : 1480545665, k1 : -1357678406, k2 : -1563177170, k3 : -765180257, k4 : 't', k11 : -557777129, id : 0, k10 : -1192208925, k13 : 'REL', k15 : -579131472, k14 : 1532912451});
+CREATE (n0 :L0{k0 : true, k1 : 248953617, k2 : -69613221, k3 : 1136158835, k4 : '14Wd16H', id : 1});
+CREATE (n0 :L1:L3{k19 : -874409788, k18 : true, k20 : 'y', k5 : 'T74', k22 : 1797760065, id : 2, k6 : -1413802194, k21 : 1228969437, k7 : 91822583, k8 : 1198562251});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T4{k62 : false, k61 : 'mAPKd', k64 : 'sd0ikgq', k63 : 47906804, k66 : false, id : 4, k65 : false, k67 : 1216819171}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 1}) MERGE(n0)-[r :T6{k80 : -389801285, k81 : 'AB53PU', k75 : 'y', k77 : true, id : 5, k76 : -629342601, k79 : -1436592756, k78 : -1882985607}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T2{k49 : 'c', k51 : 2040725312, k50 : -1707521857, k53 : '0', k52 : true, k55 : 'GhK', id : 6, k54 : 'FdYlDZ'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T6{k80 : -820177365, k81 : '4', k75 : 'Qvjjygz', k77 : false, id : 7, k76 : 1575488438, k79 : -1615062931, k78 : -424465286}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T1{k42 : -2081786734, k44 : -2040404360, id : 8, k43 : true, k45 : 'D', k48 : false, k47 : true}]->(n1);
+MATCH ()<-[r0 :T4{k65:NULL}]-(), ()-[ :T2{k51:(r0.k63)}]->(n0{k18:true}) WHERE (r0.k62) OPTIONAL MATCH p0=(n1) WHERE ('AHO' ENDS WITH 'Y') CREATE ({k11:-601477191, id:9})-[ :T2{k51:459807220, id:10}]->(n2{id:11}) RETURN n0 AS a0 SKIP 0 LIMIT 1;
+MATCH ( ) < - [ r0 : T4 { k65 : NULL } ] - ( ) ,( ) - [ : T2 { k51 : ( CASE WHEN TRUE THEN r0 . k63 END ) } ] - > ( n0 { k18 : true } ) WHERE ( r0 . k62 ) CREATE (c0{id:-1}) DELETE (c0) WITH * OPTIONAL MATCH p0 = ( n1 ) WHERE ( 'AHO' ENDS WITH 'Y' ) CREATE ( { k11 : -601477191 , id : 9 } ) - [ : T2 { k51 : reduce(a=459807220 ,b IN []|a) , id : 10 } ] - > ( n2 { id : 11 } ) RETURN DISTINCT n0 AS a0 SKIP 0 LIMIT 1 ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+OPTIONAL MATCH (n0 :L2{k13:'O'})-[]-()-[r0]-(), () CREATE ( :L1 :L3{k9:round(1398793187), id:12})<-[r1 :T2{id:13}]-(n1 :L2 :L0{id:14}) CREATE ({k20:NULL, id:15})<-[r2 :T2{id:16}]-( :L0{k4:('lkggTgob'+((n0.k13)+(n0.k13))), id:17}), ( :L1{id:18})<-[r3 :T2{id:19}]-({k11:(n0.k10), id:20})-[r4 :T4{id:21}]->( :L2{k15:1491356315, k1:(-1226127862+872959777), id:22}) RETURN DISTINCT (n0.k12) AS a0;
+OPTIONAL MATCH ( n0 : L2 { k13 : reduce(a='O' ,b IN []|a) } ) - [ ] - ( ) - [ r0 ] - ( ) ,( ) REMOVE (NULL).TRUE CREATE ( : L1 : L3 { k9 : round ( 1398793187 ) , id : 12 } ) < - [ r1 : T2 { id : 13 } ] - ( n1 : L2 : L0 { id : 14 } ) SET (NULL).k=1 CREATE ( { k20 : NULL , id : 15 } ) < - [ r2 : T2 { id : 16 } ] - ( : L0 { k4 : CASE WHEN FALSE THEN NULL ELSE ( 'lkggTgob' + ( ( CASE WHEN TRUE THEN n0 . k13 END ) + ( n0 . k13 ) ) ) END , id : 17 } ) CREATE ( : L1 { id : CASE WHEN FALSE THEN NULL ELSE 18 END } ) < - [ r3 : T2 { id : CASE WHEN FALSE THEN NULL ELSE 19 END } ] - ( { k11 : reduce(a=( n0 . k10 ) ,b IN []|a) , id : reduce(a=20 ,b IN []|a) } ) - [ r4 : T4 { id : CASE WHEN TRUE THEN 21 END } ] - > ( : L2 { k15 : CASE WHEN TRUE THEN 1491356315 END , k1 : ( -1226127862 + 872959777 ) , id : 22 } ) WITH * UNWIND [1] as l0 RETURN DISTINCT ( n0 . k12 ) AS a0 LIMIT 1 ;

@@ -1,0 +1,26 @@
+-- Time: 2024/07/05 16:32:47
+-- Database: memgraph_database66
+-- Database version: composite
+-- seed value: 1720168297041
+CREATE (n0 {id : 0});
+CREATE (n0 {id : 1});
+CREATE (n0 {id : 2});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T4{k71 : 'O', k70 : '0vU5z', k72 : 1898135665, id : 4, k68 : 'o', k69 : 'gq'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T2{id : 5, k57 : 830969994, k56 : true, k59 : true, k58 : 't'}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T3{k62 : true, k61 : false, k64 : true, k63 : false, id : 6, k65 : true, k67 : 'G'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T4{k70 : 'r', id : 7, k68 : 'K', k69 : 'Nca'}]->(n1);
+MERGE (n0{id:8}) DETACH DELETE n0  CREATE ({id:9})<-[r0 :T4{id:10}]-({id:11}) RETURN 1 AS a0, 1 AS a1 LIMIT 0;
+MERGE pp0=( n0 { id : 8 } ) DETACH DELETE n0 WITH * UNWIND [NULL] as l0 CREATE ( { id : reduce(a=9 ,b IN []|a) } ) < - [ r0 : T4 { id : 10 } ] - ( { id : 11 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN 1 AS a0 , reduce(a=1 ,b IN []|a) AS a1 ORDER BY FALSE SKIP 1 LIMIT 0 ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+CALL{WITH * WITH * MERGE (n2{id:12})-[r0 :T4{id:13}]->(n3{id:14}) RETURN r0 AS a1} MATCH (n4) SET n4.k=NULL RETURN 1 AS a2, n4 AS a3;
+CALL { WITH * WITH * MERGE ( n2 { id : 12 } ) - [ r0 : T4 { id : 13 } ] - > ( n3 { id : 14 } ) CREATE (c0{id:-1}) DELETE (c0) RETURN DISTINCT r0 AS a1 ORDER BY FALSE } CREATE (c1{id:-1}) DELETE (c1) WITH * MATCH ( n4 ) WITH * OPTIONAL MATCH ()-[:TYPE]-() FOREACH(f in [1]|SET n4 . k = NULL ) WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN 1 AS a2 , n4 AS a3 LIMIT 1 ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MERGE ({id:15}) MERGE p0=({id:16}) CREATE (n0{id:17})<-[ :T4{id:18}]-(n1{id:19}) RETURN p0 AS a0, 1 AS a1;
+MERGE ( { id : 15 } ) WITH * MERGE p0 = ( { id : 16 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() CREATE (n0{ id : 17 } )CREATE (n0)< - [ : T4 { id : 18 } ] - ( n1 { id : 19 } ) RETURN reduce(a=p0 ,b IN []|a) AS a0 , 1 AS a1 ;

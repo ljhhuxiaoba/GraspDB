@@ -1,0 +1,50 @@
+{
+  "neo4j@first": {
+    "port": 7687,
+    "host": "localhost",
+    "username": "neo4j",
+    "password": "GraspDB"
+  },
+  "neo4j@second":{
+    "port": 7688,
+    "host": "localhost",
+    "username": "neo4j",
+    "password": "GraspDB"
+  },
+  "redisgraph@first":{
+    "port": 6379,
+    "host": "localhost",
+    "username": "redis",
+    "password": "GraspDB"
+  },
+  "redisgraph@second":{
+    "port": 6380,
+    "host": "localhost",
+    "username": "redis",
+    "password": "GraspDB"
+  },
+  "memgraph@first":{
+    "port": 7689,
+    "host": "localhost",
+    "username": "memgraph",
+    "password": "GraspDB"
+  },
+  "memgraph@second":{
+    "port": 7690,
+    "host": "localhost",
+    "username": "memgraph",
+    "password": "GraspDB"
+  },
+  "agensgraph@first": {
+    "port": 5432,
+    "host": "localhost",
+    "username": "postgres",
+    "password": "GraspDB"
+  },
+  "agensgraph@second":{
+    "port": 5433,
+    "host": "localhost",
+    "username": "postgres",
+    "password": "GraspDB"
+  }
+}

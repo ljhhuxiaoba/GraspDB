@@ -1,0 +1,15 @@
+-- Time: 2024/07/05 16:32:50
+-- Database: memgraph_database69
+-- Database version: composite
+-- seed value: 1720168297044
+CREATE (n0 :L0{k0 : 'mV', k1 : -3121408, k3 : 'WsfC2aUBG', k4 : 'yj', k5 : 497003458, id : 0});
+CREATE (n0 :L2:L3{k17 : 159992751, k16 : 'stDKrDq', k20 : true, k11 : 1701755229, k22 : false, id : 1, k21 : true, k12 : 'h', k23 : 'svV', k15 : false, k14 : 'k'});
+CREATE (n0 {id : 2});
+CREATE (n0 :L6:L5{k39 : 'R', k38 : -1936038136, k40 : true, k42 : -484251364, k31 : false, k44 : 'K', id : 3, k32 : 'ohV7jySh8', k35 : -549499620, k34 : 'g', k37 : true, k36 : 'f'});
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T0{k49 : -1392378860, id : 4, k46 : 725245955, k48 : 1485947200, k47 : -748517425}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T1{k50 : 672492664, k53 : -254383700, k52 : -1436096646, id : 5, k54 : 526204376}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 2}) MERGE(n0)-[r :T1{k50 : -1686481204, k52 : 2137718554, id : 6, k54 : -2096462319}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T0{k49 : -1641909786, id : 7, k46 : -1492327663, k48 : -1873780692}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T2{k55 : 'd', id : 8, k57 : 910548505, k59 : 'Yub', k58 : -1614430387}]->(n1);
+FOREACH(a0 IN [NULL]|MERGE (n0{id:9}) MERGE (n1 :L5{id:10}) CREATE ({k5:NULL, id:11})-[ :T2{k57:round(-1752284734), id:12}]->({k0:'t', id:13}), p0=(n2{id:14})-[r0 :T2{k59:NULL, id:15}]->(n3{id:16})) MERGE (n4{k44:'t2T', id:17})-[r1 :T1{id:18}]-(n5{id:19}) SET n5.k=-2126648755 RETURN *, 1 AS a1;
+FOREACH ( a0 IN [ CASE WHEN TRUE THEN NULL END ] | MERGE ( n0 { id : 9 } ) MERGE pp0=( n1 : L5 { id : reduce(a=10 ,b IN []|a) } ) CREATE ( { k5 : CASE WHEN FALSE THEN NULL ELSE NULL END , id : 11 } ) - [ : T2 { k57 : round ( -1752284734 ) , id : CASE WHEN FALSE THEN NULL ELSE 12 END } ] - > ( { k0 : 't' , id : 13 } ) CREATE p0 = ( n2 { id : 14 } ) - [ r0 : T2 { k59 : NULL , id : 15 } ] - > ( n3 { id : CASE WHEN FALSE THEN NULL ELSE 16 END } ) ) WITH * OPTIONAL MATCH ()-[:TYPE]-() MERGE ( n4 { k44 : 't2T' , id : 17 } ) - [ r1 : T1 { id : 18 } ] - ( n5 { id : 19 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() SET n5 . k = reduce(a=-2126648755 ,b IN []|a) DETACH DELETE (NULL) RETURN * , reduce(a=1 ,b IN []|a) AS a1 ;

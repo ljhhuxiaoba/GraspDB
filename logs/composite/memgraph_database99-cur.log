@@ -1,0 +1,18 @@
+-- Time: 2024/07/05 16:33:18
+-- Database: memgraph_database99
+-- Database version: composite
+-- seed value: 1720168297074
+CREATE (n0 :L4:L3{k28 : -1557465210, k27 : 'b', k19 : false, k29 : -1567063458, k18 : true, k20 : '9', k22 : true, id : 0, k24 : true, k23 : 996223961, k26 : true, k25 : 162582632});
+CREATE (n0 :L2:L4{k13 : -412994485, k24 : true, k23 : 158369150, k15 : true, k26 : true, k14 : 2083677842, k25 : -1034982670, k17 : -1304259359, k28 : -1088828868, k16 : true, k27 : 's5tL8O', k29 : 1051522605, id : 1});
+CREATE (n0 {id : 2});
+CREATE (n0 :L4{k28 : -1856625692, k27 : 'cRkDA', id : 3, k24 : true, k23 : -634518138, k26 : false});
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T0{k39 : 'l', k38 : true, k40 : false, k41 : true, id : 4, k37 : false}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T4{k62 : false, k61 : '2', k64 : false, k63 : -647301714, id : 5, k65 : true}]->(n1);
+MATCH (n0{k25:-1411608826}) CREATE (n1{k29:-466465460, id:6}) DETACH DELETE n0,NULL  RETURN 1 AS a0;
+MATCH (n0) WHERE n0.k25=-1411608826 DELETE NULL CREATE ( n1 { k29 : -466465460 , id : 6 } ) CREATE (c0{id:-1}) DELETE (c0) DETACH DELETE n0 , NULL RETURN 1 AS a0 ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+CREATE ({id:7}), ({id:8}) MERGE ({id:9}) CREATE (n0{id:10}), ({id:11}) RETURN DISTINCT 1 AS a0, 431587658 AS a1;
+CREATE ( { id : CASE WHEN TRUE THEN 7 END } ) CREATE ( { id : reduce(a=8 ,b IN []|a) } ) SET (NULL).TRUE=1 MERGE ( { id : reduce(a=9 ,b IN []|a) } ) WITH * CREATE ( n0 { id : 10 } ) CREATE ( { id : CASE WHEN FALSE THEN NULL ELSE 11 END } ) RETURN DISTINCT CASE WHEN TRUE THEN 1 END AS a0 , 431587658 AS a1 ;

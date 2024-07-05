@@ -1,0 +1,18 @@
+-- Time: 2024/07/05 16:32:51
+-- Database: memgraph_database71
+-- Database version: composite
+-- seed value: 1720168297046
+CREATE (n0 {id : 0});
+CREATE (n0 :L2{k11 : false, id : 1, k10 : 'NQ', k13 : '6', k12 : false, k14 : true});
+CREATE (n0 :L2{k11 : true, id : 2, k10 : '38axpk', k13 : 'Jl', k12 : false, k14 : true});
+CREATE (n0 :L2{k11 : true, id : 3, k10 : 'G', k13 : 'K', k12 : true, k14 : true});
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T5{k64 : 139979202, k66 : '4', id : 4, k65 : true, k68 : true, k67 : 't'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T0{k39 : 'ESgiit0l', k38 : false, id : 5, k37 : false, k36 : true}]->(n1);
+FOREACH(a0 IN NULL|CREATE ({id:6}) MERGE ({id:7}) MERGE ({id:8})) CREATE (n0{id:9}), p0=(n1{id:10}) MERGE ({id:11}) RETURN 1 AS a1, 1 AS a2 SKIP 0;
+FOREACH ( a0 IN NULL | CREATE ( { id : 6 } ) MERGE ( { id : 7 } ) MERGE ( { id : CASE WHEN FALSE THEN NULL ELSE 8 END } ) CREATE (c0{id:-1}) DELETE (c0) ) CREATE ( n0 { id : 9 } ) CREATE p0 = ( n1 { id : 10 } ) MERGE ( { id : 11 } ) RETURN 1 AS a1 , 1 AS a2 SKIP 0 ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (n0 :L2)-[*0..0]->(n1)-[ :T0{k41:(n0.k13)}]->(n2), (n3{k11:(n0.k12)}) DETACH DELETE n1  MERGE ({id:12}) RETURN * LIMIT 0;
+MATCH (n0:L2),()-[*0..0]->(),(n1),()-[m0:T0{k41:(n0.k13)}]->(),(n2),(n3{k11:(n0.k12)}) WITH * WHERE exists((n0)-[*0..0]->(n1)-[m0]->(n2)) CREATE (c0{id:-1}) DELETE (c0) DETACH DELETE n1 MERGE ( { id : 12 } ) DETACH DELETE (NULL) RETURN * LIMIT 0 ;

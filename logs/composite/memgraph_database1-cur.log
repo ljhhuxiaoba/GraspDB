@@ -1,0 +1,34 @@
+-- Time: 2024/07/05 16:31:41
+-- Database: memgraph_database1
+-- Database version: composite
+-- seed value: 1720168296976
+CREATE (n0 :L4{k27 : 'Z', id : 0, k24 : false, k23 : true, k26 : -1505471892, k25 : 1135845756});
+CREATE (n0 {id : 1});
+CREATE (n0 :L0{k0 : -116499869, k1 : 'n', k3 : -441062739, k4 : true, id : 2});
+CREATE (n0 :L3{k19 : 2083619154, k18 : 567413603, k20 : true, k22 : true, id : 3, k21 : 228570997});
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T2{k49 : -1014271920, k44 : 'l', id : 4, k45 : -762357339, k48 : false}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 3}) MERGE(n0)-[r :T0{k38 : -1008981557, k33 : 574221398, id : 5, k35 : false, k34 : false, k37 : '7L', k36 : 'y'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T5{k64 : -1367562504, k63 : 'HCp7Ek9b', k66 : false, id : 6, k65 : 'k', k68 : -87739396, k67 : false, k69 : '5'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T3{k51 : 514003141, k53 : -962454082, k52 : 'oxgcj8dN', id : 7, k54 : true}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T0{k38 : 2025579674, k33 : -167593422, id : 8, k35 : true, k34 : true, k37 : 'tg', k36 : 'uYFaJ'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T4{k62 : true, k61 : 'DfWYCTbVM', id : 9, k57 : 'tGetegC', k56 : 'F', k59 : 20167926, k58 : 'b'}]->(n1);
+CREATE (n0{id:10})<-[r0 :T5{k67:NULL, id:11}]-( :L3{id:12}) CREATE (n1{id:13})<-[ :T3{id:14}]-({id:15}) CREATE ( :L4{k23:NULL, id:16}), ( :L0{id:17})-[ :T0{id:18}]->({id:19})<-[r1 :T0{id:20}]-(n2{id:21}) RETURN 1 AS a0, 1 AS a1;
+CREATE ( n0 { id : 10 } ) < - [ r0 : T5 { k67 : NULL , id : 11 } ] - ( : L3 { id : 12 } ) WITH * UNWIND [1] as l0 CREATE (n1{ id : reduce(a=13 ,b IN []|a) } )CREATE (n1)< - [ : T3 { id : CASE WHEN FALSE THEN NULL ELSE 14 END } ] - ( { id : reduce(a=15 ,b IN []|a) } ) DELETE (NULL) CREATE ( : L4 { k23 : NULL , id : 16 } ) CREATE (m0: L0 { id : 17 } )CREATE (m0)- [ : T0 { id : reduce(a=18 ,b IN []|a) } ] - > ( { id : 19 } ) < - [ r1 : T0 { id : 20 } ] - ( n2 { id : reduce(a=21 ,b IN []|a) } ) REMOVE (NULL).k RETURN 1 AS a0 , CASE WHEN FALSE THEN NULL ELSE 1 END AS a1 ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+OPTIONAL MATCH (n0) WHERE NULL UNWIND NULL AS a0 DETACH DELETE n0,NULL  RETURN 1 AS a1, a0 AS a2;
+OPTIONAL MATCH ( n0 ) WHERE NULL OPTIONAL MATCH ()-[:TYPE]-() UNWIND NULL AS a0 UNWIND [1] as l0 DETACH DELETE n0 , NULL WITH * UNWIND [NULL] as l1 RETURN 1 AS a1 , a0 AS a2 ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH ({k25:-1807598014})-[]-(n0 :L0) WHERE false DETACH DELETE n0  MERGE ({k27:'Fxm6mDZ', id:22}) RETURN DISTINCT 1 AS a0;
+MATCH ( { k25 : -1807598014 } ) - [ ] - ( n0 : L0 ) WHERE CASE WHEN FALSE THEN NULL ELSE false END CREATE (c0{id:-1}) DELETE (c0) DETACH DELETE CASE WHEN FALSE THEN NULL ELSE n0 END MERGE ( { k27 : 'Fxm6mDZ' , id : 22 } ) RETURN DISTINCT 1 AS a0 LIMIT 1 ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MERGE (n0{id:23}) CREATE ({k23:CASE WHEN false THEN NULL END, id:24})<-[r0 :T2{id:25}]-({k4:NULL, id:26})<-[ :T3{k54:true, id:27}]-(n1{id:28}) DETACH DELETE n0  RETURN 1 AS a0, 1 AS a1 LIMIT 1;
+MERGE ( n0 { id : 23 } ) CREATE ( { k23 : CASE WHEN FALSE THEN NULL ELSE CASE WHEN false THEN NULL END END , id : 24 } ) < - [ r0 : T2 { id : 25 } ] - ( { k4 : NULL , id : 26 } ) < - [ : T3 { k54 : true , id : 27 } ] - ( n1 { id : 28 } ) WITH * DETACH DELETE n0 SET (NULL).NULL=1 RETURN 1 AS a0 , 1 AS a1 LIMIT reduce(a=1 ,b IN []|a) ;

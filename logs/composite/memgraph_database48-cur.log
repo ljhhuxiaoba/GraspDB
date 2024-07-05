@@ -1,0 +1,25 @@
+-- Time: 2024/07/05 16:32:30
+-- Database: memgraph_database48
+-- Database version: composite
+-- seed value: 1720168297023
+CREATE (n0 :L1:L0{k0 : 'A', k1 : 'y', k2 : 'Z', k4 : 'X', k5 : true, k11 : false, id : 0, k6 : 'n7', k10 : -800080622, k7 : true, k8 : true, k9 : 't'});
+CREATE (n0 {id : 1});
+CREATE (n0 {id : 2});
+CREATE (n0 :L1:L4{k5 : true, k11 : false, k6 : 'ox', k7 : true, k24 : '9', k8 : true, k9 : 'OHZT8XZIg', k26 : 'mgGSCs4bT', k25 : true, k28 : 566137230, k27 : 'wu', k29 : true, id : 3});
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T2{k44 : 'fe', id : 4, k43 : 'e', k45 : true, k47 : 1506945584}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T3{k49 : 'y', k51 : 1979328745, k50 : -52479854, k52 : 1509021051, id : 5, k48 : 692557140}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 0}) MERGE(n0)-[r :T0{k31 : 1782056491, k33 : 't', id : 6, k35 : true}]->(n1);
+FOREACH(a0 IN NULL|MERGE ({id:7})<-[r0 :T0{id:8}]-({id:9}) MERGE p0=(n0 :L1 :L4{k7:false, id:10})-[r1 :T2{k43:'M', id:11}]->(n1{id:12}) MERGE ( :L1 :L4{id:13})) CREATE ({id:14}), p1=({id:15})<-[r2 :T2{id:16}]-( :L1 :L0{k5:false, id:17}) CREATE p2=(n2{id:18})<-[r3 :T2{k47:1839955467, id:19}]-(n3 :L0{id:20}), (n4 :L1 :L4{k10:1979337208, id:21})-[r4 :T2{id:22}]->({id:23}) RETURN 1 AS a1, 1 AS a2 SKIP 1;
+FOREACH ( a0 IN NULL | MERGE ( { id : CASE WHEN FALSE THEN NULL ELSE 7 END } ) < - [ r0 : T0 { id : 8 } ] - ( { id : 9 } ) MERGE p0 = ( n0 : L1 : L4 { k7 : CASE WHEN TRUE THEN false END , id : 10 } ) - [ r1 : T2 { k43 : 'M' , id : reduce(a=11 ,b IN []|a) } ] - > ( n1 { id : CASE WHEN TRUE THEN 12 END } ) MERGE ( : L1 : L4 { id : 13 } ) DETACH DELETE NULL ) CREATE ( { id : CASE WHEN FALSE THEN NULL ELSE 14 END } ) CREATE p1=( :L1 :L0{k5:false, id:17})-[ r2 : T2 { id : 16 } ] ->( { id : 15 } ) CREATE p2 = ( n2 { id : CASE WHEN FALSE THEN NULL ELSE 18 END } ) < - [ r3 : T2 { k47 : 1839955467 , id : 19 } ] - ( n3 : L0 { id : 20 } ) CREATE ( n4 : L1 : L4 { k10 : 1979337208 , id : 21 } ) - [ r4 : T2 { id : 22 } ] - > ( { id : 23 } ) WITH * RETURN 1 AS a1 , 1 AS a2 SKIP CASE WHEN TRUE THEN 1 END ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (n0)<-[r0]-(n1) OPTIONAL MATCH (n2)-[]-() WHERE CASE WHEN (((-900114498-531240087)-NULL) >= (round(1355687970)-692986620)) THEN (NULL >= NULL) END SET n0.k=-1417441299 RETURN n2 AS a2, n0 AS a3 ORDER BY a2;
+MATCH ( n0 ) < - [ r0 ] - ( n1 ) WITH * OPTIONAL MATCH ( n2 ) - [ ] - ( ) WHERE CASE WHEN ( ( CASE WHEN TRUE THEN ( reduce(a=-900114498 -531240087 ,b IN []|a) ) - NULL END ) >= ( round ( 1355687970 ) -692986620 ) ) THEN CASE WHEN TRUE THEN ( NULL >= NULL ) END END SET n0 . k = -1417441299 RETURN n2 AS a2 , n0 AS a3 ORDER BY a2 ,TRUE ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+FOREACH(a4 IN [(346812613/623224719)]|MERGE ({id:24})-[ :T2{k46:true, id:25}]-({id:26})-[ :T0{id:27}]->( :L1{id:28}) CREATE ({id:29}) MERGE (n0{k6:'HItY1m', id:30})-[ :T2{k43:'UNXCNVrC', id:31}]-({id:32})) CREATE ({id:33})-[ :T2{id:34}]->({id:35})-[ :T0{k31:NULL, id:36}]->(n1 :L0{id:37}), (n2{k6:NULL, id:38}) MERGE p1=({k10:-1803867826, id:39})-[ :T2{id:40}]-(n3{id:41})-[ :T0{id:42}]-(n4{k3:-612264114, id:43}) RETURN 1 AS a5, collect(relationships(NULL)[abs(NULL)])[abs(-2100084722)] AS a6;
+FOREACH ( a4 IN [ reduce(a=( 346812613 / 623224719 ) ,b IN []|a) ] | MERGE ( { id : CASE WHEN TRUE THEN 24 END } ) - [ : T2 { k46 : reduce(a=true ,b IN []|a) , id : CASE WHEN FALSE THEN NULL ELSE 25 END } ] - ( { id : 26 } ) - [ : T0 { id : 27 } ] - > ( : L1 { id : 28 } ) CREATE ( { id : 29 } ) MERGE ( n0 { k6 : ('HItY1m' +'') , id : 30 } ) - [ : T2 { k43 : reduce(a='UNXCNVrC' ,b IN []|a) , id : 31 } ] - ( { id : CASE WHEN FALSE THEN NULL ELSE 32 END } ) ) WITH * OPTIONAL MATCH ()-[:TYPE]-() CREATE ( { id : reduce(a=33 ,b IN []|a) } ) - [ : T2 { id : 34 } ] - > ( { id : 35 } ) - [ : T0 { k31 : NULL , id : 36 } ] - > ( n1 : L0 { id : 37 } ) CREATE ( n2 { k6 : NULL , id : reduce(a=38 ,b IN []|a) } ) MERGE p1 = ( { k10 : -1803867826 , id : 39 } ) - [ : T2 { id : 40 } ] - ( n3 { id : reduce(a=41 ,b IN []|a) } ) - [ : T0 { id : 42 } ] - ( n4 { k3 : -612264114 , id : 43 } ) RETURN reduce(a=1 ,b IN []|a) AS a5 , collect ( ([]+relationships ( NULL ) )[ abs ( NULL ) ] ) [ abs ( -2100084722 ) ] AS a6 SKIP 1 LIMIT 1 ;

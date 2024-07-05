@@ -1,0 +1,48 @@
+-- Time: 2024/07/05 16:33:19
+-- Database: memgraph_database100
+-- Database version: composite
+-- seed value: 1720168297075
+CREATE (n0 :L0{k0 : 878507188, k1 : 365852457, k2 : true, k3 : '9Reg7', k4 : true, k5 : true, id : 0, k6 : '8'});
+CREATE (n0 :L4:L0{k28 : '8YtHfJ', k0 : 209810874, k1 : -1730223851, k2 : false, k3 : '9Reg7', k30 : 'Q', k4 : false, k5 : false, id : 1, k26 : -1469572268});
+CREATE (n0 :L1{k11 : -1719824850, id : 2, k10 : 'Yf', k8 : '9wB8V0e', k9 : 'mNFUecU'});
+CREATE (n0 {id : 3});
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T3{k51 : false, k50 : 'C', k53 : true, k52 : true, id : 4, k54 : false}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T1{k39 : 'dy', k38 : 937821940, k40 : -568290459, k42 : 417199115, k41 : -1837171688, k44 : true, id : 5, k43 : -1246640928}]->(n1);
+CREATE p0=(n1{k30:type(relationships(NULL)[abs(size([]))]), k2:false, id:6}), (n2 :L4{id:7}) MERGE (n3{id:8}) SET n3.k=1526061630 RETURN 1 AS a3;
+CREATE p0 = ( n1 { k30 : type ( relationships ( reduce(a=NULL ,b IN []|a) ) [ abs ( size ( CASE WHEN TRUE THEN ([ ] +[]) END ) ) ] ) , k2 : false , id : 6 } ) CREATE ( n2 : L4 { id : 7 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() MERGE ( n3 { id : 8 } ) WITH * UNWIND [1] as l0 SET n3 . k = reduce(a=1526061630 ,b IN []|a) RETURN reduce(a=1 ,b IN []|a) AS a3 LIMIT 1 ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+WITH * MATCH (), () MERGE ({id:9}) RETURN 1 AS a0;
+WITH * UNWIND [NULL] as l0 MATCH ( ) ,( ) DETACH DELETE NULL MERGE ( { id : 9 } ) WITH * RETURN CASE WHEN TRUE THEN 1 END AS a0 ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+CALL{WITH * CREATE ({id:10}), ({id:11}) WITH * WHERE (-1578010516 >= reverse('jVhdK3G')) RETURN 1 AS a0, [-655125625, 514380927] AS a1} CREATE (n0{id:12}), (n1{k29:NULL, k1:a1, id:13}) MERGE (n2 :L1{k8:'Y', id:14}) RETURN n2 AS a2 UNION OPTIONAL MATCH (n1 :L0)<-[]-( :L0{k6:reduce(a=(n1.k6),b IN [NULL]|a)}), () CREATE ({k5:CASE WHEN (n1.k4) THEN true END, id:16})-[ :T1{id:17}]->(n2{id:18}), ({k3:(n1.k3), id:19})-[ :T1{k39:type(NULL), id:20}]->(n3{id:21}) CREATE ({id:22})<-[ :T1{k38:-913692209, id:23}]-(n4{id:24}), p1=(n5 :L0{k3:(n1.k3), id:25})-[ :T1{k38:450432398, id:26}]->({id:27}) RETURN n1 AS a2 ORDER BY a2 DESC;
+CALL { WITH * CREATE ( { id : 10 } ) CREATE ( { id : 11 } ) WITH * WHERE ( -1578010516 >= reverse ( (''+'jVhdK3G' )) ) CREATE (c0{id:-1}) DELETE (c0) RETURN 1 AS a0 , [ -655125625 , CASE WHEN FALSE THEN NULL ELSE 514380927 END ] AS a1 } CREATE (c1{id:-1}) DELETE (c1) CREATE ( n0 { id : 12 } ) CREATE ( n1 { k29 : NULL , k1 : CASE WHEN TRUE THEN a1 END , id : 13 } ) REMOVE (NULL).FALSE MERGE ( n2 : L1 { k8 : 'Y' , id : 14 } ) RETURN DISTINCT n2 AS a2 UNION OPTIONAL MATCH ( n1 : L0 ) < - [ ] - ( : L0 { k6 : reduce ( a = ( n1 . k6 ) , b IN ([ NULL ] +[]) | a ) } ) ,( ) WITH * CREATE (n2{id:18})<-[ : T1 { id : 17 } ] -( { k5 : CASE WHEN FALSE THEN NULL ELSE CASE WHEN ( CASE WHEN FALSE THEN NULL ELSE n1 . k4 END ) THEN CASE WHEN TRUE THEN true END END END , id : 16 } ) CREATE ( { k3 : ( n1 . k3 ) , id : 19 } ) - [ : T1 { k39 : reduce(a=type ( NULL ) ,b IN []|a) , id : 20 } ] - > ( n3 { id : 21 } ) CREATE (m0{ id : 22 } )CREATE (m0)< - [ : T1 { k38 : CASE WHEN FALSE THEN NULL ELSE -913692209 END , id : 23 } ] - ( n4 { id : reduce(a=24 ,b IN []|a) } ) CREATE p1 = ( n5 : L0 { k3 : reduce(a=( n1 . k3 ) ,b IN []|a) , id : 25 } ) - [ : T1 { k38 : 450432398 , id : 26 } ] - > ( { id : CASE WHEN TRUE THEN 27 END } ) RETURN n1 AS a2 ORDER BY a2 DESC ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (n0)-[r0]->(n2), (n0)-[r0]->(n3) CREATE (n4 :L0{id:28}), ({k5:NULL, id:29})-[ :T1{id:30}]->(n5{k5:(NULL OR NULL), id:31}) SET n0.k=CASE WHEN false THEN NULL END RETURN n3 AS a2 ORDER BY NULL, a2 DESC;
+MATCH ( n0 ) - [ r0 ] - > ( n2 ) ,( n0 ) - [ r0 ] - > ( n3 ) WITH * CREATE ( n4 : L0 { id : 28 } ) CREATE ( { k5 : NULL , id : 29 } ) - [ : T1 { id : 30 } ] - > ( n5 { k5 : ( NULL OR NULL ) , id : reduce(a=31 ,b IN []|a) } ) SET n0 . k = CASE WHEN false THEN NULL END RETURN n3 AS a2 ORDER BY NULL, a2 DESC ,NULL ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+CREATE p0=(n0{id:32}), ({k1:NULL, id:33})<-[ :T3{k53:NULL, id:34}]-(n1{id:35}) MERGE ({id:36}) CREATE ( :L0{id:37}), p1=({id:38}) RETURN 1 AS a0, relationships(NULL)[abs(1549083639)] AS a1 SKIP 1 LIMIT 0;
+CREATE p0 = ( n0 { id : 32 } ) CREATE (m0{ k1 : NULL , id : 33 } )CREATE (m0)< - [ : T3 { k53 : NULL , id : 34 } ] - ( n1 { id : 35 } ) MERGE ( { id : 36 } ) WITH * CREATE ( : L0 { id : CASE WHEN FALSE THEN NULL ELSE 37 END } ) CREATE p1 = ( { id : 38 } ) WITH * UNWIND [1] as l0 RETURN 1 AS a0 , relationships ( NULL ) [ CASE WHEN FALSE THEN NULL ELSE abs ( reduce(a=1549083639 ,b IN []|a) ) END ] AS a1 ORDER BY 1 SKIP 1 LIMIT 0 ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+CREATE (n0{id:39}), (n1{id:40}) MERGE (n2{id:41}) SET n2.k='l' RETURN 1 AS a0 LIMIT 1;
+CREATE ( n0 { id : 39 } ) CREATE ( n1 { id : 40 } ) WITH * MERGE ( n2 { id : 41 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() SET n2 . k = 'l' RETURN 1 AS a0 SKIP 1 LIMIT 1 ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+FOREACH(a4 IN NULL|MERGE (n0{id:45}) CREATE (n1{id:46}) MERGE (n2{id:47})) CREATE ({id:48}), ({id:49}) CREATE p0=(n3{id:50}), (n4{id:51}) RETURN 1 AS a5;
+FOREACH ( a4 IN NULL | MERGE ( n0 { id : CASE WHEN TRUE THEN 45 END } ) REMOVE (NULL).TRUE CREATE ( n1 { id : 46 } ) MERGE ( n2 { id : CASE WHEN TRUE THEN 47 END } ) SET (NULL).FALSE=1 ) WITH * CREATE ( { id : CASE WHEN TRUE THEN 48 END } ) CREATE ( { id : CASE WHEN FALSE THEN NULL ELSE 49 END } ) CREATE p0 = ( n3 { id : 50 } ) CREATE ( n4 { id : CASE WHEN TRUE THEN 51 END } ) WITH * RETURN 1 AS a5 SKIP 1 ;

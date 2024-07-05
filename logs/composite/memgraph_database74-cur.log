@@ -1,0 +1,23 @@
+-- Time: 2024/07/05 16:32:55
+-- Database: memgraph_database74
+-- Database version: composite
+-- seed value: 1720168297049
+CREATE (n0 :L1{k11 : 'HZp1OpzLw', id : 0, k6 : 'IgDJt6lD', k10 : true, k7 : true, k8 : false, k9 : 'e'});
+CREATE (n0 :L2:L4{k31 : 'Se', k30 : 'sWbh2', k32 : -521154879, k13 : '7', k12 : 1947142579, k15 : '5qRe', k26 : -804539826, k14 : -234064026, k17 : false, k28 : -1564326966, k16 : 'MNpXbinZd', k27 : 1275684246, k18 : 1260230573, id : 1});
+CREATE (n0 :L4{k28 : -1564326966, k27 : -476167019, k29 : 1158075321, k31 : 'Yg', k30 : 'sWbh2', id : 2, k32 : -1481285899, k26 : 248076245});
+CREATE (n0 :L0:L2{k0 : false, k1 : -1298938520, k2 : 'oapX', k3 : 'zL', k4 : 'tKKIIlYj', k5 : 'l', k13 : 'm', k12 : -616277255, k15 : 'j', k14 : -1946111064, k16 : 't2aWm', k18 : 361979556, id : 3});
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T4{k60 : 'V', k62 : 'ejpjS', k61 : true, id : 4, k58 : 292660285}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T3{k53 : -176251637, k55 : -68653206, id : 5, k57 : -1927662151, k56 : 'g'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T1{k42 : -1857925073, k41 : 'cR1jNfeKd', k44 : -565104937, id : 6, k43 : true, k45 : 448154442}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 2}) MERGE(n0)-[r :T4{k62 : 'FEBM', k61 : true, k63 : 'ov94', id : 7, k59 : 'H3tMiPX5G', k58 : -1819481595}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T5{k70 : 1677598314, k66 : 2071056027, id : 8, k65 : -512631617, k68 : true, k67 : true, k69 : 'm'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 3}) MERGE(n0)-[r :T5{k70 : -144427702, k66 : 1515702549, id : 9, k65 : -550209968, k68 : true, k67 : false, k69 : 'Um'}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 3}) MERGE(n0)-[r :T5{k70 : 1729881698, k64 : -525341290, k66 : 149070160, id : 10, k65 : 256706514, k68 : false, k67 : true, k69 : 'Vgvi'}]->(n1);
+CALL{WITH * CREATE (n0 :L1{id:11}), (n1{id:12}) WITH NULL AS a0 RETURN 1 AS a1, startNode(NULL) AS a2 LIMIT 1} CREATE ({id:13})<-[ :T5{k69:'aq1TgT', id:14}]-(n2{k7:NULL, id:15}) CREATE ({id:16})<-[r0 :T5{id:17}]-(n3 :L1{id:18}) RETURN 1 AS a3, 1 AS a4;
+CALL { WITH * WITH * CREATE ( n0 : L1 { id : reduce(a=11 ,b IN []|a) } ) CREATE ( n1 { id : 12 } ) DELETE (NULL) WITH NULL AS a0 RETURN 1 AS a1 , startNode ( reduce(a=NULL ,b IN []|a) ) AS a2 LIMIT 1 } CREATE ( { id : 13 } ) < - [ : T5 { k69 : (''+'aq1TgT' ), id : 14 } ] - ( n2 { k7 : NULL , id : CASE WHEN TRUE THEN 15 END } ) CREATE (m0{ id : 16 } )CREATE (m0)< - [ r0 : T5 { id : CASE WHEN TRUE THEN 17 END } ] - ( n3 : L1 { id : 18 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN 1 AS a3 , 1 AS a4 ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+FOREACH(a0 IN NULL|MERGE ( :L4{id:19})-[r0 :T5{id:20}]-({id:21})-[r1 :T5{id:22}]-(n0{id:23}) CREATE p0=({k4:NULL, id:24})-[ :T5{id:25}]->(n1{k30:'jyQ', id:26}) CREATE p1=(n2{id:27})<-[ :T4{k61:false, id:28}]-(n3{id:29})) MERGE ( :L2 :L4{id:30}) CREATE ( :L2{id:31})-[ :T5{id:32}]->({id:33}) RETURN NULL AS a1, 1 AS a2;
+FOREACH ( a0 IN NULL | MERGE ( : L4 { id : 19 } ) - [ r0 : T5 { id : reduce(a=20 ,b IN []|a) } ] - ( { id : CASE WHEN FALSE THEN NULL ELSE 21 END } ) - [ r1 : T5 { id : 22 } ] - ( n0 { id : 23 } ) CREATE p0 = ( { k4 : NULL , id : 24 } ) - [ : T5 { id : 25 } ] - > ( n1 { k30 : 'jyQ' , id : 26 } ) DETACH DELETE NULL CREATE p1 = ( n2 { id : 27 } ) < - [ : T4 { k61 : false , id : 28 } ] - ( n3 { id : 29 } ) ) WITH * UNWIND [NULL] as l0 MERGE pp0=( : L2 : L4 { id : 30 } ) CREATE ( : L2 { id : reduce(a=31 ,b IN []|a) } ) - [ : T5 { id : 32 } ] - > ( { id : 33 } ) CREATE (c0{id:-1}) DELETE (c0) RETURN NULL AS a1 , 1 AS a2 SKIP 1 LIMIT 1 ;

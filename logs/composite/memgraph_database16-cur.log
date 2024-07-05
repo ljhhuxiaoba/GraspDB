@@ -1,0 +1,15 @@
+-- Time: 2024/07/05 16:31:58
+-- Database: memgraph_database16
+-- Database version: composite
+-- seed value: 1720168296991
+CREATE (n0 {id : 0});
+CREATE (n0 :L0{k0 : -1288073989, k1 : true, k2 : -294086442, k3 : '2kp3X', k4 : true, k5 : -733288052, id : 1, k6 : false});
+CREATE (n0 :L1{k11 : false, id : 2, k10 : '6UoX', k7 : -1505746652, k13 : false, k8 : 'y033', k12 : true});
+CREATE (n0 :L2{k16 : true, k19 : 'aYOjNofk', k18 : -1049081207, id : 3, k15 : false, k14 : -802557097});
+MATCH (n0 {id : 0}), (n1 {id : 0}) MERGE(n0)-[r :T0{k42 : false, k44 : 'tPa2K', id : 4, k43 : 'MuYS', k46 : '0', k47 : true}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T4{k70 : 'aRn', k66 : false, id : 5, k65 : 'kBxZTTY8x', k68 : false, k67 : 2084423168, k69 : false}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 0}) MERGE(n0)-[r :T3{k60 : -543257176, k62 : -1108438078, k61 : 274893834, k64 : true, k63 : '2', id : 6}]->(n1);
+MATCH (n0 {id : 3}), (n1 {id : 0}) MERGE(n0)-[r :T1{k49 : true, k51 : '9QvL', k50 : false, k53 : 'L', id : 7, k48 : 'CHH9'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T3{k60 : -470491574, k62 : -2134787540, k61 : -181537718, k64 : false, k63 : 'rY', id : 8}]->(n1);
+FOREACH(a0 IN [relationships(NULL)[abs((-1892230248-(-564268190-667016895)))], reduce(a=relationships(NULL)[abs(968368864)],b IN [NULL, NULL]|b)]|CREATE ({id:9})<-[r0 :T1{id:10}]-({id:11})-[ :T4{id:12}]->(n0{id:13}) CREATE (n1{id:14})-[ :T3{id:15}]->(n2{id:16}), ({id:17}) MERGE ({id:18})-[r1 :T1{id:19}]-({k17:'Ao', id:20})) MERGE (n3{id:21})-[r2 :T0{k42:false, id:22}]->({id:23})<-[r3 :T3{id:24}]-(n4{id:25}) SET n4.k='BTF' RETURN 1 AS a1, 1 AS a2;
+FOREACH ( a0 IN ([]+[ relationships ( NULL ) [ abs ( ( -1892230248 - ( -564268190 -667016895 ) ) ) ] , reduce ( a = relationships ( NULL ) [ CASE WHEN FALSE THEN NULL ELSE abs ( CASE WHEN FALSE THEN NULL ELSE 968368864 END ) END ] , b IN [ NULL , NULL ] | b ) ] )| CREATE ( { id : 9 } ) < - [ r0 : T1 { id : CASE WHEN TRUE THEN 10 END } ] - ( { id : 11 } ) - [ : T4 { id : 12 } ] - > ( n0 { id : 13 } ) CREATE (n2{id:16})<-[ : T3 { id : 15 } ] -( n1 { id : 14 } ) CREATE ( { id : 17 } ) MERGE ( { id : 18 } ) - [ r1 : T1 { id : 19 } ] - ( { k17 : reduce(a='Ao' ,b IN []|a) , id : 20 } ) ) WITH * UNWIND [1] as l0 MERGE ( n3 { id : 21 } ) - [ r2 : T0 { k42 : CASE WHEN TRUE THEN false END , id : 22 } ] - > ( { id : reduce(a=23 ,b IN []|a) } ) < - [ r3 : T3 { id : reduce(a=24 ,b IN []|a) } ] - ( n4 { id : 25 } ) REMOVE (NULL).k SET n4 . k = 'BTF' REMOVE (NULL).k RETURN 1 AS a1 , reduce(a=1 ,b IN []|a) AS a2 ;

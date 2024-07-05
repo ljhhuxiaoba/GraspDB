@@ -1,0 +1,24 @@
+-- Time: 2024/07/05 16:33:14
+-- Database: memgraph_database93
+-- Database version: composite
+-- seed value: 1720168297068
+CREATE (n0 :L1{k11 : 1180148691, id : 0, k10 : true, k7 : 'B77t6kX', k8 : 'c', k9 : true});
+CREATE (n0 {id : 1});
+CREATE (n0 :L0:L5{k0 : 'mp', k1 : false, k2 : -461707696, k3 : false, k31 : 'e', k4 : true, k30 : true, k5 : 'O', k33 : -863687164, k6 : 'QK', k35 : -1691363670, k34 : 39817750, k29 : 'kvV', id : 2});
+CREATE (n0 :L5{k29 : '7bPr0', k31 : 'vme0', k30 : true, k33 : -472448941, id : 3, k32 : 'CpPX3rU', k35 : 1562918583, k34 : 1189589642});
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T1{k42 : false, k41 : true, k44 : 300939963, id : 4, k43 : true, k46 : 723765164, k45 : false, k47 : 1793587103}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 2}) MERGE(n0)-[r :T4{k60 : true, k62 : 1765234504, k61 : 'VOz', k64 : -1771631858, k63 : 'f', id : 5}]->(n1);
+MATCH (n0)-[]-(n1), ()-[]-(n2)-[*0..]->(n0) UNWIND [properties(n2)] AS a0 SET n2.k='iYYto45JH' RETURN ((NULL > (round(-269446281)-NULL)) IS NOT NULL) AS a1, NULL AS a2;
+MATCH ( n0 ) - [ ] - ( n1 ) ,( ) - [ ] - ( n2 ) - [ * 0 .. ] - > ( n0 ) UNWIND ([ properties ( n2 ) ] +[]) AS a0 OPTIONAL MATCH ()-[:TYPE]-() SET n2 . k = 'iYYto45JH' WITH * UNWIND [1] as l0 RETURN ( ( NULL > ( round ( -269446281 ) - NULL ) ) IS NOT NULL ) AS a1 , NULL AS a2 SKIP 1 ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+WITH * MERGE ({id:6}) MERGE (n0{id:7}) RETURN 1 AS a0 LIMIT 0;
+WITH * CREATE (c0{id:-1}) DELETE (c0) MERGE ( { id : 6 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() MERGE ( n0 { id : reduce(a=7 ,b IN []|a) } ) DELETE NULL RETURN DISTINCT reduce(a=1 ,b IN []|a) AS a0 LIMIT reduce(a=0 ,b IN []|a) ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+FOREACH(a0 IN NULL|MERGE p0=({id:8}) MERGE ({id:9}) MERGE p1=(n0{id:10})) MERGE (n1{k32:'f', id:11}) SET n1.k=true RETURN CASE WHEN false THEN (-66186195+(NULL-size([]))) END AS a1, 1 AS a2 SKIP 1;
+FOREACH ( a0 IN CASE WHEN FALSE THEN NULL ELSE NULL END | MERGE p0 = ( { id : 8 } ) MERGE ( { id : 9 } ) REMOVE (NULL).TRUE MERGE p1 = ( n0 { id : 10 } ) ) WITH * MERGE ( n1 { k32 : 'f' , id : 11 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() SET n1 . k = true WITH * RETURN CASE WHEN false THEN ( -66186195 + ( CASE WHEN FALSE THEN NULL ELSE NULL - size ( [ ] ) END ) ) END AS a1 , CASE WHEN FALSE THEN NULL ELSE 1 END AS a2 SKIP 1 LIMIT 1 ;

@@ -1,0 +1,14 @@
+-- Time: 2024/07/05 16:32:11
+-- Database: memgraph_database30
+-- Database version: composite
+-- seed value: 1720168297005
+CREATE (n0 :L5{k30 : false, k33 : true, id : 0, k32 : 'h', k34 : -1989733256, k36 : -2075699261});
+CREATE (n0 {id : 1});
+CREATE (n0 :L2:L0{k17 : 'R8ng9B', k16 : 'T', k0 : 751690336, k1 : 1183249510, k2 : false, k3 : 'C', k4 : true, k5 : -1291285930, id : 2, k13 : false, k15 : 529645743, k14 : 'nIjNr'});
+CREATE (n0 :L0{k0 : -712641665, k1 : -789179243, k2 : true, k3 : 'Z', k4 : false, k5 : 1064293045, id : 3});
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T0{k39 : true, k40 : 'vdCFdQGs', k42 : -967603971, k41 : 'd55', id : 4, k37 : true}]->(n1);
+MATCH (n0 {id : 2}), (n1 {id : 2}) MERGE(n0)-[r :T5{k71 : 465109269, k70 : true, k72 : 853591726, id : 5, k68 : 'NsWH', k67 : 1250527951, k69 : 'HIOSDrqA'}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T0{k39 : true, k38 : 'DDGs', k42 : 1405155200, k41 : 'y', id : 6, k37 : true}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 2}) MERGE(n0)-[r :T0{k39 : false, k38 : 'V', k40 : 'GW', k42 : 1300105218, k41 : 'wey', id : 7, k37 : false}]->(n1);
+FOREACH(a0 IN [type(relationships(NULL)[abs(1536233210)])]|CREATE p0=(n0 :L0{id:8}) MERGE ({id:9}) MERGE p1=(n1 :L5{id:10})) MERGE ({id:11}) CREATE (n2{id:12}), ({id:13}) RETURN 1 AS a1;
+FOREACH ( a0 IN [ type ( ([]+relationships ( NULL ) )[ abs ( 1536233210 ) ] ) ] | CREATE p0 = ( n0 : L0 { id : 8 } ) CREATE (c0{id:-1}) DELETE (c0) MERGE ( { id : 9 } ) CREATE (c1{id:-1}) DELETE (c1) MERGE p1 = ( n1 : L5 { id : 10 } ) REMOVE (NULL).k ) DETACH DELETE (NULL) MERGE ( { id : 11 } ) WITH * CREATE ( n2 { id : CASE WHEN TRUE THEN 12 END } ) CREATE ( { id : 13 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN 1 AS a1 LIMIT 1 ;

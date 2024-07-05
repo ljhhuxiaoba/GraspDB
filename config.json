@@ -1,0 +1,14 @@
+{
+  "memgraph@first": {
+    "port": 7688,
+    "host": "localhost",
+    "username": "memgraph",
+    "password": "123abc..."
+  },
+  "memgraph@second":{
+    "port": 7689,
+    "host": "localhost",
+    "username": "memgraph",
+    "password": "123abc..."
+  }
+}

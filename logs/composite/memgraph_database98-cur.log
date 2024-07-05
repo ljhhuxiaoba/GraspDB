@@ -1,0 +1,18 @@
+-- Time: 2024/07/05 16:33:17
+-- Database: memgraph_database98
+-- Database version: composite
+-- seed value: 1720168297073
+CREATE (n0 :L5{k38 : 1534153112, k33 : false, id : 0, k32 : '8', k35 : 'NNt', k34 : false, k37 : 2002938602});
+CREATE (n0 :L2{k17 : 1624062773, k16 : 1037510587, id : 1, k13 : '4', k12 : 539487334, k15 : 43540787, k14 : 'BNctMz'});
+CREATE (n0 {id : 2});
+CREATE (n0 :L0{k0 : true, k2 : 726681528, k3 : 'QbGQzmV', k5 : -114233839, id : 3, k6 : 'xwY'});
+MATCH (n0 {id : 3}), (n1 {id : 1}) MERGE(n0)-[r :T0{k39 : false, k40 : false, k42 : 1477210688, k41 : 'BPK', id : 4, k43 : -2048148292}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T2{k51 : -223532990, k50 : true, k53 : 'u', k52 : 'a', id : 5, k54 : 'x'}]->(n1);
+OPTIONAL MATCH (n0)<-[*0..1]-()-[r0 :T2{k51:483037445}]-(), (n1)-[]-(n2)-[r0]-(n3) DETACH DELETE r0  CREATE ( :L2{k15:CASE WHEN NULL THEN 922466750 END, id:6})<-[ :T0{id:7}]-( :L0{id:8}), (n4{id:9})<-[ :T0{id:10}]-({k2:(1579026887+NULL), id:11})<-[ :T2{id:12}]-( :L5{k35:'Y', id:13}) RETURN n1 AS a0 SKIP 1;
+OPTIONAL MATCH (n0)<-[*0..1]-()-[r0 :T2{k51:483037445}]-(),(n1),()<-[m0]-(),(n2),()<-[r0]-(),(n3) WHERE exists((n1)-[m0]-(n2)-[r0]-(n3)) DETACH DELETE r0 CREATE (c0{id:-1}) DELETE (c0) CREATE (m1: L2 { k15 : reduce(a=CASE WHEN NULL THEN 922466750 END ,b IN []|a) , id : 6 } )CREATE (m1)< - [ : T0 { id : 7 } ] - ( : L0 { id : 8 } ) CREATE ( n4 { id : 9 } ) < - [ : T0 { id : 10 } ] - ( { k2 : ( reduce(a=1579026887 + NULL ,b IN []|a) ) , id : CASE WHEN TRUE THEN 11 END } ) < - [ : T2 { id : 12 } ] - ( : L5 { k35 : 'Y' , id : CASE WHEN TRUE THEN 13 END } ) WITH * UNWIND [1] as l0 RETURN n1 AS a0 SKIP 1 ;
+MATCH (a) RETURN a;
+MATCH (a) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+MATCH (b)-[a]->(c) RETURN a;
+CREATE (n4{id:14}), p0=(n5{id:15})<-[r1 :T0{id:16}]-( :L0{id:17}) MERGE p1=(n6 :L2{id:18}) CREATE (n7{id:19})-[ :T2{id:20}]->({k5:(n6.k12), id:21})-[ :T0{id:22}]->(n8{k12:(n6.k17), id:23}) RETURN (n6.k15) AS a2 SKIP 1 LIMIT 1;
+CREATE ( n4 { id : CASE WHEN FALSE THEN NULL ELSE 14 END } ) CREATE (n5{ id : 15 } )CREATE (n5)< - [ r1 : T0 { id : 16 } ] - ( : L0 { id : reduce(a=17 ,b IN []|a) } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() MERGE p1 = ( n6 : L2 { id : CASE WHEN FALSE THEN NULL ELSE 18 END } ) WITH * CREATE ( n7 { id : 19 } ) - [ : T2 { id : 20 } ] - > ( { k5 : ( n6 . k12 ) , id : 21 } ) - [ : T0 { id : 22 } ] - > ( n8 { k12 : CASE WHEN TRUE THEN ( n6 . k17 ) END , id : 23 } ) WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN DISTINCT ( n6 . k15 ) AS a2 SKIP reduce(a=1 ,b IN []|a) LIMIT 1 ;

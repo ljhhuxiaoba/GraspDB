@@ -1,0 +1,15 @@
+-- Time: 2024/07/05 16:32:13
+-- Database: memgraph_database32
+-- Database version: composite
+-- seed value: 1720168297007
+CREATE (n0 :L3{k19 : -1636359969, k20 : 907562988, k22 : 'g', id : 0, k21 : false, k24 : 607669023, k23 : true});
+CREATE (n0 :L2:L0{k0 : true, k1 : 1982224878, k2 : -2120920902, k3 : 1167177451, k4 : 'o', k5 : true, k6 : false, k13 : 'tg', k12 : false, k14 : 'i', k16 : 1532660647, k18 : 'Hq', id : 1});
+CREATE (n0 :L4:L0{k28 : 'e', k27 : -261362924, k29 : false, k2 : 1295224403, k4 : 't', k5 : true, id : 2, k6 : false, k26 : 'WlOy', k25 : -264327508});
+CREATE (n0 :L5{k31 : '9', k30 : true, k33 : 'e', id : 3, k35 : -64748051, k34 : false, k36 : false});
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T1{k49 : 'B', k51 : -935467072, k50 : 'WpjWSS', k53 : 'o0MxbVWZT', k52 : true, id : 4, k48 : true}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T4{k71 : false, k70 : 'r8E', k73 : -1575971894, k72 : 'Nft74', id : 5, k68 : 'St', k67 : 'l', k69 : -1834733128}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T2{k55 : 490250975, id : 6, k54 : -2047795305, k57 : 'T0R', k56 : 'BHCq', k59 : true}]->(n1);
+MATCH (n0 {id : 1}), (n1 {id : 1}) MERGE(n0)-[r :T0{k44 : 'k', id : 7, k46 : 1756459461, k45 : '6NK0Wvo5O', k47 : 'xCCGp'}]->(n1);
+MATCH (n0 {id : 0}), (n1 {id : 3}) MERGE(n0)-[r :T2{k55 : -1390768614, id : 8, k54 : -1814306185, k57 : 'stw', k56 : 'a6L8s', k59 : false, k58 : 1923160027}]->(n1);
+WITH NULL AS a0 MATCH (n0)-[]-(n1) DETACH DELETE n0,n1  RETURN 1 AS a1;
+WITH NULL AS a0 OPTIONAL MATCH ()-[:TYPE]-() MATCH ( n0 ) - [ ] - ( n1 ) DETACH DELETE n0 , n1 WITH * OPTIONAL MATCH ()-[:TYPE]-() RETURN 1 AS a1 LIMIT 1 ;
