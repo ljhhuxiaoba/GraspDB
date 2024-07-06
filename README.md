@@ -1,16 +1,18 @@
 <<<<<<< HEAD
 # GraspDB
 
-We propose GraspDB, to the best of our knowledge, the first black-box approach for identifying bugs related to writing operations in graph database systems.
+We propose GraspDB, which, to the best of our knowledge, is the first black-box approach for identifying bugs related to write operations in graph database systems.
 
 # Getting Started
 
 Requirements:
 * Java 11
-* [Maven](https://maven.apache.org/)
-* The graph database engines that you want to test (now supporting Neo4j, RedisGraph, Memgraph and Agensgraph with any version)
+* [Maven(https://maven.apache.org/)(version 4.0.0)
+* The graph database engines that you want to test (now supporting Neo4j v5.6.0, RedisGraph v2.10.9, Memgraph v2.7.0 and Agensgraph v2.13.1 and above. )
 
+# Environment Setting
 
+All experiments are conducted on a computer with Intel i5-8400 CPU, 16 GB of memory and Windows 11 OS. And the requirements above need to be met.
 
 # Project Structure
 
@@ -30,20 +32,24 @@ Requirements:
             * expr
               * RandomExpressionGenerator.java: the expression generator for GraspDB
           * oracle: oracles
-            * DifferentialNonEmptyBranchOracle.java: the differential oracle used by GraspDB
-        * support for different databases[neo4j, redisGraph, memgraph, agensmgraph, ...]
+            * DifferentialNonEmptyBranchOracle.java: the oracle used by GraspDB
+        * neo4j: support for neo4j database(schema, connection, options)
+        * redisGraph: support for redisGraph database(schema, connection, options)
+        * memGraph: support for memGraph database(schema, connection, options)
+        * agensGraph: support for agensGraph database(schema, connection, options)
 * out: the executable jar file GraspDB.jar
 
 # Using GraspDB
 
 ## Step1: Run the docker images of target database.
 
-Note that for the target database, we must create two instances of it for testing because our test case pairs can change the database data.
-For example, we can create two instances of Neo4j with 5.6.0 version by running the following command:
+Note that for a given target database, two instances of it should be created for testing, as our test case pairs involve writing operations, which may change the database status. 
+For example, we can create two instances of Neo4j version5.6.0  by running the following commands at the command line:
 ```shell
 docker run --restart always --name neo4j_1 -p 7473:7473 -p 7474:7474 -p 7687:7687 -d neo4j:5.6.0
 docker run --restart always --name neo4j_2 -p 7475:7473 -p 7476:7474 -p 7688:7687 -d neo4j:5.6.0
 ```
+The "--restart always" parameter prevents the test from stopping due to a database crash. The "--name" specifies the name of the container. The "-p" parameter specifies the mapping of ports. The "-d" means running in the background. And the "neo4j:5.6.0" specifies the database name and version number of the docker image.
 
 ## Step2: Modify the configuration file.
 
@@ -64,7 +70,7 @@ For example, if you want to test Neo4j above, the configuration for both databas
   }
 }
 ```
-The ```config.json``` file records the information necessary to connect and access the database.
+The ```config.json``` file records the information necessary to connect and access the database. The "neo4j@first" tells GraspDB which database to connect. The "port" and "host" mean the host and port number on which the database service is running. The "username" and "password" specify the authentication for database connections, and some databases do not require authentication, such as memGraph.
 Note that you must change the password before the first connection to Neo4j.
 
 ## Step3: Start the testing.
@@ -75,8 +81,7 @@ Generally GraspDB can be configured and executed using the following command:
 java -jar GraspDB.jar --[database_option1] --[database_option2] composite
 ```
 
-Here are some examples of database options(relation-removed and graph-state-oracle options are used for RQ2 in our paper):
-
+The list of supported database options is as follows. (relation-removed and graph-state-oracle options are used for RQ2 in our paper):
 ```
 --num-tries <num-tries> // the number of graphs to generate
 --num-queries <num-queries> // the number of queries generated for each graph
@@ -93,9 +98,8 @@ Then the testing should begin, GraspDB will generate 5000 graphs and for each gr
 
 ## Step4: Check the bug report.
 
-The potential bugs are recorded in ```GraspDB/log.txt```. All the graph data and test case pairs will be recorded in ```logs``` directory for reproduction. Note that ```GraspDB/log.txt``` needs to be removed before the next round of testing begins.
-
-Here is the set of databases supported by GraspDB:
+The potential bugs are recorded in ```GraspDB/log.txt```. All the graph database instances and test case pairs will be recorded in the ```logs``` directory for reproduction. Note that ```GraspDB/log.txt``` needs to be removed before the next round of testing begins. Inspecting the log information to reproduce and validate the reported bugs. 
+The list of databases currently supported by GraspDB is as follows:
 
 ```
 neo4j
@@ -105,9 +109,11 @@ agensgraph
 ```
 And testing other databases is similar to tesing Neo4j.
 
-# Replicate the RQ1:Ability on detecting unknown bugs
+# Detailed Description of Replicating the Experiment Results 
 
-## Step1: Run the docker images of target database(Neo4j, Memgraph, Redisgraph, Agensgraph) with target versions. (all commands are listed here)
+## RQ1:Ability on detecting unknown bugs
+
+### Step1: Run the docker images of target database(Neo4j, Memgraph, Redisgraph, Agensgraph) with target versions. (all commands are listed here)
 
 ```shell
 docker run --restart always --name neo4j_1 -p 7473:7473 -p 7474:7474 -p 7687:7687 -d neo4j:[version]
@@ -120,7 +126,7 @@ docker run --restart always --name agens_1 -p 5432:5432 -d agensgraph:[version]
 docker run --restart always --name agens_2 -p 5433:5432 -d agensgraph:[version]
 ```
 
-## Step2: Modify the configuration file. (all configuration are listed here)
+### Step2: Modify the configuration file. (all configurations are listed here)
 
 ```json
 {  
@@ -175,8 +181,9 @@ docker run --restart always --name agens_2 -p 5433:5432 -d agensgraph:[version]
 }
 ```
 
-## Step3: Start the testing.
+### Step3: Start the testing.
 
+We run our method for 6 months and reported the detected bugs. During the 6 months, we periodically run the testing process, each time generating 5000 graph database instances, and generating 100 query pairs for each graph database instance. 
 ```bash
 java -jar GraspDB.jar --num-tries 5000 --num-queries 100 --database-instance neo4j composite
 java -jar GraspDB.jar --num-tries 5000 --num-queries 100 --database-instance memgraph composite
@@ -184,37 +191,35 @@ java -jar GraspDB.jar --num-tries 5000 --num-queries 100 --database-instance red
 java -jar GraspDB.jar --num-tries 5000 --num-queries 100 --database-instance agensgraph composite
 ```
 
-## Step4: Check the ```GraspDB/log.txt``` and ```logs``` directory to identify bugs.
+### Step4: Check the ```GraspDB/log.txt``` and ```logs``` directory to identify bugs.
 
-# Replicate the RQ2:Contribution of different components
+## RQ2:Contribution of different components
 
-To validate the contribution of different components of GraspDB to bug detection, we can remove each of them in step3. And other steps are the same as those in RQ1.
-For example, if we want to remove the AWC Rules, we can run the following command:
+To validate the contribution of different components of GraspDB to bug detection, we can remove each of them by controling the parameters in Step3.  And other steps of replication are the same as those of RQ1.
 
+Run the following command  to run the GraspDB(It corresponds to row 1 of the Table 6 in our paper):
 ```bash
-java -jar GraspDB.jar --num-tries 5000 --num-queries 100 --relation-removed 1 neo4j composite
+java -jar GraspDB.jar --num-tries 5000 --num-queries 100 neo4j composite
 ```
-We can also remove other components by using relation-removed or graph-state-oracle option:
+Run the following command  to remove the graph state oracle(It corresponds to row 2 of the Table 6 in our paper):
 ```bash
-java -jar GraspDB.jar --num-tries 5000 --num-queries 100 --relation-removed 2 neo4j composite
-java -jar GraspDB.jar --num-tries 5000 --num-queries 100 --relation-removed 3 neo4j composite
 java -jar GraspDB.jar --num-tries 5000 --num-queries 100 --graph-state-oracle 1 neo4j composite
 ```
+We can also remove other components by using relation-removed option(They correspond to rows 3, 4 and 5 of the Table 6 in our paper):
+```bash
+java -jar GraspDB.jar --num-tries 5000 --num-queries 100 --relation-removed 1 neo4j composite
+java -jar GraspDB.jar --num-tries 5000 --num-queries 100 --relation-removed 2 neo4j composite
+java -jar GraspDB.jar --num-tries 5000 --num-queries 100 --relation-removed 3 neo4j composite
+```
 
+## RQ3:Comparison with Baselines
 
-# Replicate the RQ3:Comparison with Baselines
+For the comparison with baselines, run GraspDB following the steps of replicating RQ1. 
+Run GDSmith and GraphGenie follow their GitHub pages, refering to steps instructed in their manual page. The Github link to GDSmith is https://github.com/ddaa2000/GDsmith(https://github.com/ddaa2000/GDsmith), and GraphGenie is https://github.com/YuanchengJiang/GraphGenie(https://github.com/YuanchengJiang/GraphGenie). 
 
-For the comparison with baselines, you can run GraspDB by following the steps of replicating the RQ1. And for running GDSmith(https://github.com/ddaa2000/GDsmith) and GraphGenie(https://github.com/YuanchengJiang/GraphGenie), you can follow the GitHub pages of the corresponding tool and refer to steps instructed in the manual page.
+## RQ4:Case study of bugs detected by GraspDB
 
-# Replicate the RQ4:Case study of bugs detected by GraspDB
-
-The cases selected in our paper can be found in issues filed by us and their links are listed in paper. You can see the detailed description of bugs as well as the developer's response on github pages.
-
-# Graph State Oracle and Graph Isomorphism Algorithm
-
-We compare graph state as a new oracle to detect writing-related logic bugs and we apply a simplified version of the algorithm VF2 to check if two labeled property graphs are the same. And here's our algorithm:
-
-![image](./Image.jpg)
+The links to issues of the studied bugs can be found in our preprint paper in the corresponding section (section 5.5), where the detailed description of bugs as well as the developer's response are available. We also listed all the bug issue ids detected by GraspDB in the following. 
 
 # Bugs Found by GraspDB
 
