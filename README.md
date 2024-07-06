@@ -7,7 +7,7 @@ We propose GraspDB, which, to the best of our knowledge, is the first black-box 
 
 Requirements:
 * Java 11
-* [Maven(https://maven.apache.org/)(version 4.0.0)
+* [Maven](https://maven.apache.org/)(version 4.0.0)
 * The graph database engines that you want to test (now supporting Neo4j v5.6.0, RedisGraph v2.10.9, Memgraph v2.7.0 and Agensgraph v2.13.1 and above. )
 
 # Environment Setting
