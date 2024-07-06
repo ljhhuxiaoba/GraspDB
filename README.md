@@ -215,7 +215,7 @@ java -jar GraspDB.jar --num-tries 5000 --num-queries 100 --relation-removed 3 ne
 ## RQ3:Comparison with Baselines
 
 For the comparison with baselines, run GraspDB following the steps of replicating RQ1. 
-Run GDSmith and GraphGenie follow their GitHub pages, refering to steps instructed in their manual page. The Github link to GDSmith is https://github.com/ddaa2000/GDsmith(https://github.com/ddaa2000/GDsmith), and GraphGenie is https://github.com/YuanchengJiang/GraphGenie(https://github.com/YuanchengJiang/GraphGenie). 
+Run GDSmith and GraphGenie follow their GitHub pages, refering to steps instructed in their manual page. The Github link to GDSmith is [https://github.com/ddaa2000/GDsmith](https://github.com/ddaa2000/GDsmith), and GraphGenie is [https://github.com/YuanchengJiang/GraphGenie](https://github.com/YuanchengJiang/GraphGenie). 
 
 ## RQ4:Case study of bugs detected by GraspDB
 
